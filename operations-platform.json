@@ -1,0 +1,11 @@
+{
+    "artId": "",
+    "appName": "operations-platform",
+    "description": "Operations app for HR",
+    "lastModified": "2019-01-28T10:25:44.209Z",
+    "artURL": "http://localhost:3000/bhive-art/",
+    "imgSourcePath": "",
+    "version": "1.0.0",
+    "dataSource": "neutrinos-delivery-rt",
+    "createDate": "2019-01-28T10:25:43.636Z"
+}
