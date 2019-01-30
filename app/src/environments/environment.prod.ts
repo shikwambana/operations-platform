@@ -3,8 +3,8 @@ export const environment = {
     "name": "prod",
     "properties": {
         "production": true,
-        "baseUrl": "http://localhost:3000/bhive-art/",
-        "tenantName": "neutrinos-delivery",
+        "baseUrl": "ds213832.mlab.com",
+        "tenantName": "operations-platform",
         "appName": "operations-platform",
         "namespace": "com.neutrinos-delivery.operations-platform",
         "isNotificationEnabled": true,
@@ -14,9 +14,8 @@ export const environment = {
         "authDomain": "FIREBASE_AUTH_DOMAIN",
         "databaseURL": "FIREBASE_DATABASE_URL",
         "storageBucket": "FIREBASE_STORAGE_BUCKET",
-        "messagingSenderId": "FIREBASE_SENDER_ID",
         "appDataSource": "neutrinos-delivery-rt",
-        "appAuthenticationStrategy": "localAuth",
+        "appAuthenticationStrategy": "SCRAM-SHA-1",
         "basicAuthUser": "username",
         "basicAuthPassword": "password",
         "useDefaultExceptionUI": true

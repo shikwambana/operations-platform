@@ -1,0 +1,48 @@
+<div fxLayout="column wrap" style="margin: 20px;" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+  <div fxLayout="column wrap" style="margin: 20px 0;" fxLayoutAlign="  none" fxShow="true" fxHide="false">
+    <mat-accordion [displayMode]="linear" multi="false">
+      <mat-expansion-panel hideToggle="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Add HR Policy
+          </mat-panel-title>
+          <mat-panel-description style="justify-content: space-between;   align-items: center;">
+            Click here to add a newPolicy
+            <mat-icon>library_add</mat-icon>
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+          <mat-form-field><input matInput="" placeholder="Policy Title" required></mat-form-field>
+          <mat-form-field style="height:100px;"><textarea matInput="" placeholder="Policy Content" required></textarea></mat-form-field><button mat-raised-button="">Submit Policy</button>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+  <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+    <h2>HR Policies</h2>
+  </div>
+  <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+    <mat-form-field>
+      <input matInput="" (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+    </mat-form-field>
+
+    <table mat-table="" [dataSource]="dataSource" class="mat-elevation-z8">
+
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell="" *matHeaderCellDef=""> Policy Name </th>
+        <td mat-cell="" *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="symbol">
+        <th mat-header-cell="" *matHeaderCellDef=""> Category </th>
+        <td mat-cell="" *matCellDef="let element"> {{element.symbol}} </td>
+      </ng-container>
+
+      <tr mat-header-row="" *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row="" *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</div>

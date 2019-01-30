@@ -13,5 +13,15 @@
         "appPageName": "loader",
         "componentName": "loaderComponent",
         "isEntry": false
+    },
+    "3c6a7b94-648a-a7d5-4f4f-12cc7a060d25": {
+        "appPageName": "hrpolicyadmin",
+        "componentName": "hrpolicyadminComponent",
+        "isEntry": false
+    },
+    "55ea5da2-d723-8052-4740-3c4299b27c64": {
+        "appPageName": "homepage",
+        "componentName": "homepageComponent",
+        "isEntry": false
     }
 }
