@@ -1,0 +1,8 @@
+<div fxLayout="column wrap" fxLayoutAlign="center center" fxShow="true" fxHide="false">
+  <h3 style="margin-top:0;color:#ad4632;">Policies</h3>
+  <div fxLayout="row wrap" style="marign-top" class="policyCardRow" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+    <mat-card *ngFor="let con of Content" style="background-color:#ced2e0; cursor: pointer" class="policyCard">
+      <mat-card-title routerLink="{{con | lowercase}}" (click)="selected(con)" style="font-size: 9px;color:#20232b;">{{con}}</mat-card-title>
+    </mat-card>
+  </div>
+</div>

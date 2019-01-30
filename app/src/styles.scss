@@ -11,3 +11,20 @@
     background-color: #ee1c22;
     color: white;
 }
+
+mat-grid-tile {
+  background: lightblue;
+}
+
+.policyCard {
+    width: 16%;
+    margin: 5px 2% 20px 0;
+    line-height: 0;
+    padding: 5px 0;
+}
+.policyCardRow {
+    width: 90%;
+    margin: 0 auto;
+    padding-left: 4%;
+    box-sizing: border-box;
+}

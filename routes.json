@@ -24,13 +24,18 @@
             "pathMatch": "full"
         },
         {
+            "path": "policies",
+            "component": "policiesComponent"
+        },
+        {
             "path": "''",
             "component": "",
             "pathMatch": "full",
             "redirectTo": "/home",
             "resolve": "",
             "data": "",
-            "canActivate": ""
+            "canActivate": "",
+            "default": true
         },
         {
             "path": "**",

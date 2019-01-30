@@ -21,5 +21,33 @@
                 "isArray": false
             }
         ]
+    },
+    "60f374a7-a0b3-f40c-440a-16b7fdaff198": {
+        "dataModelId": "60f374a7-a0b3-f40c-440a-16b7fdaff198",
+        "name": "policies",
+        "description": "policies",
+        "dataSource": "operations-platform-rt",
+        "fields": [
+            {
+                "name": "Title",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "Content",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "Acknowledgement",
+                "fieldType": 4,
+                "isArray": false
+            },
+            {
+                "name": "Category",
+                "fieldType": 2,
+                "isArray": false
+            }
+        ]
     }
 }

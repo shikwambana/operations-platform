@@ -13,5 +13,10 @@
         "appPageName": "loader",
         "componentName": "loaderComponent",
         "isEntry": false
+    },
+    "19ca2240-ba3d-82ff-39fb-aa5c131d98b3": {
+        "appPageName": "policies",
+        "componentName": "policiesComponent",
+        "isEntry": false
     }
 }
