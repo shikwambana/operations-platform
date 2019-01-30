@@ -21,5 +21,33 @@
                 "isArray": false
             }
         ]
+    },
+    "366ec9bb-57f8-ef50-e9bb-01e54f4e0a9e": {
+        "dataModelId": "366ec9bb-57f8-ef50-e9bb-01e54f4e0a9e",
+        "name": "policies",
+        "description": "policies",
+        "dataSource": "operations",
+        "fields": [
+            {
+                "name": "title",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "content",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "acknowledgement",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "category",
+                "fieldType": 2,
+                "isArray": false
+            }
+        ]
     }
 }

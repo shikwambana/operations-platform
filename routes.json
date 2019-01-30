@@ -24,13 +24,28 @@
             "pathMatch": "full"
         },
         {
+            "path": "hrpolicy",
+            "component": "hrpolicyadminComponent"
+        },
+        {
+            "path": "homepage",
+            "component": "homepageComponent",
+            "children": [
+                {
+                    "path": "hr",
+                    "component": "hrpolicyadminComponent"
+                }
+            ]
+        },
+        {
             "path": "''",
             "component": "",
             "pathMatch": "full",
             "redirectTo": "/home",
             "resolve": "",
             "data": "",
-            "canActivate": ""
+            "canActivate": "",
+            "default": true
         },
         {
             "path": "**",

@@ -1,0 +1,13 @@
+{
+    "appPageId": "3c6a7b94-648a-a7d5-4f4f-12cc7a060d25",
+    "appPageName": "hrpolicyadmin",
+    "componentName": "hrpolicyadminComponent",
+    "selectorName": "bh-hrpolicyadmin",
+    "htmlFileName": "hrpolicyadmin.template.html",
+    "tsFileName": "hrpolicyadmin.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}
