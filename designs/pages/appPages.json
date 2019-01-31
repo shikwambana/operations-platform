@@ -23,5 +23,15 @@
         "appPageName": "homepage",
         "componentName": "homepageComponent",
         "isEntry": false
+    },
+    "5cec9809-1f95-a1cb-f646-97f6b5763019": {
+        "appPageName": "editpolicy",
+        "componentName": "editpolicyComponent",
+        "isEntry": false
+    },
+    "0049beb3-a07a-2a65-4353-817d89228ce7": {
+        "appPageName": "dialog",
+        "componentName": "dialogComponent",
+        "isEntry": false
     }
 }

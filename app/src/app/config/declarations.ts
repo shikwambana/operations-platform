@@ -12,6 +12,12 @@ window['neutrinos'] = {
 }
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-dialogComponent
+import { dialogComponent } from '../components/dialogComponent/dialog.component';
+//CORE_REFERENCE_IMPORT-editpolicyComponent
+import { editpolicyComponent } from '../components/editpolicyComponent/editpolicy.component';
+//CORE_REFERENCE_IMPORT-policiesService
+import { policiesService } from '../services/policies/policies.service';
 //CORE_REFERENCE_IMPORT-homepageComponent
 import { homepageComponent } from '../components/homepageComponent/homepage.component';
 //CORE_REFERENCE_IMPORT-hrpolicyadminComponent
@@ -58,6 +64,10 @@ export const appDeclarations = [
   PageNotFoundComponent,
   NMapComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-dialogComponent
+dialogComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-editpolicyComponent
+editpolicyComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-homepageComponent
 homepageComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-hrpolicyadminComponent
@@ -85,6 +95,8 @@ export const appProviders = [
   },
   NAuthGuardService,
   //CORE_REFERENCE_PUSH_TO_PRO_ARRAY
+//CORE_REFERENCE_PUSH_TO_PRO_ARRAY-policiesService
+policiesService,
 
 ];
 
@@ -94,5 +106,6 @@ export const appProviders = [
 
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_START
 export const appRoutes = [{path: 'home', component: homeComponent, canActivate: [NAuthGuardService]},{path: 'login', component: loginComponent},{path: 'unauthorized', redirectTo: '/login', pathMatch: 'full'},{path: 'hrpolicy', component: hrpolicyadminComponent},{path: 'homepage', component: homepageComponent,
-children: [{path: 'hr', component: hrpolicyadminComponent}]},{path: '', redirectTo: '/home', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
+children: [{path: 'hr', component: hrpolicyadminComponent,
+children: []},{path: 'edit', component: editpolicyComponent}]},{path: '', redirectTo: '/home', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_END

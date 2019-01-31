@@ -33,7 +33,12 @@
             "children": [
                 {
                     "path": "hr",
-                    "component": "hrpolicyadminComponent"
+                    "component": "hrpolicyadminComponent",
+                    "children": []
+                },
+                {
+                    "path": "edit",
+                    "component": "editpolicyComponent"
                 }
             ]
         },

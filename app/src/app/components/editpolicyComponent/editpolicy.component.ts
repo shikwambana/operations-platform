@@ -1,19 +1,12 @@
 /*DEFAULT GENERATED TEMPLATE. DO NOT CHANGE SELECTOR TEMPLATE_URL AND CLASS NAME*/
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
 import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
 import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
-import { Router } from '@angular/router';
-
-import { dialogComponent } from '../dialogComponent/dialog.component';
-
-import { MatTableDataSource } from '@angular/material';
-import { policies } from "../../models/policies.model"
-import { categories } from "../../models/categories.model";
 import { policiesService } from '../../services/policies/policies.service';
-
-import { MatDialog } from '@angular/material';
+import { policies } from "../../models/policies.model"
+import { Router } from '@angular/router';
 
 /**
  * Service import Example :
@@ -21,83 +14,41 @@ import { MatDialog } from '@angular/material';
  */
 
 @Component({
-    selector: 'bh-hrpolicyadmin',
-    templateUrl: './hrpolicyadmin.template.html'
+    selector: 'bh-editpolicy',
+    templateUrl: './editpolicy.template.html'
 })
 
-export class hrpolicyadminComponent extends NBaseComponent implements OnInit {
+export class editpolicyComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
-    policies: policies;
-    //test data
-    currentPolicies: policies[];
-    // categories
-
+    selectedPolicy: policies;
 
     categories = [
         'RECRUITMENT AND SELECTION', 'RECRUITMENT AND SELECTION',
         "ETHICAL BEHAVIOUR", "EMPLOYMENT EQUITY", "FLEET POLICY",
         "FLEET POLICY"
     ];
-    //end of test data
 
-    constructor(private bdms: NDataModelService, private router: Router, public PoliciesService: policiesService, public dialog: MatDialog) {
+    constructor(private bdms: NDataModelService, public PoliciesService : policiesService) {
         super();
         this.mm = new ModelMethods(bdms);
-        this.policies = new policies();
-        this.categories = new categories();
-    }
+        this.selectedPolicy = new policies();
 
-
-    displayedColumns: string[] = ['name', 'symbol'];
-    // dataSource = new MatTableDataSource(this.currentPolicies);
-    dataSource;
-    applyFilter(filterValue: string) {
-        this.dataSource.filter = filterValue.trim().toLowerCase();
     }
 
     ngOnInit() {
-        this.get('policies');
-        // this.get('categories');
+      this.selectedPolicy =  this.PoliciesService.getSelectedPolicy();
     }
 
-    // MyDialog Function
-    openDialog() {
-        this.dialog.open(dialogComponent, {
-            data: {
-                animal: 'panda'
-            },
-            width: '250px',
-            disableClose: true
-        });
-    }
-
-    addPolicy() {
-        this.put('policies', this.policies);
-        this.currentPolicies.push(this.policies);
-        // this.router.navigate[('/homepage/hr')];
-    }
-
-    selectedPolicy(row) {
-        this.PoliciesService.setSelectedPolicy(row);
-        console.log(row);
-        this.router.navigate(['/homepage/edit']);
+    updatePolicy(){
+        this.updateById('policies',this.selectedPolicy._id,this.selectedPolicy);
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, this, filter, keys, sort, pagenumber, pagesize,
             result => {
                 // On Success code here
-                if (dataModelName == 'policies') {
-                    this.currentPolicies = result;
-                    this.dataSource = new MatTableDataSource(this.currentPolicies);
-                }
-                if (dataModelName == 'categories') {
-                    this.categories = result;
-                }
-
             },
             error => {
-                console.log(error);
                 // Handle errors here
             });
     }
@@ -115,11 +66,8 @@ export class hrpolicyadminComponent extends NBaseComponent implements OnInit {
     put(dataModelName, dataModelObject) {
         this.mm.put(dataModelName, dataModelObject,
             result => {
-                console.log(result);
                 // On Success code here
             }, error => {
-                console.log(error);
-
                 // Handle errors here
             })
     }
@@ -142,12 +90,15 @@ export class hrpolicyadminComponent extends NBaseComponent implements OnInit {
         this.mm.update(dataModelName, updateObject,
             result => {
                 //  On Success code here
+                console.log(result);
             }, error => {
                 // Handle errors here
+                console.log(error);
+                
             })
     }
 
-    delete(dataModelName, filter) {
+    delete (dataModelName, filter) {
         this.mm.delete(dataModelName, filter,
             result => {
                 // On Success code here
@@ -169,8 +120,12 @@ export class hrpolicyadminComponent extends NBaseComponent implements OnInit {
         this.mm.updateById(dataModelName, dataModelId, dataModelObj,
             result => {
                 // On Success code here
+                console.log(result);
+                
             }, error => {
                 // Handle errors here
+                console.log(error);
+                
             })
     }
 

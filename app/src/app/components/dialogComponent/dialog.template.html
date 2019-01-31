@@ -1,0 +1,17 @@
+<div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+  <h1 mat-dialog-title="">Favorite Animal</h1>
+  <div mat-dialog-content="">
+    My favorite animal is:
+    <ul>
+      <li>
+        <span *ngIf="data.animal === &apos;panda&apos;">&#x2713;</span> Panda
+      </li>
+      <li>
+        <span *ngIf="data.animal === &apos;unicorn&apos;">&#x2713;</span> Unicorn
+      </li>
+      <li>
+        <span *ngIf="data.animal === &apos;lion&apos;">&#x2713;</span> Lion
+      </li>
+    </ul>
+  </div>
+</div>

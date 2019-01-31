@@ -1,0 +1,14 @@
+<div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+  <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+    <h1>Edit Policy</h1>
+  </div>
+  <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+    <mat-form-field><input matInput="" [(ngModel)]="selectedPolicy.title" name="selectedPolicy.title" placeholder="Policy Title" required></mat-form-field>
+    <mat-form-field>
+      <mat-select placeholder="Category" [(ngModel)]="selectedPolicy.category" required>
+        <mat-option *ngFor="let categories of categories" [value]="categories">{{ categories }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field><textarea matInput="" [(ngModel)]="selectedPolicy.content" required></textarea></mat-form-field><button mat-raised-button="" (click)="updatePolicy()">Update Policy</button>
+  </div>
+</div>
