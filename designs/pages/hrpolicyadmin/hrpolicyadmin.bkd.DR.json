@@ -360,13 +360,13 @@
                             },
                             {
                                 "_key": "fxShow",
-                                "_value": "true",
+                                "_value": "false",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
                             {
                                 "_key": "fxHide",
-                                "_value": "false",
+                                "_value": "true",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             }

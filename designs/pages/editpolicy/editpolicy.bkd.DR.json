@@ -380,8 +380,8 @@
                     }
                 ]
             },
-            "56635f32-091c-cb6f-0b42-9000f71130ff": {
-                "paletteKey": "NG-RaisedButton",
+            "a1edd4da-68b0-f8cb-c42c-35aa437bffa8": {
+                "paletteKey": "FlexLayoutRow",
                 "designerReference": [
                     {
                         "_key": "style",
@@ -396,24 +396,118 @@
                         "_attrDef": "p"
                     },
                     {
-                        "_key": "buttonname",
-                        "_value": "Update Policy",
-                        "_type": "a",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "color",
+                        "_key": "fxFlex",
                         "_value": "",
                         "_type": "kv",
                         "_attrDef": "p"
                     },
                     {
-                        "_key": "(click)",
-                        "_value": "updatePolicy()",
+                        "_key": "fxLayoutGap",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "wrap",
+                        "_value": "wrap",
+                        "_type": "a",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "layoutAlign",
+                        "_value": "start",
+                        "_type": "a",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "pLayoutAlign",
+                        "_value": "stretch",
+                        "_type": "a",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "fxShow",
+                        "_value": "true",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "fxHide",
+                        "_value": "false",
                         "_type": "kv",
                         "_attrDef": "p"
                     }
-                ]
+                ],
+                "56635f32-091c-cb6f-0b42-9000f71130ff": {
+                    "paletteKey": "NG-RaisedButton",
+                    "designerReference": [
+                        {
+                            "_key": "style",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "class",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "buttonname",
+                            "_value": "Update Policy",
+                            "_type": "a",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "color",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "(click)",
+                            "_value": "updatePolicy()",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        }
+                    ]
+                },
+                "cd80289e-04ce-0060-f42a-97f710d35461": {
+                    "paletteKey": "NG-button",
+                    "designerReference": [
+                        {
+                            "_key": "style",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "class",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "buttonname",
+                            "_value": "Cancel",
+                            "_type": "a",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "color",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "(click)",
+                            "_value": "goBack()",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        }
+                    ]
+                }
             }
         }
     }

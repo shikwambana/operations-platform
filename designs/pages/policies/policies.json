@@ -1,0 +1,13 @@
+{
+    "appPageId": "d9aaa445-6937-5f95-409e-f72ebb8f262a",
+    "appPageName": "policies",
+    "componentName": "policiesComponent",
+    "selectorName": "bh-policies",
+    "htmlFileName": "policies.template.html",
+    "tsFileName": "policies.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

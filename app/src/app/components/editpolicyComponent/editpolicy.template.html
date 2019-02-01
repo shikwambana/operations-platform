@@ -9,6 +9,7 @@
         <mat-option *ngFor="let categories of categories" [value]="categories">{{ categories }}</mat-option>
       </mat-select>
     </mat-form-field>
-    <mat-form-field><textarea matInput="" [(ngModel)]="selectedPolicy.content" required></textarea></mat-form-field><button mat-raised-button="" (click)="updatePolicy()">Update Policy</button>
+    <mat-form-field><textarea matInput="" [(ngModel)]="selectedPolicy.content" required></textarea></mat-form-field>
+    <div fxLayout="row wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false"><button mat-raised-button="" (click)="updatePolicy()">Update Policy</button><button mat-button="" (click)="goBack()">Cancel</button></div>
   </div>
 </div>

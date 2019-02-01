@@ -12,6 +12,18 @@
     color: white;
 }
 
+
+//=============================================================================================
+// home page navigation
+//=============================================================================================
+
+
+.navbar-nav {
+    text-decoration: none; 
+    margin: 10px 0;
+    color: red;
+}
+
 //=============================================================================================
 // TUKISO - Home component
 //=============================================================================================
@@ -31,7 +43,7 @@
 .home {
     box-sizing: border-box;
     padding: 10px;
-    background: url('assets/web/homeBg.jpg') no-repeat center center fixed;
+    // background: url('assets/web/homeBg.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

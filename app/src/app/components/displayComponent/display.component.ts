@@ -1,8 +1,10 @@
 /*DEFAULT GENERATED TEMPLATE. DO NOT CHANGE SELECTOR TEMPLATE_URL AND CLASS NAME*/
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
-import { NDataModelService } from 'neutrinos-seed-services';
+import { NDataModelService, NLogoutService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 
 /**
@@ -18,13 +20,18 @@ import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 export class displayComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
 
-    constructor(private bdms: NDataModelService) {
+    constructor(private bdms: NDataModelService, private logoutService: NLogoutService, private router: Router) {
         super();
         this.mm = new ModelMethods(bdms);
     }
 
     ngOnInit() {
 
+    }
+
+    logoutUser() {
+        this.logoutService.logout();
+        this.router.navigate(['/login']);
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
@@ -79,7 +86,7 @@ export class displayComponent extends NBaseComponent implements OnInit {
             })
     }
 
-    delete (dataModelName, filter) {
+    delete(dataModelName, filter) {
         this.mm.delete(dataModelName, filter,
             result => {
                 // On Success code here

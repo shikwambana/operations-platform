@@ -28,7 +28,7 @@ export class editpolicyComponent extends NBaseComponent implements OnInit {
         "FLEET POLICY"
     ];
 
-    constructor(private bdms: NDataModelService, public PoliciesService : policiesService) {
+    constructor(private bdms: NDataModelService, public PoliciesService : policiesService, private router: Router) {
         super();
         this.mm = new ModelMethods(bdms);
         this.selectedPolicy = new policies();
@@ -37,11 +37,20 @@ export class editpolicyComponent extends NBaseComponent implements OnInit {
 
     ngOnInit() {
       this.selectedPolicy =  this.PoliciesService.getSelectedPolicy();
+      if(!this.selectedPolicy){
+          this.router.navigate(['/homepage/hr']);
+      }
     }
 
     updatePolicy(){
         let id = this.selectedPolicy['_id'];
         this.updateById('policies',id,this.selectedPolicy);
+        this.router.navigate(['/homepage/hr']);
+
+    }
+
+     goBack(){
+         this.router.navigate(['/homepage/hr']);
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {

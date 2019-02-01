@@ -57,7 +57,7 @@ export class loginComponent extends NBaseComponent implements OnInit, OnDestroy 
     this.loginService.login(this.user.username, this.user.password, this.user.remember).subscribe((response) => {
       if (this.loginService.isLoggedIn()) {
         this.alertService.openSnackBar('User authenticated');
-        this.router.navigate(['home']);
+        this.router.navigate(['homepage']);
       }
     }, (error) => {
       this.httpLoaderService.alertError(error);

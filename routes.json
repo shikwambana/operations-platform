@@ -30,10 +30,6 @@
             "pathMatch": "full"
         },
         {
-            "path": "hrpolicy",
-            "component": "hrpolicyadminComponent"
-        },
-        {
             "path": "homepage",
             "component": "homepageComponent",
             "children": [
@@ -45,9 +41,40 @@
                 {
                     "path": "edit",
                     "component": "editpolicyComponent"
+                },
+                {
+                    "component": "policyComponent",
+                    "path": "policy"
+                },
+                {
+                    "component": "policiesComponent",
+                    "path": "policies",
+                    "children": []
+                },
+                {
+                    "path": "''",
+                    "component": "policiesComponent"
                 }
             ],
             "canActivate": "NAuthGuardService"
+        },
+        {
+            "path": "o",
+            "component": "displayComponent",
+            "children": [
+                {
+                    "path": "''",
+                    "component": "hrpolicyadminComponent"
+                },
+                {
+                    "path": "policies",
+                    "component": "policiesComponent"
+                },
+                {
+                    "path": "policy",
+                    "component": "policyComponent"
+                }
+            ]
         },
         {
             "path": "''",

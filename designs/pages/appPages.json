@@ -39,9 +39,14 @@
         "componentName": "displayComponent",
         "isEntry": false
     },
-    "83260c80-6e90-b844-daf0-9c6010218c14": {
-        "appPageName": "search",
-        "componentName": "searchComponent",
+    "cc2e8957-394b-b8ec-2426-b1ef7f484793": {
+        "appPageName": "policy",
+        "componentName": "policyComponent",
+        "isEntry": false
+    },
+    "d9aaa445-6937-5f95-409e-f72ebb8f262a": {
+        "appPageName": "policies",
+        "componentName": "policiesComponent",
         "isEntry": false
     }
 }

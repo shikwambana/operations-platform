@@ -11,6 +11,7 @@ selectedPolicy: policies;
     }
 
     getSelectedPolicy(){
+        console.log(this.selectedPolicy);
         return this.selectedPolicy;
     }
 }

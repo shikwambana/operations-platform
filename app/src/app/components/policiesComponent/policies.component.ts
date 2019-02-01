@@ -4,50 +4,65 @@ import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
 import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
-import { policiesComponent } from '../policiesComponent/policies.component';
+import { policiesService } from '../../services/policies/policies.service';
+import { policies } from "../../models/policies.model";
 import { Router } from '@angular/router';
-
 
 /**
  * Service import Example :
  * import { HeroService } from '../services/hero/hero.service';
  */
 
-// export const routerConfig: Routes = [
-//     {
-//         path: 'policy',
-//         component: policiesComponent
-//     }
-// ];
-
 @Component({
-    selector: 'bh-homepage',
-    templateUrl: './homepage.template.html'
+    selector: 'bh-policies',
+    templateUrl: './policies.template.html'
 })
 
-export class homepageComponent extends NBaseComponent implements OnInit {
+export class policiesComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
+    policy: policies;
 
-    constructor(private bdms: NDataModelService, private router: Router) {
+    // policy = [
+    // {"_id": "5c532e989dc2041314a83cc7", title: "ALLOWANCE salary", 
+    // "content": "Policy It is the policy of Neutrinos to reimburse … expenses that are inconsistent with this policy.", 
+    // "acknowledgement": false, 
+    // "category": "TRAVEL AND ENTERTAINMENT POLICY"}];
+    
+
+    constructor(private bdms: NDataModelService, public PoliciesService : policiesService, private router: Router) {
         super();
         this.mm = new ModelMethods(bdms);
+        // this.selectedPolicy = new policies();
+
     }
 
     ngOnInit() {
+        this.get('policies');
 
     }
+    
 
-    logoutUser() {
-    //   this.logoutService.logout();
-      this.router.navigate(['../login']);
+    viewPolicy(policy){
+        console.log(policy);
+        this.PoliciesService.setSelectedPolicy(policy);
+        this.router.navigate(['/homepage/policy']);
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, this, filter, keys, sort, pagenumber, pagesize,
             result => {
                 // On Success code here
+                console.log(result);
+                if (dataModelName == 'policies') {
+                    this.policy = result;
+                }
+                // if (dataModelName == 'categories') {
+                //     this.categories = result;
+                // }
+
             },
             error => {
+                console.log(error);
                 // Handle errors here
             });
     }

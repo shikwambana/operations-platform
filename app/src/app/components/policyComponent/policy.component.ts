@@ -4,6 +4,10 @@ import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
 import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
+import { policiesService } from '../../services/policies/policies.service';
+import { policies } from "../../models/policies.model";
+import { Router } from '@angular/router';
+
 
 /**
  * Service import Example :
@@ -11,20 +15,26 @@ import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
  */
 
 @Component({
-    selector: 'bh-search',
-    templateUrl: './search.template.html'
+    selector: 'bh-policy',
+    templateUrl: './policy.template.html'
 })
 
-export class searchComponent extends NBaseComponent implements OnInit {
+export class policyComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
+    selectedPolicy: policies;
 
-    constructor(private bdms: NDataModelService) {
+    constructor(private bdms: NDataModelService, public PoliciesService : policiesService, private router: Router) {
         super();
         this.mm = new ModelMethods(bdms);
+        this.selectedPolicy = new policies();
+
     }
 
     ngOnInit() {
-
+        this.selectedPolicy =  this.PoliciesService.getSelectedPolicy();
+        if(!this.selectedPolicy){
+          this.router.navigate(['/homepage/policies']);
+      }
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
@@ -37,6 +47,9 @@ export class searchComponent extends NBaseComponent implements OnInit {
             });
     }
 
+    goBack(){
+         this.router.navigate(['/homepage/policies']);
+    }
     getById(dataModelName, dataModelId) {
         this.mm.getById(dataModelName, dataModelId,
             result => {
