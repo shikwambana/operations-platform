@@ -12,6 +12,10 @@ window['neutrinos'] = {
 }
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-searchComponent
+import { searchComponent } from '../components/searchComponent/search.component';
+//CORE_REFERENCE_IMPORT-displayComponent
+import { displayComponent } from '../components/displayComponent/display.component';
 //CORE_REFERENCE_IMPORT-dialogComponent
 import { dialogComponent } from '../components/dialogComponent/dialog.component';
 //CORE_REFERENCE_IMPORT-editpolicyComponent
@@ -64,6 +68,10 @@ export const appDeclarations = [
   PageNotFoundComponent,
   NMapComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-searchComponent
+searchComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-displayComponent
+displayComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-dialogComponent
 dialogComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-editpolicyComponent
@@ -106,7 +114,7 @@ policiesService,
 
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_START
 export const appRoutes = [{path: 'home', component: homeComponent, canActivate: [NAuthGuardService],
-children: []},{path: 'login', component: loginComponent},{path: 'unauthorized', redirectTo: '/login', pathMatch: 'full'},{path: 'hrpolicy', component: hrpolicyadminComponent},{path: 'homepage', component: homepageComponent, canActivate: [NAuthGuardService],
+children: [{path: '', component: hrpolicyadminComponent}]},{path: 'login', component: loginComponent},{path: 'unauthorized', redirectTo: '/login', pathMatch: 'full'},{path: 'hrpolicy', component: hrpolicyadminComponent},{path: 'homepage', component: homepageComponent, canActivate: [NAuthGuardService],
 children: [{path: 'hr', component: hrpolicyadminComponent,
 children: []},{path: 'edit', component: editpolicyComponent}]},{path: '', redirectTo: '/login', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_END

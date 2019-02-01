@@ -11,3 +11,151 @@
     background-color: #ee1c22;
     color: white;
 }
+
+//=============================================================================================
+// TUKISO - Home component
+//=============================================================================================
+
+
+// login page
+.login-card .mat-card-image:first-child {
+    margin-top:0 !important
+}
+
+.primary-red-btn {
+    background-color: #ee1c22;
+    color: white;
+}
+
+// home page
+.home {
+    box-sizing: border-box;
+    padding: 10px;
+    background: url('assets/web/homeBg.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+}
+.homeToolBar {
+    background:transparent;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    padding: 45px 0 !important;
+    width: 95% !important;
+}
+.homeSidenavContainer {
+    height: 88vh;
+    top: 10vh;
+    width: 100%;
+    background: transparent;
+}
+.homeDesktopLinks .mat-raised-button {
+    font-size: 2em;     
+    line-height: 1.5em !important;     
+    font-weight: bold;     
+    background: transparent !important;
+    color:  #b71c1c;
+    box-shadow: none !important;
+    text-align: left !important;
+}
+.homeDesktopLinks .mat-raised-button:hover {
+    color: white;
+} 
+.homeMenuSmallBtn {
+    background: red !important;
+    padding: 3px !important;
+    border-radius: 42px;
+    display: block;
+    min-width: 40px !important;
+}
+.homeMenuSmallBtn:hover {
+    background: white !important;
+}
+.homeMenuSmallBtn:hover  mat-icon {
+    color: red !important;
+}
+.homeMainLogoutBtn {
+    color:red; 
+    font-weight:bold;
+    background: transparent;
+    border: solid 2px red !important;
+    border-radius: 5px;
+}
+.homeMainLogoutBtn:hover {
+    color:white; 
+    border: solid 2px white !important;
+}
+.mat-drawer {
+    background-color: transparent;
+}
+.mat-drawer .mat-raised-button {
+    background-color: #b71c1c;
+    margin: 3px 3px;
+    color: white;
+}
+.mat-drawer .mat-raised-button:hover {
+    background-color: white;
+    color: #b71c1c;
+}
+// Search
+.search-form {
+    min-width: 150px;
+    max-width: 100%;
+    width: 70%;
+}
+.search-full-width {
+    width: 100%;
+    background-color: transparent;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 0 20px;
+    color: white;
+}
+.mat-autocomplete-panel {
+    width: 100%;
+    background-color: #b71c1c;
+}
+.mat-option-text {
+    color: white;
+    font-weight: bold;
+}
+.mat-autocomplete-panel .mat-option.mat-selected:not(.mat-active):not(:hover):not(.mat-option-disabled) {
+    background: grey;
+}
+// Change the input style
+.search-form .mat-form-field-label {
+    color: white !important;
+}
+.search-form .mat-focused .mat-form-field-label {
+    color: red !important;
+}
+.search-form .mat-form-field-underline {
+    background-color: red !important;
+ } 
+.search-form .mat-form-field-ripple {
+   background-color: white !important;;
+} 
+// login remember me checkbox color
+.mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+    background-color: red;
+}
+
+// For screens with a maximum width of 599px
+@media only screen and (max-width: 599px){
+    .emptyRow {
+        height: 250px !important;
+    }
+}
+// For screens with a maximum width of 959px
+@media only screen and (max-width: 959px){
+    .emptyRow {
+        height: 250px !important;
+    }
+}
+
+//=============================================================================================
+// </Home component>
+//=============================================================================================

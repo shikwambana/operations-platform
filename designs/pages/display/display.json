@@ -1,0 +1,13 @@
+{
+    "appPageId": "01a055c5-333d-1bc2-93f8-322a2371b690",
+    "appPageName": "display",
+    "componentName": "displayComponent",
+    "selectorName": "bh-display",
+    "htmlFileName": "display.template.html",
+    "tsFileName": "display.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

@@ -8,7 +8,12 @@
             "resolve": "",
             "data": "",
             "canActivate": "NAuthGuardService",
-            "children": []
+            "children": [
+                {
+                    "path": "''",
+                    "component": "hrpolicyadminComponent"
+                }
+            ]
         },
         {
             "path": "login",

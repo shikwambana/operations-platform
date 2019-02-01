@@ -3,7 +3,7 @@ export const environment = {
     "name": "dev",
     "properties": {
         "production": false,
-        "baseUrl": "http://localhost:3000/bhive-art/",
+        "baseUrl": "http://10.0.0.7:3000/bhive-art/",
         "tenantName": "operations-platform",
         "appName": "operations-platform",
         "namespace": "com.neutrinos-delivery.operations-platform",

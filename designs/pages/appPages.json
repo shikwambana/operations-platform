@@ -33,5 +33,15 @@
         "appPageName": "dialog",
         "componentName": "dialogComponent",
         "isEntry": false
+    },
+    "01a055c5-333d-1bc2-93f8-322a2371b690": {
+        "appPageName": "display",
+        "componentName": "displayComponent",
+        "isEntry": false
+    },
+    "83260c80-6e90-b844-daf0-9c6010218c14": {
+        "appPageName": "search",
+        "componentName": "searchComponent",
+        "isEntry": false
     }
 }

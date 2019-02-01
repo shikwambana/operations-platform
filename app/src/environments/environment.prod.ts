@@ -3,7 +3,7 @@ export const environment = {
     "name": "prod",
     "properties": {
         "production": true,
-        "baseUrl": "http://localhost:3000/bhive-art/",
+        "baseUrl": "http://10.0.0.7:3000/bhive-art/",
         "tenantName": "operations-platform",
         "appName": "operations-platform",
         "namespace": "com.neutrinos-delivery.operations-platform",
@@ -14,7 +14,7 @@ export const environment = {
         "authDomain": "FIREBASE_AUTH_DOMAIN",
         "databaseURL": "FIREBASE_DATABASE_URL",
         "storageBucket": "FIREBASE_STORAGE_BUCKET",
-        "appDataSource": "neutrinos-delivery-rt",
+        "appDataSource": "operations",
         "appAuthenticationStrategy": "localAuth",
         "basicAuthUser": "username",
         "basicAuthPassword": "password",
