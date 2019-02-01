@@ -40,7 +40,8 @@ export class editpolicyComponent extends NBaseComponent implements OnInit {
     }
 
     updatePolicy(){
-        this.updateById('policies',this.selectedPolicy._id,this.selectedPolicy);
+        let id = this.selectedPolicy['_id'];
+        this.updateById('policies',id,this.selectedPolicy);
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {

@@ -8,7 +8,7 @@
         <div fxLayout="column wrap" fxLayoutAlign="center end" fxShow="true" fxHide="false"><button mat-raised-button="" (click)="openDialog()">Add Category</button></div>
       </div>
     </div>
-    <mat-accordion [displayMode]="linear" multi="false">
+    <mat-accordion multi="false">
       <mat-expansion-panel hideToggle="true">
         <mat-expansion-panel-header>
           <mat-panel-title>
@@ -21,7 +21,7 @@
         </mat-expansion-panel-header>
         <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
           <mat-form-field><input matInput="" [(ngModel)]="policies.title" placeholder="Policy Title" required></mat-form-field>
-          <mat-form-field style="height:100px;"><textarea matInput="" [(ngModel)]="policies.content" placeholder="Policy Content" required></textarea></mat-form-field>
+          <mat-form-field><textarea matInput="" [(ngModel)]="policies.content" placeholder="Policy Content" required></textarea></mat-form-field>
           <mat-form-field>
             <mat-select placeholder="Select a category" [(ngModel)]="policies.category" required>
               <mat-option *ngFor="let category of categories" [value]="category">{{category}}</mat-option>

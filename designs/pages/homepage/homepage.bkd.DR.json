@@ -300,7 +300,7 @@
                 "designerReference": [
                     {
                         "_key": "style",
-                        "_value": "height: 60%; background-color: black; width: 30%;",
+                        "_value": "height: 60%;  width: 30%;",
                         "_type": "kv",
                         "_attrDef": "p"
                     },

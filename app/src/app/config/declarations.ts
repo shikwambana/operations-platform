@@ -105,7 +105,8 @@ policiesService,
 */
 
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_START
-export const appRoutes = [{path: 'home', component: homeComponent, canActivate: [NAuthGuardService]},{path: 'login', component: loginComponent},{path: 'unauthorized', redirectTo: '/login', pathMatch: 'full'},{path: 'hrpolicy', component: hrpolicyadminComponent},{path: 'homepage', component: homepageComponent,
+export const appRoutes = [{path: 'home', component: homeComponent, canActivate: [NAuthGuardService],
+children: []},{path: 'login', component: loginComponent},{path: 'unauthorized', redirectTo: '/login', pathMatch: 'full'},{path: 'hrpolicy', component: hrpolicyadminComponent},{path: 'homepage', component: homepageComponent, canActivate: [NAuthGuardService],
 children: [{path: 'hr', component: hrpolicyadminComponent,
-children: []},{path: 'edit', component: editpolicyComponent}]},{path: '', redirectTo: '/home', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
+children: []},{path: 'edit', component: editpolicyComponent}]},{path: '', redirectTo: '/login', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_END

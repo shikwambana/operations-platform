@@ -44,7 +44,7 @@ export class hrpolicyadminComponent extends NBaseComponent implements OnInit {
         super();
         this.mm = new ModelMethods(bdms);
         this.policies = new policies();
-        this.categories = new categories();
+        // this.categories = new categories();
     }
 
 

@@ -7,7 +7,8 @@
             "redirectTo": "",
             "resolve": "",
             "data": "",
-            "canActivate": "NAuthGuardService"
+            "canActivate": "NAuthGuardService",
+            "children": []
         },
         {
             "path": "login",
@@ -40,13 +41,14 @@
                     "path": "edit",
                     "component": "editpolicyComponent"
                 }
-            ]
+            ],
+            "canActivate": "NAuthGuardService"
         },
         {
             "path": "''",
             "component": "",
             "pathMatch": "full",
-            "redirectTo": "/home",
+            "redirectTo": "/login",
             "resolve": "",
             "data": "",
             "canActivate": "",

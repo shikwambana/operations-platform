@@ -426,7 +426,7 @@
                     },
                     {
                         "_key": "[displayMode]",
-                        "_value": "linear",
+                        "_value": "",
                         "_type": "kv",
                         "_attrDef": "p"
                     },
@@ -703,7 +703,7 @@
                             "designerReference": [
                                 {
                                     "_key": "style",
-                                    "_value": "height:100px;",
+                                    "_value": "",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
