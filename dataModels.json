@@ -62,5 +62,12 @@
                 "isArray": true
             }
         ]
+    },
+    "d0db7b92-4c67-19fa-a6df-17e3bba06bb9": {
+        "dataModelId": "d0db7b92-4c67-19fa-a6df-17e3bba06bb9",
+        "name": "visa",
+        "description": "visa",
+        "dataSource": "neutrinos-delivery-rt",
+        "fields": []
     }
 }

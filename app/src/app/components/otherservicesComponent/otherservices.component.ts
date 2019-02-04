@@ -1,47 +1,67 @@
 /*DEFAULT GENERATED TEMPLATE. DO NOT CHANGE SELECTOR TEMPLATE_URL AND CLASS NAME*/
 import { Component, OnInit } from '@angular/core'
-import { Router } from '@angular/router';
-
 import { ModelMethods } from '../../lib/model.methods';
+// import { BDataModelService } from '../service/bDataModel.service';
+import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
-import { NDataModelService, NLogoutService } from 'neutrinos-seed-services';
-import { operationsService } from '../../services/operations/operations.service';
+
+/**
+ * Service import Example :
+ * import { HeroService } from '../services/hero/hero.service';
+ */
 
 @Component({
-    selector: 'bh-home',
-    templateUrl: './home.template.html'
+    selector: 'bh-otherservices',
+    templateUrl: './otherservices.template.html'
 })
 
-export class homeComponent extends NBaseComponent implements OnInit {
+export class otherservicesComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
 
-    homeLinks = ["home", "apply leave", ""]
+    operationsIcons = [
+        {
+            image: "Web/visa.jpg",
+            link: "../extension",
+            text: "Visa Extension"
+        },
+        {
+            image: "Web/images.png",
+            link: "../guesthouse",
+            text: "Guest House"
+        },
+        {
+            image: "Web/transportation.jpg",
+            link: "../transport",
+            text: "Transport Request"
+        },
+        {
+            image: "Web/flight.jpg",
+            link: "../flight",
+            text: "Flight Information"
+        },
+        {
+            image: "Web/hr.jpg",
+            link: "../hr",
+            text: "HR Policies"
+        }
+    ]
 
-    constructor(private bdms: NDataModelService, private logoutService: NLogoutService, private operationsService: operationsService, private router: Router) {
+    constructor(private bdms: NDataModelService) {
         super();
         this.mm = new ModelMethods(bdms);
     }
 
     ngOnInit() {
-        this.get('policies');
-    }
 
-    logoutUser() {
-        this.logoutService.logout();
-        this.router.navigate(['/login']);
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, this, filter, keys, sort, pagenumber, pagesize,
             result => {
                 // On Success code here
-                console.log(result, 'policies');
-                this.operationsService.policies = result;
-                console.log(this.operationsService.policies, "home");
             },
             error => {
                 // Handle errors here
-                console.log(error,'policies')
             });
     }
 
@@ -87,7 +107,7 @@ export class homeComponent extends NBaseComponent implements OnInit {
             })
     }
 
-    delete(dataModelName, filter) {
+    delete (dataModelName, filter) {
         this.mm.delete(dataModelName, filter,
             result => {
                 // On Success code here

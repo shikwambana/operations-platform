@@ -8,12 +8,7 @@
             "resolve": "",
             "data": "",
             "canActivate": "NAuthGuardService",
-            "children": [
-                {
-                    "path": "''",
-                    "component": "hrpolicyadminComponent"
-                }
-            ]
+            "children": []
         },
         {
             "path": "login",
@@ -54,25 +49,33 @@
                 {
                     "path": "''",
                     "component": "policiesComponent"
+                },
+                {
+                    "path": "search",
+                    "component": "searchComponent"
                 }
             ],
             "canActivate": "NAuthGuardService"
         },
         {
-            "path": "o",
+            "path": "menu",
             "component": "displayComponent",
             "children": [
                 {
-                    "path": "''",
-                    "component": "hrpolicyadminComponent"
+                    "path": "otherservices",
+                    "component": "otherservicesComponent"
+                },
+                {
+                    "path": "guesthouse",
+                    "component": "guesthouseComponent"
                 },
                 {
                     "path": "policies",
                     "component": "policiesComponent"
                 },
                 {
-                    "path": "policy",
-                    "component": "policyComponent"
+                    "path": "extension",
+                    "component": "extensionComponent"
                 }
             ]
         },

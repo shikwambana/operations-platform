@@ -27,7 +27,7 @@
 //=============================================================================================
 // TUKISO - Home component
 //=============================================================================================
-
+/*Importing default angular material css theme. */
 
 // login page
 .login-card .mat-card-image:first-child {
@@ -43,7 +43,7 @@
 .home {
     box-sizing: border-box;
     padding: 10px;
-    // background: url('assets/web/homeBg.jpg') no-repeat center center fixed;
+    background: url('assets/web/homeBg.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -138,27 +138,135 @@
     background: grey;
 }
 // Change the input style
-.search-form .mat-form-field-label {
+.mat-form-field-label {
     color: white !important;
 }
-.search-form .mat-focused .mat-form-field-label {
+.mat-focused .mat-form-field-label {
     color: red !important;
 }
-.search-form .mat-form-field-underline {
+.mat-form-field-underline {
     background-color: red !important;
  } 
-.search-form .mat-form-field-ripple {
+.mat-form-field-ripple {
    background-color: white !important;;
 } 
 // login remember me checkbox color
 .mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
     background-color: red;
 }
+.mat-checkbox-frame {
+    border-color: white;
+}
+// Menu Content
+.menuContent {
+    height: 85vh !important;
+    margin-top: 10vh !important;
+    color: white;
+    width: 100%;
+}
+// Operations Icons
+.operationsIconsRow {
+    width: 98% !important;
+}
+.cardSM {
+    margin-bottom: 3%;
+}
+.cardXS {
+    margin-bottom: 2%;
+}
+.otherservicesCardsContainer {
+    height: 65vh; 
+    overflow: auto;
+}
+.otherServiceCards {
+    background: rgba(255, 0, 0, 0.6);
+    height: 280px;
+    border-radius: 48px;
+}
+.otherServiceCards:hover {
+    background: red;
+}
+// Scroll Bar
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px red; 
+  border-radius: 10px;
+  background: transparent; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 0, 0, 0.6); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 0, 0, 0.9); 
+}
+
+// My Forms
+.formCard {
+    background-color:rgba(122, 122, 122, 0.3);
+    color: white;
+    width: 100%;
+}
+.formCard .mat-form-field-infix {
+    width: 325px !important;
+}
+.changeColor .mat-option-0 .mat-option-1 .mat-option-2 {
+    background: yellow;
+}
+.mat-select-panel .mat-optgroup-label, .mat-select-panel .mat-option {
+    background: red;
+}
+// Form Height
+.formHeight {
+    height: 79vh !important;
+    // width: 80% !important;
+    overflow: auto !important;
+    padding-top: 30vh !important;
+}
+.formWidth {
+    height: 71vh !important;
+    width: 86% !important;
+    overflow: auto !important;
+    padding-top: 56vh !important;
+    margin: 0 auto !important;
+    overflow-x: hidden !important;
+    text-align: center;
+}
+.formWidth .mat-form-field-infix {
+    width: 42vh !important;
+}
+
+
+// For screens with a maximum width of 415px
+@media only screen and (max-width: 415px){
+    .formWidth {
+        padding-top: 56vh !important;
+    }
+    .formWidth .mat-form-field-infix {
+        width: 32vh !important;
+    }
+}
 // For screens with a maximum width of 599px
 @media only screen and (max-width: 599px){
     .emptyRow {
         height: 250px !important;
+    }
+}
+// For screens with a maximum width of 768px
+@media only screen and (max-width: 768px){
+    .formWidth .mat-form-field-infix {
+        height: 81vh !important;
+        overflow: auto !important;
+        padding-top: 0vh !important;
     }
 }
 // For screens with a maximum width of 959px

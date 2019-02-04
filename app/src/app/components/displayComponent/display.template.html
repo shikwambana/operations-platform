@@ -3,11 +3,11 @@
     <mat-toolbar class="homeToolBar">
       <div fxLayout="column wrap" fxFlex="20" fxLayoutAlign="start none" fxShow="true" fxHide="false" fxFlex.sm="30" fxFlex.xs="40"><img imgSrc="Web/homelogo.png" routerLink="/home"></div>
       <div fxLayout="column wrap" fxFlex="80" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
-        <div fxLayout="row wrap" fxLayoutAlign="end stretch" fxShow="true" fxHide="false"><button mat-raised-button="" class="homeMainLogoutBtn" fxHide.sm="true" fxHide.xs="true" (click)="logoutUser()">Logout</button></div>
+        <div fxLayout="row wrap" fxLayoutAlign="end stretch" fxShow="true" fxHide="false"><button mat-raised-button="" class="homeMainLogoutBtn" (click)="logoutUser()">Logout</button></div>
       </div>
     </mat-toolbar>
   </header>
-  <div fxLayout="column wrap" style="color:white;height: 100%;" fxLayoutAlign="center center" fxShow="true" fxHide="false">
+  <div fxLayout="column wrap" class="menuContent" fxFlex="100" fxLayoutAlign="center center" fxShow="true" fxHide="false">
     <router-outlet></router-outlet>
   </div>
 </div>

@@ -38,7 +38,10 @@
     "@angular/router": "6.0.3",
     "@swimlane/ngx-charts": "8.0.2",
     "android-versions": "1.3.0",
+    "angular-instantsearch": "^2.1.0",
     "chart.js": "2.7.2",
+    "cordova-android": "~7.1.0",
+    "cordova-ios": "~4.5.4",
     "core-js": "2.5.7",
     "d3": "5.4.0",
     "firebase": "5.0.4",
@@ -50,9 +53,7 @@
     "rxjs": "6.2.0",
     "rxjs-compat": "6.2.0",
     "signature_pad": "2.3.2",
-    "zone.js": "0.8.26",
-    "cordova-android": "~7.1.0",
-    "cordova-ios": "~4.5.4"
+    "zone.js": "0.8.26"
   },
   "devDependencies": {
     "@angular/cli": "6.0.7",

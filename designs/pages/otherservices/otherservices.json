@@ -1,0 +1,13 @@
+{
+    "appPageId": "738acf91-208e-abc9-94fe-a1d41bf358af",
+    "appPageName": "otherservices",
+    "componentName": "otherservicesComponent",
+    "selectorName": "bh-otherservices",
+    "htmlFileName": "otherservices.template.html",
+    "tsFileName": "otherservices.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

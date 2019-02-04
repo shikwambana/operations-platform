@@ -1,0 +1,13 @@
+{
+    "appPageId": "5e705d00-b6bd-a465-e0bc-310a7b26174e",
+    "appPageName": "guesthouse",
+    "componentName": "guesthouseComponent",
+    "selectorName": "bh-guesthouse",
+    "htmlFileName": "guesthouse.template.html",
+    "tsFileName": "guesthouse.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

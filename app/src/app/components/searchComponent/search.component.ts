@@ -1,47 +1,77 @@
 /*DEFAULT GENERATED TEMPLATE. DO NOT CHANGE SELECTOR TEMPLATE_URL AND CLASS NAME*/
 import { Component, OnInit } from '@angular/core'
-import { Router } from '@angular/router';
-
 import { ModelMethods } from '../../lib/model.methods';
+// import { BDataModelService } from '../service/bDataModel.service';
+import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
-import { NDataModelService, NLogoutService } from 'neutrinos-seed-services';
+
+import { Router } from '@angular/router';
 import { operationsService } from '../../services/operations/operations.service';
 
+import { FormControl } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { map, startWith } from 'rxjs/operators';
+
+/**
+ * Service import Example :
+ * import { HeroService } from '../services/hero/hero.service';
+ */
+
 @Component({
-    selector: 'bh-home',
-    templateUrl: './home.template.html'
+    selector: 'bh-search',
+    templateUrl: './search.template.html'
 })
 
-export class homeComponent extends NBaseComponent implements OnInit {
+export class searchComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
 
-    homeLinks = ["home", "apply leave", ""]
+    services;
+    policies;
 
-    constructor(private bdms: NDataModelService, private logoutService: NLogoutService, private operationsService: operationsService, private router: Router) {
+    myControl = new FormControl();
+
+    operations = [{
+        name: 'Services',
+        operationObj: this.services
+    }, {
+        name: 'Policies',
+        operationObj: this.policies
+    }];
+
+
+    filteredOperations: Observable<any[]>;
+
+    constructor(private bdms: NDataModelService, private operationsService: operationsService, private router: Router) {
         super();
         this.mm = new ModelMethods(bdms);
     }
 
     ngOnInit() {
-        this.get('policies');
+        this.get('services');
+
+        this.filteredOperations = this.myControl.valueChanges.pipe(
+            startWith(''),
+            map(value => this._filter(value))
+        );
     }
 
-    logoutUser() {
-        this.logoutService.logout();
-        this.router.navigate(['/login']);
+    private _filter(value: string): any[] {
+        const filterValue = value.toLowerCase();
+
+        return this.operations.filter(operation => operation.name.toLowerCase().indexOf(filterValue) === 0);
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, this, filter, keys, sort, pagenumber, pagesize,
             result => {
                 // On Success code here
-                console.log(result, 'policies');
-                this.operationsService.policies = result;
-                console.log(this.operationsService.policies, "home");
+                this.operationsService.services = result;
+                this.services = this.operationsService.services;
+                this.policies = this.operationsService.policies;
             },
             error => {
                 // Handle errors here
-                console.log(error,'policies')
+                console.log(error, 'services')
             });
     }
 

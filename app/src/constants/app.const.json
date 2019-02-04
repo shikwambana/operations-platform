@@ -2,6 +2,7 @@
     "dataSource": {
         "user": "neutrinos-delivery-rt",
         "policies": "operations",
-        "categories": "operations-platform-rt"
+        "categories": "operations-platform-rt",
+        "visa": "neutrinos-delivery-rt"
     }
 }
