@@ -69,5 +69,165 @@
         "description": "visa",
         "dataSource": "neutrinos-delivery-rt",
         "fields": []
+    },
+    "76cf35b7-e10b-6eaf-89c7-91ad65b4ef04": {
+        "dataModelId": "76cf35b7-e10b-6eaf-89c7-91ad65b4ef04",
+        "name": "services",
+        "description": "services",
+        "dataSource": "operations",
+        "fields": [
+            {
+                "name": "title",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "link",
+                "fieldType": 2,
+                "isArray": false
+            }
+        ]
+    },
+    "93761d39-369c-8af8-fec7-8676584aba88": {
+        "dataModelId": "93761d39-369c-8af8-fec7-8676584aba88",
+        "name": "guesthouse",
+        "description": "huesthouse",
+        "dataSource": "operations",
+        "fields": [
+            {
+                "name": "problem",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "guest_house",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "unit_number",
+                "fieldType": 1,
+                "isArray": false
+            },
+            {
+                "name": "date",
+                "fieldType": 3,
+                "isArray": false
+            },
+            {
+                "name": "to_know",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "name",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "whatsapp_num",
+                "fieldType": 1,
+                "isArray": false
+            }
+        ]
+    },
+    "c17b8b7e-b9f0-dbcc-1a03-637f82a3e971": {
+        "dataModelId": "c17b8b7e-b9f0-dbcc-1a03-637f82a3e971",
+        "name": "transport",
+        "description": "transport",
+        "dataSource": "operations",
+        "fields": [
+            {
+                "name": "date",
+                "fieldType": 3,
+                "isArray": false
+            },
+            {
+                "name": "destination",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "from",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "to",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "time",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "additional_info",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "whatsapp_num",
+                "fieldType": 1,
+                "isArray": false
+            },
+            {
+                "name": "email",
+                "fieldType": 2,
+                "isArray": false
+            }
+        ]
+    },
+    "558029a5-fff5-35b8-eb51-ce6743e980d6": {
+        "dataModelId": "558029a5-fff5-35b8-eb51-ce6743e980d6",
+        "name": "flight",
+        "description": "flight",
+        "dataSource": "operations",
+        "fields": [
+            {
+                "name": "airlines",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "ticket_number",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "arrival",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "departure",
+                "fieldType": 2,
+                "isArray": false
+            }
+        ]
+    },
+    "310c3cdd-89d9-633b-7edb-b52e3c9180df": {
+        "dataModelId": "310c3cdd-89d9-633b-7edb-b52e3c9180df",
+        "name": "operations",
+        "description": "operations",
+        "dataSource": "operations",
+        "fields": [
+            {
+                "name": "name",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "email",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "message",
+                "fieldType": 2,
+                "isArray": false
+            }
+        ]
     }
 }

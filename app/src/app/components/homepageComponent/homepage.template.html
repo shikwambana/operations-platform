@@ -23,6 +23,9 @@
         <button mat-button="" (click)="logoutUser()">Log Out</button>
       </div>
     </mat-sidenav>
-    <router-outlet></router-outlet>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div fxLayout="row wrap" style="height: 90px;" fxLayoutAlign="start stretch" fxShow="true" fxHide="false"></div>
+      <router-outlet></router-outlet>
+    </div>
   </mat-sidenav-container>
 </div>

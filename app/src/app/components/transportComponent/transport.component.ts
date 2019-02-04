@@ -1,12 +1,10 @@
 /*DEFAULT GENERATED TEMPLATE. DO NOT CHANGE SELECTOR TEMPLATE_URL AND CLASS NAME*/
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-
+import { Component, OnInit } from '@angular/core'
 import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
-import { NDataModelService, NLogoutService } from 'neutrinos-seed-services';
+import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
-import { operationsService } from '../../services/operations/operations.service';
+import { transport } from '../../models/transport.model';
 
 /**
  * Service import Example :
@@ -14,16 +12,22 @@ import { operationsService } from '../../services/operations/operations.service'
  */
 
 @Component({
-    selector: 'bh-display',
-    templateUrl: './display.template.html'
+    selector: 'bh-transport',
+    templateUrl: './transport.template.html'
 })
 
-export class displayComponent extends NBaseComponent implements OnInit {
+export class transportComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
 
-    BtnRoutes: any[] = this.operationsService.BtnRoutes;
+    transport = new transport();
 
-    constructor(private bdms: NDataModelService, private logoutService: NLogoutService, private operationsService: operationsService, private router: Router) {
+    options: String[] = [
+        'Opt1',
+        'Opt2',
+        'Opt3'
+    ]
+
+    constructor(private bdms: NDataModelService) {
         super();
         this.mm = new ModelMethods(bdms);
     }
@@ -32,9 +36,8 @@ export class displayComponent extends NBaseComponent implements OnInit {
 
     }
 
-    logoutUser() {
-        this.logoutService.logout();
-        this.router.navigate(['/login']);
+    submit() {
+        this.put('transport', this.transport);
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
@@ -61,8 +64,10 @@ export class displayComponent extends NBaseComponent implements OnInit {
         this.mm.put(dataModelName, dataModelObject,
             result => {
                 // On Success code here
+                console.log('saved');
             }, error => {
                 // Handle errors here
+                console.log(error);
             })
     }
 
@@ -89,7 +94,7 @@ export class displayComponent extends NBaseComponent implements OnInit {
             })
     }
 
-    delete(dataModelName, filter) {
+    delete (dataModelName, filter) {
         this.mm.delete(dataModelName, filter,
             result => {
                 // On Success code here

@@ -8,7 +8,12 @@
             "resolve": "",
             "data": "",
             "canActivate": "NAuthGuardService",
-            "children": []
+            "children": [
+                {
+                    "path": "''",
+                    "component": "searchComponent"
+                }
+            ]
         },
         {
             "path": "login",
@@ -49,10 +54,6 @@
                 {
                     "path": "''",
                     "component": "policiesComponent"
-                },
-                {
-                    "path": "search",
-                    "component": "searchComponent"
                 }
             ],
             "canActivate": "NAuthGuardService"
@@ -76,6 +77,14 @@
                 {
                     "path": "extension",
                     "component": "extensionComponent"
+                },
+                {
+                    "component": "transportComponent",
+                    "path": "transport"
+                },
+                {
+                    "component": "flightComponent",
+                    "path": "flight"
                 }
             ]
         },

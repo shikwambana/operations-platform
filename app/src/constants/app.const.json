@@ -3,6 +3,11 @@
         "user": "neutrinos-delivery-rt",
         "policies": "operations",
         "categories": "operations-platform-rt",
-        "visa": "neutrinos-delivery-rt"
+        "visa": "neutrinos-delivery-rt",
+        "services": "operations",
+        "guesthouse": "operations",
+        "transport": "operations",
+        "flight": "operations",
+        "operations": "operations"
     }
 }
