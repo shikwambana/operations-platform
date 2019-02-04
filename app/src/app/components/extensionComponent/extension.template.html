@@ -22,7 +22,10 @@
               <mat-form-field color="black" class="search-full-width"><input matInput="" [(ngModel)]="visa.phone" name="phone" type="number" placeholder="Phone Number" required></mat-form-field>
             </div>
             <div fxLayout="column wrap" fxFlex="50" fxLayoutAlign="center center" fxShow="true" fxHide="false">
-              <mat-form-field class="search-full-width"><input matInput="" [(ngModel)]="visa.expiry_date" name="expiry_date" type="date" placeholder="When will your visa expire?" required id="expiry"></mat-form-field>
+              <mat-form-field class="search-full-width"><input matInput="" placeholder="When will your visa expire?" [matDatepicker]="picker" [(ngModel)]="visa.expiry_date" name="expiry_date">
+                <mat-datepicker-toggle matSuffix="" [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker="" type="date" id="expiry"></mat-datepicker>
+              </mat-form-field>
             </div>
           </div>
           <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="space-between center" fxShow="true" fxHide="false" fxLayout.sm="column" fxLayout.xs="column">

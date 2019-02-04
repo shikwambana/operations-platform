@@ -976,8 +976,8 @@
                                         "_attrDef": "p"
                                     }
                                 ],
-                                "f3abebef-df32-b7c6-86d5-e8958b0f8ba1": {
-                                    "paletteKey": "NG-Input",
+                                "df491a90-35ec-8802-b8ab-e7540ef03aa0": {
+                                    "paletteKey": "NG-DatePicker",
                                     "designerReference": [
                                         {
                                             "_key": "style",
@@ -1004,20 +1004,86 @@
                                             "_attrDef": "p"
                                         },
                                         {
-                                            "_key": "required",
-                                            "_value": "required",
-                                            "_type": "a",
+                                            "_key": "[min]",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "[max]",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "[startAt]",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "startView",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "touchUi",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "id",
+                                            "_value": "expiry",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "(dateChange)",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "(dateInput)",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "opened",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "disabled",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "(open)",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "(close)",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "[matDatepickerFilter]",
+                                            "_value": "",
+                                            "_type": "kv",
                                             "_attrDef": "p"
                                         },
                                         {
                                             "_key": "[(ngModel)]",
                                             "_value": "visa.expiry_date",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "color",
-                                            "_value": "",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
@@ -1028,14 +1094,14 @@
                                             "_attrDef": "p"
                                         },
                                         {
-                                            "_key": "type",
-                                            "_value": "date",
-                                            "_type": "kv",
+                                            "_key": "picker",
+                                            "_value": "picker",
+                                            "_type": "ma",
                                             "_attrDef": "p"
                                         },
                                         {
-                                            "_key": "id",
-                                            "_value": "expiry",
+                                            "_key": "type",
+                                            "_value": "date",
                                             "_type": "kv",
                                             "_attrDef": "c"
                                         }
@@ -1307,7 +1373,7 @@
                                         "_attrDef": "p"
                                     }
                                 ],
-                                "1868cdcf-66f4-b710-e6c8-162eed1e3996": {
+                                "4ab9757a-d3c4-3cbd-c2a7-380e4618183a": {
                                     "paletteKey": "NG-Input",
                                     "designerReference": [
                                         {

@@ -69,5 +69,66 @@
         "description": "visa",
         "dataSource": "neutrinos-delivery-rt",
         "fields": []
+    },
+    "76cf35b7-e10b-6eaf-89c7-91ad65b4ef04": {
+        "dataModelId": "76cf35b7-e10b-6eaf-89c7-91ad65b4ef04",
+        "name": "services",
+        "description": "services",
+        "dataSource": "operations",
+        "fields": [
+            {
+                "name": "title",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "link",
+                "fieldType": 2,
+                "isArray": false
+            }
+        ]
+    },
+    "93761d39-369c-8af8-fec7-8676584aba88": {
+        "dataModelId": "93761d39-369c-8af8-fec7-8676584aba88",
+        "name": "guesthouse",
+        "description": "huesthouse",
+        "dataSource": "operations",
+        "fields": [
+            {
+                "name": "problem",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "guest_house",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "unit_number",
+                "fieldType": 1,
+                "isArray": false
+            },
+            {
+                "name": "date",
+                "fieldType": 3,
+                "isArray": false
+            },
+            {
+                "name": "to_know",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "name",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "whatsapp_num",
+                "fieldType": 1,
+                "isArray": false
+            }
+        ]
     }
 }
