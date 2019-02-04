@@ -10,8 +10,8 @@
             "canActivate": "NAuthGuardService",
             "children": [
                 {
-                    "path": "search",
-                    "component": "findComponent"
+                    "path": "''",
+                    "component": "searchComponent"
                 }
             ]
         },
@@ -54,10 +54,6 @@
                 {
                     "path": "''",
                     "component": "policiesComponent"
-                },
-                {
-                    "path": "search",
-                    "component": "searchComponent"
                 }
             ],
             "canActivate": "NAuthGuardService"
@@ -80,12 +76,15 @@
                 },
                 {
                     "path": "extension",
-                    "component": "extensionComponent",
-                    "children": []
+                    "component": "extensionComponent"
                 },
                 {
-                    "component": "searchComponent",
-                    "path": "search"
+                    "component": "transportComponent",
+                    "path": "transport"
+                },
+                {
+                    "component": "flightComponent",
+                    "path": "flight"
                 }
             ]
         },

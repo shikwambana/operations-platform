@@ -1,47 +1,46 @@
 /*DEFAULT GENERATED TEMPLATE. DO NOT CHANGE SELECTOR TEMPLATE_URL AND CLASS NAME*/
 import { Component, OnInit } from '@angular/core'
-import { Router } from '@angular/router';
-
 import { ModelMethods } from '../../lib/model.methods';
+// import { BDataModelService } from '../service/bDataModel.service';
+import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
-import { NDataModelService, NLogoutService } from 'neutrinos-seed-services';
-import { operationsService } from '../../services/operations/operations.service';
+import { flight } from '../../models/flight.model';
+
+/**
+ * Service import Example :
+ * import { HeroService } from '../services/hero/hero.service';
+ */
 
 @Component({
-    selector: 'bh-home',
-    templateUrl: './home.template.html'
+    selector: 'bh-flight',
+    templateUrl: './flight.template.html'
 })
 
-export class homeComponent extends NBaseComponent implements OnInit {
+export class flightComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
 
-    BtnRoutes: any[] = this.operationsService.BtnRoutes;
+    flight = new flight();
 
-    constructor(private bdms: NDataModelService, private logoutService: NLogoutService, private operationsService: operationsService, private router: Router) {
+    constructor(private bdms: NDataModelService) {
         super();
         this.mm = new ModelMethods(bdms);
     }
 
     ngOnInit() {
-        // this.get('policies');
+
     }
 
-    logoutUser() {
-        this.logoutService.logout();
-        this.router.navigate(['/login']);
+    submit() {
+        this.put('flight', this.flight);
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, this, filter, keys, sort, pagenumber, pagesize,
             result => {
                 // On Success code here
-                console.log(result, 'policies');
-                this.operationsService.policies = result;
-                console.log(this.operationsService.policies, "home");
             },
             error => {
                 // Handle errors here
-                console.log(error,'policies')
             });
     }
 
@@ -59,8 +58,10 @@ export class homeComponent extends NBaseComponent implements OnInit {
         this.mm.put(dataModelName, dataModelObject,
             result => {
                 // On Success code here
+                console.log('saved');
             }, error => {
                 // Handle errors here
+                console.log(error);
             })
     }
 
@@ -87,7 +88,7 @@ export class homeComponent extends NBaseComponent implements OnInit {
             })
     }
 
-    delete(dataModelName, filter) {
+    delete (dataModelName, filter) {
         this.mm.delete(dataModelName, filter,
             result => {
                 // On Success code here

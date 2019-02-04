@@ -21,4 +21,40 @@ export class operationsService {
 //     console.log(this.searchFilter);
 
 //    }
+    displayer = "/menu";
+
+    BtnRoutes = [
+        {
+            name: "Home",
+            link: "/home"
+        },
+        {
+            name: "Apply Leave",
+            link: this.displayer + "/applyleave"
+        },
+        {
+            name: "Other Services",
+            link: this.displayer + "/otherservices"
+        },
+        {
+            name: "Emergency Contacts",
+            link: this.displayer + "/emergencies"
+        },
+        {
+            name: "HR Policies",
+            link: this.displayer + "/policies"
+        },
+        {
+            name: "Contact HR",
+            link: this.displayer + "/contacthr"
+        },
+        {
+            name: "Policies",
+            link: "../homepage/policies"
+        },
+        {
+            name: "Policy Admin",
+            link: "../homepage/hr"
+        },
+    ]
 }
