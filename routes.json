@@ -7,7 +7,8 @@
             "redirectTo": "",
             "resolve": "",
             "data": "",
-            "canActivate": "NAuthGuardService"
+            "canActivate": "NAuthGuardService",
+            "children": []
         },
         {
             "path": "login",
@@ -24,14 +25,87 @@
             "pathMatch": "full"
         },
         {
-            "path": "policies",
-            "component": "policiesComponent"
+            "path": "homepage",
+            "component": "homepageComponent",
+            "children": [
+                {
+                    "path": "hr",
+                    "component": "hrpolicyadminComponent",
+                    "children": []
+                },
+                {
+                    "path": "edit",
+                    "component": "editpolicyComponent"
+                },
+                {
+                    "component": "policyComponent",
+                    "path": "policy"
+                },
+                {
+                    "component": "policiesComponent",
+                    "path": "policies",
+                    "children": []
+                },
+                {
+                    "path": "''",
+                    "component": "policiesComponent"
+                },
+                {
+                    "path": "search",
+                    "component": "searchComponent"
+                }
+            ],
+            "canActivate": "NAuthGuardService"
+        },
+        {
+            "path": "menu",
+            "component": "displayComponent",
+            "children": [
+                {
+                    "path": "otherservices",
+                    "component": "otherservicesComponent"
+                },
+                {
+                    "path": "guesthouse",
+                    "component": "guesthouseComponent"
+                },
+                {
+                    "path": "policies",
+                    "component": "policiesComponent"
+                },
+                {
+                    "path": "extension",
+                    "component": "extensionComponent"
+                }
+            ]
+        },
+        {
+            "path": "lms",
+            "component": "lmsComponent",
+            "children": [
+                {
+                    "path": "myapprovals",
+                    "component": "myapprovalsComponent"
+                },
+                {
+                    "component": "applyleaveComponent",
+                    "path": "applyleave"
+                },
+                {
+                    "component": "userdetailComponent",
+                    "path": "userdetail"
+                },
+                {
+                    "path": "userregistration",
+                    "component": "userregistrationComponent"
+                }
+            ]
         },
         {
             "path": "''",
             "component": "",
             "pathMatch": "full",
-            "redirectTo": "/home",
+            "redirectTo": "/login",
             "resolve": "",
             "data": "",
             "canActivate": "",

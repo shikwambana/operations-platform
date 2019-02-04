@@ -1,8 +1,13 @@
-<div fxLayout="column wrap" fxLayoutAlign="center center" fxShow="true" fxHide="false">
-  <h3 style="margin-top:0;color:#ad4632;">Policies</h3>
-  <div fxLayout="row wrap" style="marign-top" class="policyCardRow" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
-    <mat-card *ngFor="let con of Content" style="background-color:#ced2e0; cursor: pointer" class="policyCard">
-      <mat-card-title routerLink="{{con | lowercase}}" (click)="selected(con)" style="font-size: 9px;color:#20232b;">{{con}}</mat-card-title>
+<div fxLayout="column wrap" style="padding: 25px;" fxFlex="100" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+  <div fxLayout="row wrap" fxFlex="24" fxLayoutAlign="space-between none" fxShow="true" fxHide="false">
+    <mat-card *ngFor="let policies of policy" style="margin: 10px; width: 25%;">
+      <mat-card-title>{{ policies.title }}</mat-card-title>
+      <mat-card-content>
+        <h4>Category: {{ policies.category }}</h4>
+      </mat-card-content>
+      <mat-card-footer style="margin: 0 -24px -24px 6px;">
+        <mat-card-actions style="padding: 5px;"><button mat-raised-button="" (click)="viewPolicy(policies)">View Policy</button></mat-card-actions>
+      </mat-card-footer>
     </mat-card>
   </div>
 </div>

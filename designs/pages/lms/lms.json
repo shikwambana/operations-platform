@@ -1,0 +1,13 @@
+{
+    "appPageId": "48b12069-c7fe-6ae2-9238-f5c571b4ea10",
+    "appPageName": "lms",
+    "componentName": "lmsComponent",
+    "selectorName": "bh-lms",
+    "htmlFileName": "lms.template.html",
+    "tsFileName": "lms.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

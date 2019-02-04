@@ -1,10 +1,10 @@
 {
-    "e1e4d792-e3ef-47f4-cfca-90e46c782d12": {
+    "71a39f2d-6ca7-0d96-9928-d671b044f386": {
         "paletteKey": "FlexLayoutCol",
         "designerReference": [
             {
                 "_key": "style",
-                "_value": "",
+                "_value": "padding: 25px;",
                 "_type": "kv",
                 "_attrDef": "p"
             },
@@ -16,7 +16,7 @@
             },
             {
                 "_key": "fxFlex",
-                "_value": "",
+                "_value": "100",
                 "_type": "kv",
                 "_attrDef": "p"
             },
@@ -34,13 +34,13 @@
             },
             {
                 "_key": "layoutAlign",
-                "_value": "center",
+                "_value": "start",
                 "_type": "a",
                 "_attrDef": "p"
             },
             {
                 "_key": "pLayoutAlign",
-                "_value": "center",
+                "_value": "stretch",
                 "_type": "a",
                 "_attrDef": "p"
             },
@@ -57,47 +57,24 @@
                 "_attrDef": "p"
             }
         ],
-        "fb29b679-fd5e-e0fe-065a-61085b0956b6": {
-            "paletteKey": "NG-H3",
+        "46581da7-134d-e231-f9e4-81b1dc2e0c93": {
+            "paletteKey": "FlexLayoutRow",
             "designerReference": [
                 {
                     "_key": "style",
-                    "_value": "margin-top:0;color:#ad4632;",
+                    "_value": "",
                     "_type": "kv",
                     "_attrDef": "p"
                 },
                 {
                     "_key": "class",
                     "_value": "",
-                    "_type": "kv",
-                    "_attrDef": "p"
-                },
-                {
-                    "_key": "H3 Text",
-                    "_value": "Policies",
-                    "_type": "a",
-                    "_attrDef": "p"
-                }
-            ]
-        },
-        "4101bde3-fb95-2937-9f60-cd393151491a": {
-            "paletteKey": "FlexLayoutRow",
-            "designerReference": [
-                {
-                    "_key": "style",
-                    "_value": "marign-top",
-                    "_type": "kv",
-                    "_attrDef": "p"
-                },
-                {
-                    "_key": "class",
-                    "_value": "policyCardRow",
                     "_type": "kv",
                     "_attrDef": "p"
                 },
                 {
                     "_key": "fxFlex",
-                    "_value": "",
+                    "_value": "24",
                     "_type": "kv",
                     "_attrDef": "p"
                 },
@@ -115,13 +92,13 @@
                 },
                 {
                     "_key": "layoutAlign",
-                    "_value": "start",
+                    "_value": "space-between",
                     "_type": "a",
                     "_attrDef": "p"
                 },
                 {
                     "_key": "pLayoutAlign",
-                    "_value": "stretch",
+                    "_value": "none",
                     "_type": "a",
                     "_attrDef": "p"
                 },
@@ -136,42 +113,36 @@
                     "_value": "false",
                     "_type": "kv",
                     "_attrDef": "p"
-                },
-                {
-                    "_key": "fxLayoutAlign",
-                    "_value": "space-between",
-                    "_type": "kv",
-                    "_attrDef": "c"
                 }
             ],
-            "4e7590b7-88b2-12f4-5956-1d19698551cc": {
+            "336824b3-0e28-8ce5-86db-a00513adfa79": {
                 "paletteKey": "NG-card",
                 "designerReference": [
                     {
                         "_key": "style",
-                        "_value": "background-color:#ced2e0; cursor: pointer",
+                        "_value": "margin: 10px; width: 25%;",
                         "_type": "kv",
                         "_attrDef": "p"
                     },
                     {
                         "_key": "class",
-                        "_value": "policyCard",
+                        "_value": "",
                         "_type": "kv",
                         "_attrDef": "p"
                     },
                     {
                         "_key": "*ngFor",
-                        "_value": "let con of Content",
+                        "_value": "let policies of policy",
                         "_type": "kv",
                         "_attrDef": "c"
                     }
                 ],
-                "c96611e5-6c8a-e8e9-9bb2-f47f970de8bd": {
+                "e0226c37-0832-99d7-98e6-383b4e2eb73a": {
                     "paletteKey": "NG-CardTitle",
                     "designerReference": [
                         {
                             "_key": "style",
-                            "_value": "font-size: 9px;color:#20232b;",
+                            "_value": "",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -183,23 +154,120 @@
                         },
                         {
                             "_key": "Title",
-                            "_value": "{{con}}",
+                            "_value": "{{ policies.title }}",
                             "_type": "a",
+                            "_attrDef": "p"
+                        }
+                    ]
+                },
+                "567b4a9b-a2bd-40ce-2a5e-754fccbcad2f": {
+                    "paletteKey": "NG-CardContent",
+                    "designerReference": [
+                        {
+                            "_key": "style",
+                            "_value": "",
+                            "_type": "kv",
                             "_attrDef": "p"
                         },
                         {
-                            "_key": "routerLink",
-                            "_value": "{{con | lowercase}}",
+                            "_key": "class",
+                            "_value": "",
                             "_type": "kv",
-                            "_attrDef": "c"
+                            "_attrDef": "p"
+                        }
+                    ],
+                    "0be64275-035e-b413-0cb1-714966e6fb15": {
+                        "paletteKey": "NG-H4",
+                        "designerReference": [
+                            {
+                                "_key": "style",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "class",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "H4 Text",
+                                "_value": "Category: {{ policies.category }}",
+                                "_type": "a",
+                                "_attrDef": "p"
+                            }
+                        ]
+                    }
+                },
+                "53a40a92-9491-28b6-7055-5e1becf417b3": {
+                    "paletteKey": "NG-CardFooter",
+                    "designerReference": [
+                        {
+                            "_key": "style",
+                            "_value": "margin: 0 -24px -24px 6px;",
+                            "_type": "kv",
+                            "_attrDef": "p"
                         },
                         {
-                            "_key": "(click)",
-                            "_value": "selected(con)",
+                            "_key": "class",
+                            "_value": "",
                             "_type": "kv",
-                            "_attrDef": "c"
+                            "_attrDef": "p"
                         }
-                    ]
+                    ],
+                    "7740b906-856e-9cb9-f597-a4f9d1611021": {
+                        "paletteKey": "NG-CardActions",
+                        "designerReference": [
+                            {
+                                "_key": "style",
+                                "_value": "padding: 5px;",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "class",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            }
+                        ],
+                        "cc13f3a0-4626-4500-b199-0eb16c69555c": {
+                            "paletteKey": "NG-RaisedButton",
+                            "designerReference": [
+                                {
+                                    "_key": "style",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "class",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "buttonname",
+                                    "_value": "View Policy",
+                                    "_type": "a",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "color",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "(click)",
+                                    "_value": "viewPolicy(policies)",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                }
+                            ]
+                        }
+                    }
                 }
             }
         }

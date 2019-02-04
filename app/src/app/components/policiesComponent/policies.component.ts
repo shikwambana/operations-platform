@@ -4,12 +4,14 @@ import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
 import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
+import { policiesService } from '../../services/policies/policies.service';
+import { policies } from "../../models/policies.model";
+import { Router } from '@angular/router';
 
 /**
  * Service import Example :
  * import { HeroService } from '../services/hero/hero.service';
  */
-
 
 @Component({
     selector: 'bh-policies',
@@ -18,96 +20,49 @@ import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 
 export class policiesComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
+    policy: policies;
 
-    Content = [
-        "ALLOWANCE",
-        "JOB_RECRUITMENT",
-        "APPOINTMENT_POLICY",
-        "STAFF_INDUCTION",
-        "ETHICAL_BEHAVIOUR",
-        "DISCIPLINARY_PROCEDURE",
-        "SUSPENSION_POLICY",
-        "CODE_OF_CONTENT",
-        "GRIEVANCE_PROCEDURE",
-        "SEXUAL_HARASSMENT",
-        "EMPLOYMENT_WELLNESS",
-        "EMPLOYEE_DOCUMENT",
-        "TERMINATION",
-        "OVERTIME",
-        "LEAVE_POLICIES",
-        "OCCUPATIONAL",
-        "VEHICLEPOLICY",
-        "SMOKING",
-        "TRAINING_DEVELOPMENT",
-        "STUDYLOAN"
-    ]
+    // policy = [
+    // {"_id": "5c532e989dc2041314a83cc7", title: "ALLOWANCE salary", 
+    // "content": "Policy It is the policy of Neutrinos to reimburse … expenses that are inconsistent with this policy.", 
+    // "acknowledgement": false, 
+    // "category": "TRAVEL AND ENTERTAINMENT POLICY"}];
+    
 
-    // Contents = [
-    //     {"title" : "Hellow", 
-    //     "content": "feebeubbiwiuwiuv cibvivwrivvwr vsdibvs vsfiuvcfs",
-    //     "acknowledgement" : true,
-    //     "category" : "Greeting policy"},
-
-    //    {"title" : "how are you", 
-    //     "content": "feebeubbiwiuwiuv cibvivwrivvwr vsdibvs vsfiuvcfs",
-    //     "acknowledgement" : true,
-    //     "category" : "Greeting policy"},
-
-    //    {"title" : "are you good", 
-    //     "content": "feebeubbiwiuwiuv cibvivwrivvwr vsdibvs vsfiuvcfs",
-    //     "acknowledgement" : true,
-    //     "category" : "Greeting policy"},
-
-    //    {"title" : "hahaha", 
-    //     "content": "feebeubbiwiuwiuv cibvivwrivvwr vsdibvs vsfiuvcfs",
-    //     "acknowledgement" : true,
-    //     "category" : "Greeting policy"},
-
-        
-    // ]
-    // link = [
-    //     "ALLOWANCE",
-    //     "JOB_RECRUITMENT",
-    //     "APPOINTMENT_POLICY",
-    //     "STAFF_INDUCTION",
-    //     "ETHICAL_BEHAVIOUR",
-    //     "DISCIPLINARY_PROCEDURE",
-    //     "SUSPENSION_POLICY",
-    //     "CODE_OF_CONTENT",
-    //     "GRIEVANCE_PROCEDURE",
-    //     "SEXUAL_HARASSMENT",
-    //     "EMPLOYMENT_WELLNESS",
-    //     "EMPLOYEE_DOCUMENT",
-    //     "TERMINATION",
-    //     "OVERTIME",
-    //     "LEAVE_POLICIES",
-    //     "OCCUPATIONAL",
-    //     "VEHICLEPOLICY",
-    //     "SMOKING",
-    //     "TRAINING_DEVELOPMENT",
-    //     "STUDYLOAN"
-    // ]
-
-
-    constructor(private bdms: NDataModelService) {
+    constructor(private bdms: NDataModelService, public PoliciesService : policiesService, private router: Router) {
         super();
         this.mm = new ModelMethods(bdms);
+        // this.selectedPolicy = new policies();
+
     }
 
     ngOnInit() {
+        this.get('policies');
 
     }
+    
 
-    selected(con){
-        console.log(con);
+    viewPolicy(policy){
+        console.log(policy);
+        this.PoliciesService.setSelectedPolicy(policy);
+        this.router.navigate(['/homepage/policy']);
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, this, filter, keys, sort, pagenumber, pagesize,
             result => {
                 // On Success code here
+                console.log(result);
+                if (dataModelName == 'policies') {
+                    this.policy = result;
+                }
+                // if (dataModelName == 'categories') {
+                //     this.categories = result;
+                // }
+
             },
             error => {
+                console.log(error);
                 // Handle errors here
             });
     }
@@ -154,7 +109,7 @@ export class policiesComponent extends NBaseComponent implements OnInit {
             })
     }
 
-    delete(dataModelName, filter) {
+    delete (dataModelName, filter) {
         this.mm.delete(dataModelName, filter,
             result => {
                 // On Success code here

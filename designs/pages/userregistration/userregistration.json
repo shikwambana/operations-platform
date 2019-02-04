@@ -1,0 +1,13 @@
+{
+    "appPageId": "4a0bd27a-2ad7-bbcc-ed5c-ae61718ef20c",
+    "appPageName": "userregistration",
+    "componentName": "userregistrationComponent",
+    "selectorName": "bh-userregistration",
+    "htmlFileName": "userregistration.template.html",
+    "tsFileName": "userregistration.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

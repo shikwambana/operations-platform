@@ -1,0 +1,13 @@
+{
+    "appPageId": "c1fb5374-c56f-624a-7c82-d8e8e5810192",
+    "appPageName": "myapprovals",
+    "componentName": "myapprovalsComponent",
+    "selectorName": "bh-myapprovals",
+    "htmlFileName": "myapprovals.template.html",
+    "tsFileName": "myapprovals.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

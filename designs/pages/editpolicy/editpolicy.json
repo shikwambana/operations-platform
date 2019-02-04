@@ -1,0 +1,13 @@
+{
+    "appPageId": "5cec9809-1f95-a1cb-f646-97f6b5763019",
+    "appPageName": "editpolicy",
+    "componentName": "editpolicyComponent",
+    "selectorName": "bh-editpolicy",
+    "htmlFileName": "editpolicy.template.html",
+    "tsFileName": "editpolicy.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

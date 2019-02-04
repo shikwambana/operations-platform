@@ -3,7 +3,7 @@
         "dataModelId": "612ee53c-d6b7-0ef7-4743-4102b97d9d63",
         "name": "user",
         "description": "DM for mapping user values from form",
-        "dataSource": "neutrinos-delivery-rt",
+        "dataSource": "operations",
         "fields": [
             {
                 "name": "username",
@@ -22,29 +22,243 @@
             }
         ]
     },
-    "60f374a7-a0b3-f40c-440a-16b7fdaff198": {
-        "dataModelId": "60f374a7-a0b3-f40c-440a-16b7fdaff198",
+    "366ec9bb-57f8-ef50-e9bb-01e54f4e0a9e": {
+        "dataModelId": "366ec9bb-57f8-ef50-e9bb-01e54f4e0a9e",
         "name": "policies",
         "description": "policies",
-        "dataSource": "operations-platform-rt",
+        "dataSource": "operations",
         "fields": [
             {
-                "name": "Title",
+                "name": "title",
                 "fieldType": 2,
                 "isArray": false
             },
             {
-                "name": "Content",
+                "name": "content",
                 "fieldType": 2,
                 "isArray": false
             },
             {
-                "name": "Acknowledgement",
+                "name": "acknowledgement",
                 "fieldType": 4,
                 "isArray": false
             },
             {
-                "name": "Category",
+                "name": "category",
+                "fieldType": 2,
+                "isArray": false
+            }
+        ]
+    },
+    "33af7552-2021-e659-1ad9-4c7ba6e38d4c": {
+        "dataModelId": "33af7552-2021-e659-1ad9-4c7ba6e38d4c",
+        "name": "categories",
+        "description": "Categories for policies",
+        "dataSource": "operations-platform-rt",
+        "fields": [
+            {
+                "name": "category",
+                "fieldType": 2,
+                "isArray": true
+            }
+        ]
+    },
+    "d0db7b92-4c67-19fa-a6df-17e3bba06bb9": {
+        "dataModelId": "d0db7b92-4c67-19fa-a6df-17e3bba06bb9",
+        "name": "visa",
+        "description": "visa",
+        "dataSource": "neutrinos-delivery-rt",
+        "fields": []
+    },
+    "083c0ea8-195c-cdc4-914e-45c377ee51d0": {
+        "dataModelId": "083c0ea8-195c-cdc4-914e-45c377ee51d0",
+        "name": "employees",
+        "description": "employees",
+        "dataSource": "operations",
+        "fields": [
+            {
+                "name": "firstName",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "lastName",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "employeeID",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "username",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "displayName",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "department",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "groupList",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "managerName",
+                "fieldType": 2,
+                "isArray": false
+            }
+        ]
+    },
+    "66b28128-8c98-7574-5bdb-89d6ca10ecdb": {
+        "dataModelId": "66b28128-8c98-7574-5bdb-89d6ca10ecdb",
+        "name": "leaves",
+        "description": "leaves",
+        "dataSource": "operations",
+        "fields": [
+            {
+                "name": "annualLeaves",
+                "fieldType": 1,
+                "isArray": false
+            },
+            {
+                "name": "sickLeaves",
+                "fieldType": 1,
+                "isArray": false
+            },
+            {
+                "name": "approvedLeaves",
+                "fieldType": 1,
+                "isArray": false
+            }
+        ]
+    },
+    "f0ccfd9b-4bff-e08d-294a-193b4258ae74": {
+        "dataModelId": "f0ccfd9b-4bff-e08d-294a-193b4258ae74",
+        "name": "leaverequest",
+        "description": "leaverequest",
+        "dataSource": "operations",
+        "fields": [
+            {
+                "name": "leaveType",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "fromDate",
+                "fieldType": 3,
+                "isArray": false
+            },
+            {
+                "name": "toDate",
+                "fieldType": 3,
+                "isArray": false
+            },
+            {
+                "name": "duration",
+                "fieldType": 1,
+                "isArray": false
+            },
+            {
+                "name": "leaveStatus",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "username",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "fullName",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "managerName",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "leaveReason",
+                "fieldType": 2,
+                "isArray": false
+            }
+        ]
+    },
+    "f5715d2f-4296-aa02-9416-9f681d45e70a": {
+        "dataModelId": "f5715d2f-4296-aa02-9416-9f681d45e70a",
+        "name": "employee",
+        "description": "employee",
+        "dataSource": "operations",
+        "fields": [
+            {
+                "name": "staff",
+                "fieldType": 5,
+                "isArray": false,
+                "complexTypeName": "staff",
+                "complexTypeId": "2b94952e-5a78-b54a-8022-92ac2fff0a31"
+            },
+            {
+                "name": "leaves",
+                "fieldType": 5,
+                "isArray": false,
+                "complexTypeName": "leaves",
+                "complexTypeId": "66b28128-8c98-7574-5bdb-89d6ca10ecdb"
+            }
+        ]
+    },
+    "2b94952e-5a78-b54a-8022-92ac2fff0a31": {
+        "dataModelId": "2b94952e-5a78-b54a-8022-92ac2fff0a31",
+        "name": "staff",
+        "description": "staff",
+        "dataSource": "operations",
+        "fields": [
+            {
+                "name": "firstName",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "lastName",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "employeeID",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "username",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "dispalyName",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "department",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "groupList",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "managerName",
                 "fieldType": 2,
                 "isArray": false
             }

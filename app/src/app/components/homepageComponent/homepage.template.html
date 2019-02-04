@@ -1,0 +1,28 @@
+<div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+  <header>
+    <mat-toolbar>
+      <div fxLayout="column wrap" fxFlex="85" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+        <h1>Operations</h1>
+      </div>
+      <div fxLayout="column wrap" fxLayoutAlign="center end" fxShow="true" fxHide="false"><button mat-raised-button="" (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button></div>
+    </mat-toolbar>
+  </header>
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav="" style="height: 60%;  width: 30%;" mode="push" position="right">
+      <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+        <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+          <div class="container">
+            <ul class="nav navbar-nav" routerLinkActive="active">
+              <li class="nav-item"><a class="nav-link" routerLink="policies">Policies</a></li>
+              <li class="nav-item"><a class="nav-link" routerLink="hr">Admin policies</a></li>
+            </ul>
+          </div>
+        </nav>
+        <button mat-button="" (click)="logoutUser()">Log Out</button>
+      </div>
+    </mat-sidenav>
+    <router-outlet></router-outlet>
+  </mat-sidenav-container>
+</div>

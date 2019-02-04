@@ -1,3 +1,26 @@
-<div fxLayout="column " fxLayoutAlign="center center" fxShow="true" fxHide="false">
-  <h3>You are now logged in!</h3><button mat-raised-button="" (click)="logoutUser()">Logout</button>
+<div fxLayout="column wrap" class="home" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+  <header>
+    <mat-toolbar class="homeToolBar">
+      <div fxLayout="column wrap" fxFlex="20" fxLayoutAlign="start none" fxShow="true" fxHide="false" fxFlex.sm="30" fxFlex.xs="40"><img imgSrc="Web/homelogo.png" routerLink="/home"></div>
+      <div fxLayout="column wrap" fxFlex="80" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+        <div fxLayout="row wrap" fxLayoutAlign="end stretch" fxShow="true" fxHide="false"><button mat-button="" style="background:white;padding:10px;border-radius:50%;" class="homeMenuSmallBtn" fxHide="true" fxShow.sm="true" fxShow.xs="true" (click)="sidenav.toggle();">
+            <mat-icon style="color:white;">menu</mat-icon>
+          </button><button mat-raised-button="" class="homeMainLogoutBtn" fxHide.sm="true" fxHide.xs="true" (click)="logoutUser()">Logout</button></div>
+      </div>
+    </mat-toolbar>
+  </header>
+  <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+    <mat-sidenav-container class="homeSidenavContainer">
+      <mat-sidenav #sidenav="" mode="over">
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false"><button mat-raised-button="" routerLink="/home">Home</button><button mat-raised-button="" routerLink="/applyleave">Apply Leave</button><button mat-raised-button="" routerLink="/otherservices">Other Services</button><button mat-raised-button="" routerLink="/emergency">Emergency Contacts</button><button mat-raised-button="" routerLink="/hrpolicies">HR Policies</button><button mat-raised-button="" routerLink="/contacthr">Contact HR</button><button mat-raised-button="" class="homeLogoutBtn" (click)="logoutUser()">Logout</button></div>
+      </mat-sidenav>
+      <div fxLayout="row wrap" style="height: 100px;" class="emptyRow" fxLayoutAlign="start stretch" fxShow="true" fxHide="false"></div>
+      <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+        <div fxLayout="column wrap" class="homeDesktopLinks" fxFlex="25" fxLayoutAlign="start stretch" fxShow="true" fxHide="false" fxHide.xs="true" fxHide.sm="true"><button mat-raised-button="" routerLink="/home">Home</button><button mat-raised-button="" routerLink="/applyleave">Apply Leave</button><button mat-raised-button="" routerLink="/otherservices">Other Services</button><button mat-raised-button="" routerLink="/emergency">Emergency Contacts</button><button mat-raised-button="" routerLink="/hrpolicies">HR Policies</button><button mat-raised-button="" routerLink="/contacthr">Contact HR</button></div>
+        <div fxLayout="column wrap" fxFlex="70" fxLayoutAlign="center stretch" fxShow="true" fxHide="false" fxFlex.xs="100" fxFlex.sm="100">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </mat-sidenav-container>
+  </div>
 </div>

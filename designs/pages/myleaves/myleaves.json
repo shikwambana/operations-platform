@@ -1,0 +1,13 @@
+{
+    "appPageId": "8aea07c1-1fd8-2ffd-34f5-becdee61d4f2",
+    "appPageName": "myleaves",
+    "componentName": "myleavesComponent",
+    "selectorName": "bh-myleaves",
+    "htmlFileName": "myleaves.template.html",
+    "tsFileName": "myleaves.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

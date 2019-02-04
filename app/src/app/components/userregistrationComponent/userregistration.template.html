@@ -1,0 +1,68 @@
+<div fxLayout="row " fxLayoutAlign="center start" fxShow="true" fxHide="false" fxFill="">
+  <div fxLayout="column " class=" margin-tb" fxLayoutAlign="center center" fxShow="true" fxHide="false" fxFlex.md="60" fxFlex.gt-md="40" fxFlex.sm="70" fxFlex.xs="90">
+    <form #form="ngForm" style="width:100%">
+      <mat-card>
+        <div fxLayout="row wrap" fxLayoutAlign="center center" fxShow="true" fxHide="false">
+          <mat-card-title> Employee Information</mat-card-title>
+        </div>
+        <div fxLayout="row " fxFlex="100" fxLayoutGap="1.25em" fxLayoutAlign="center center" fxShow="true" fxHide="false">
+          <div fxLayout="column wrap" fxLayoutAlign="end end" fxShow="true" fxHide="false">
+            <mat-icon>person</mat-icon>
+          </div>
+          <div fxLayout="column wrap" fxLayoutAlign="start center" fxShow="true" fxHide="false">
+            <mat-form-field><input matInput="" [(ngModel)]="dm.employee.staff.firstName" name="firstName" placeholder=" First Name" required disabled="disabled"></mat-form-field>
+          </div>
+        </div>
+        <div fxLayout="row wrap" fxFlex="100" fxLayoutGap="1.25em" fxLayoutAlign="center center" fxShow="true" fxHide="false">
+          <div fxLayout="column wrap" fxLayoutAlign="end end" fxShow="true" fxHide="false">
+            <mat-icon>person</mat-icon>
+          </div>
+          <div fxLayout="column wrap" fxLayoutAlign="start center" fxShow="true" fxHide="false">
+            <mat-form-field><input matInput="" [(ngModel)]="dm.employee.staff.lastName" name=" lastName" placeholder="  Last Name" required disabled="disabled"></mat-form-field>
+          </div>
+        </div>
+        <div fxLayout="row wrap" fxFlex="100" fxLayoutGap="1.25em" fxLayoutAlign="center center" fxShow="true" fxHide="false">
+          <div fxLayout="column wrap" fxLayoutAlign="end end" fxShow="true" fxHide="false">
+            <mat-icon>email</mat-icon>
+          </div>
+          <div fxLayout="column wrap" fxLayoutAlign="start center" fxShow="true" fxHide="false">
+            <mat-form-field><input matInput="" [(ngModel)]="dm.employee.staff.username" name="username" placeholder=" Email ID" required disabled="disabled"></mat-form-field>
+          </div>
+        </div>
+        <div fxLayout="row wrap" fxFlex="100" fxLayoutGap="1.25em" fxLayoutAlign="center center" fxShow="true" fxHide="false">
+          <div fxLayout="column wrap" fxLayoutAlign="end end" fxShow="true" fxHide="false">
+            <mat-icon> person</mat-icon>
+          </div>
+          <div fxLayout="column wrap" fxLayoutAlign="start center" fxShow="true" fxHide="false">
+            <mat-form-field><input matInput="" [(ngModel)]="dm.employee.staff.employeeID" name="employeeID" placeholder=" Employee ID" required pattern="[A-Z0-9]{5}"></mat-form-field>
+          </div>
+        </div>
+        <div fxLayout="row wrap" fxFlex="100" fxLayoutGap="1.25em" fxLayoutAlign="center center" fxShow="true" fxHide="false">
+          <div fxLayout="column wrap" fxLayoutAlign="end end" fxShow="true" fxHide="false">
+            <mat-icon> group</mat-icon>
+          </div>
+          <div fxLayout="column wrap" fxLayoutAlign="start center" fxShow="true" fxHide="false">
+            <mat-form-field>
+              <mat-select placeholder="Department" [(ngModel)]="dm.employee.staff.department" required (selectionChange)="showManager()" name="department">
+                <mat-option *ngFor="let department of departments" [value]="department">{{department}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxLayout="row wrap" fxFlex="100" fxLayoutGap="1.25em" fxLayoutAlign="center center" [fxShow]="!isManager &amp;&amp; managers.length &gt; 0">
+          <div fxLayout="column wrap" fxLayoutAlign="end end" fxShow="true" fxHide="false">
+            <mat-icon> account_box</mat-icon>
+          </div>
+          <div fxLayout="column wrap" fxLayoutAlign="start center" fxShow="true" fxHide="false">
+            <mat-form-field>
+              <mat-select placeholder="Manager" [(ngModel)]=" dm.employee.staff.managerName" required name="managerName" [required]=" userObj &amp;&amp; userObj.groupList.indexOf(&apos;Employee&apos;) &gt; -1 ? &apos;required&apos;: null">
+                <mat-option *ngFor=" let manager of managers" [value]="manager">{{manager}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="center center" fxShow="true" fxHide="false"><button mat-raised-button="" [disabled]="!form.valid" color=" primary" (click)="put(&apos;employee&apos;, dm.employee)"> Save</button></div>
+      </mat-card>
+    </form>
+  </div>
+</div>
