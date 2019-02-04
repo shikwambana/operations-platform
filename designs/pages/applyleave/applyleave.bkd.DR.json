@@ -74,7 +74,7 @@
                 },
                 {
                     "_key": "class",
-                    "_value": " margin-tb",
+                    "_value": "margin-tb",
                     "_type": "kv",
                     "_attrDef": "p"
                 },
@@ -306,7 +306,7 @@
                                 },
                                 {
                                     "_key": "optiondata",
-                                    "_value": " {{leave.value}}",
+                                    "_value": "{{leave.value}}",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
@@ -627,7 +627,7 @@
                                 },
                                 {
                                     "_key": "[(ngModel)]",
-                                    "_value": " dm.leaverequest.leaveReason",
+                                    "_value": "dm.leaverequest.leaveReason",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -674,7 +674,7 @@
                                 },
                                 {
                                     "_key": "buttonname",
-                                    "_value": " Apply",
+                                    "_value": "Apply",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
@@ -733,7 +733,7 @@
                                 },
                                 {
                                     "_key": "routerLink",
-                                    "_value": "/home/userdetail",
+                                    "_value": "/lms/userdetail",
                                     "_type": "kv",
                                     "_attrDef": "c"
                                 }

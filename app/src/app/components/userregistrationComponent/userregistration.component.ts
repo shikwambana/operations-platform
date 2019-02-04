@@ -51,6 +51,7 @@ export class userregistrationComponent extends NBaseComponent implements OnInit 
     ngOnInit() {
 
          // mapping the userobject the datamodel
+         this.get('employee', { "staff.username": this.currentUserData.username }, {}, {}, 1, 1);
         this.userObj = this.sessionStorage.getValue('userObj');
         this.dm.employee.staff.username = this.userObj.username;
         this.dm.employee.staff.firstName = this.userObj.firstName;
@@ -59,6 +60,7 @@ export class userregistrationComponent extends NBaseComponent implements OnInit 
         this.dm.employee.staff.displayName = this.userObj.displayName;
         this.dm.employee.leaves = this.leaves
         this.isManager = (this.userObj.groupList.indexOf('Manager') > -1);
+        
 
     }
 
@@ -74,6 +76,7 @@ export class userregistrationComponent extends NBaseComponent implements OnInit 
         this.mm.get(dataModelName, this, filter, keys, sort, pagenumber, pagesize,
             result => {
                 // populate the managers array
+                this.uService.user = result[0];
                 if (result && result.length > 0 && result[0].staff.groupList.indexOf("Manager") > -1) {
                     this.managers.push(result[0].staff.displayName);
                 } else {

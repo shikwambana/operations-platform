@@ -57,7 +57,234 @@
                 "_attrDef": "p"
             }
         ],
-        "de3e219c-f3a7-a69f-a6c0-c9bf97ec255e": {
+        "b4b90c14-3c43-7021-0432-3ca6387b8a21": {
+            "paletteKey": "NG-Toolbar",
+            "designerReference": [
+                {
+                    "_key": "style",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "class",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "color",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "content",
+                    "_value": "",
+                    "_type": "a",
+                    "_attrDef": "p"
+                }
+            ],
+            "a0ccea39-9d44-dc95-bb6b-85951081790c": {
+                "paletteKey": "NG-MenuButton",
+                "designerReference": [
+                    {
+                        "_key": "style",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "class",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "MenuName",
+                        "_value": "menu",
+                        "_type": "a",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "color",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "[matMenuTriggerFor]",
+                        "_value": "menu",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    }
+                ]
+            },
+            "1458e77f-3de4-1a03-2dc2-11932535bcc8": {
+                "paletteKey": "NG-Menu",
+                "designerReference": [
+                    {
+                        "_key": "style",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "class",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "xPosition",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "yPosition",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "templateRef",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "items",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "matMenu",
+                        "_value": "menu",
+                        "_type": "vk",
+                        "_attrDef": "p"
+                    }
+                ],
+                "b4e13fe1-f864-7912-7b24-bdd4f9331387": {
+                    "paletteKey": "NG-MenuItem",
+                    "designerReference": [
+                        {
+                            "_key": "style",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "class",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "MenuItemName",
+                            "_value": "MyProfile",
+                            "_type": "a",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "routerLink",
+                            "_value": "../lms/myprofile",
+                            "_type": "kv",
+                            "_attrDef": "c"
+                        }
+                    ]
+                },
+                "bef4623d-cd13-7f4b-b119-3ae61226c7f9": {
+                    "paletteKey": "NG-MenuItem",
+                    "designerReference": [
+                        {
+                            "_key": "style",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "class",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "MenuItemName",
+                            "_value": "MyLeaves",
+                            "_type": "a",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "routerLink",
+                            "_value": "../lms/myleaves",
+                            "_type": "kv",
+                            "_attrDef": "c"
+                        }
+                    ]
+                },
+                "d63ba46e-f350-6fb4-d1c0-662d45d5987f": {
+                    "paletteKey": "NG-MenuItem",
+                    "designerReference": [
+                        {
+                            "_key": "style",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "class",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "MenuItemName",
+                            "_value": "UserDetails",
+                            "_type": "a",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "routerLink",
+                            "_value": "../lms/userdetail",
+                            "_type": "kv",
+                            "_attrDef": "c"
+                        }
+                    ]
+                },
+                "29ee95ae-51b4-07a0-5eb6-7694cfeae7b0": {
+                    "paletteKey": "NG-MenuItem",
+                    "designerReference": [
+                        {
+                            "_key": "style",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "class",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "MenuItemName",
+                            "_value": "User Registration",
+                            "_type": "a",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "routerLink",
+                            "_value": "../lms/userregistraion",
+                            "_type": "kv",
+                            "_attrDef": "c"
+                        }
+                    ]
+                }
+            }
+        },
+        "d4031fb1-f6d4-5ca8-753a-d0060f1c8cff": {
             "paletteKey": "NG-RouterOutlet",
             "designerReference": [
                 {

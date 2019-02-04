@@ -4,6 +4,8 @@ import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
 import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
+import { userService} from '../../services/user/user.service';
+
 
 /**
  * Service import Example :
@@ -18,19 +20,20 @@ import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 export class myprofileComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
 
-    constructor(private bdms: NDataModelService) {
+    constructor(private bdms: NDataModelService, public uService: userService) {
         super();
         this.mm = new ModelMethods(bdms);
     }
 
     ngOnInit() {
-
+     this.get('employee', { "staff.username": this.currentUserData.username }, {}, {}, 1, 1);
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, this, filter, keys, sort, pagenumber, pagesize,
             result => {
                 // On Success code here
+                this.uService.user = result[0];
             },
             error => {
                 // Handle errors here

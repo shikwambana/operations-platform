@@ -1,3 +1,6 @@
 <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+  <mat-toolbar><button mat-button="" [matMenuTriggerFor]="menu">menu</button>
+    <mat-menu #menu="matMenu"><button mat-menu-item="" routerLink="../lms/myprofile"> MyProfile </button><button mat-menu-item="" routerLink="../lms/myleaves"> MyLeaves </button><button mat-menu-item="" routerLink="../lms/userdetail"> UserDetails </button><button mat-menu-item="" routerLink="../lms/userregistraion"> User Registration </button></mat-menu>
+  </mat-toolbar>
   <router-outlet></router-outlet>
 </div>

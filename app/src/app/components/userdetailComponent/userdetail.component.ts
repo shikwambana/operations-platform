@@ -25,26 +25,32 @@ export class userdetailComponent extends NBaseComponent implements OnInit {
     }
 
     ngOnInit() {
-
+        this.get('employee');
+        this.get('employee', { "staff.username": this.currentUserData.username }, {}, {}, 1, 1);
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, this, filter, keys, sort, pagenumber, pagesize,
             result => {
                 // On Success code here
+                 console.log(result);
+                 this.uService.user = result[0];
             },
             error => {
                 // Handle errors here
+                console.log(error);
             });
     }
 
     getById(dataModelName, dataModelId) {
         this.mm.getById(dataModelName, dataModelId,
             result => {
+               
                 // On Success code here
             },
             error => {
                 // Handle errors here
+                
             })
     }
 

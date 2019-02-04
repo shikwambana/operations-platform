@@ -44,6 +44,8 @@ export class applyleaveComponent extends NBaseComponent implements OnInit {
         this.dm.leaverequest.username = this.uService.user.staff.username;
         this.dm.leaverequest.managerName = this.uService.user.staff.managerName;
         this.dm.leaverequest.leaveStatus = "pending";
+        this.get('employee', { "staff.username": this.currentUserData.username }, {}, {}, 1, 1);
+
     }
 
     /**
@@ -51,8 +53,8 @@ export class applyleaveComponent extends NBaseComponent implements OnInit {
      * toDate - fromDate
      */
     getsTime() {
-        this.dm.leaverequest.duration = (((this.dm.leaverequest.toDate.getTime() - this.dm.leaverequest.fromDate.getTime()) / (24 * 60 * 60 * 1000)) + 1)
-
+        this.dm.leaverequest.duration = (((this.dm.leaverequest.toDate.getTime() - this.dm.leaverequest.fromDate.getTime()) / (24 * 60 * 60 * 1000)) + 1);
+        
     }
 
     /**
@@ -88,6 +90,7 @@ export class applyleaveComponent extends NBaseComponent implements OnInit {
         this.mm.get(dataModelName, this, filter, keys, sort, pagenumber, pagesize,
             result => {
                 // On Success code here
+                this.uService.user = result[0];
             },
             error => {
                 // Handle errors here
@@ -118,7 +121,7 @@ export class applyleaveComponent extends NBaseComponent implements OnInit {
         this.mm.validatePut(formObj, dataModelName, dataModelObject,
             result => {
                 // On Success code here
-                this.router.navigate(['home/userdetail']);
+                this.router.navigate(['lms/userdetail']);
             }, error => {
                 // Handle errors here
                 console.log(error);

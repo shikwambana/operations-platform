@@ -14,8 +14,8 @@ export class staff {
   @JsonProperty('username', String, true)
   public username: string = undefined;
 
-  @JsonProperty('dispalyName', String, true)
-  public dispalyName: string = undefined;
+  @JsonProperty('displayName', String, true)
+  public displayName: string = undefined;
 
   @JsonProperty('department', String, true)
   public department: string = undefined;

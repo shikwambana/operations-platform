@@ -4,6 +4,7 @@ import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
 import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
+import { userService} from '../../services/user/user.service';
 
 /**
  * Service import Example :
@@ -18,19 +19,26 @@ import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 export class myleavesComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
 
-    constructor(private bdms: NDataModelService) {
+    leaveDetails = [];
+
+    constructor(private bdms: NDataModelService, public uService: userService) {
         super();
         this.mm = new ModelMethods(bdms);
     }
 
     ngOnInit() {
-
+       // get the list of all the applied leaves
+        this.get('employee', { "staff.username": this.currentUserData.username }, {}, {}, 1, 1);
+        this.get('leaverequest', { "username": this.uService.user.staff.username}, {}, {_id: -1});
+        
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, this, filter, keys, sort, pagenumber, pagesize,
             result => {
                 // On Success code here
+                this.uService.user = result[0];
+                this.leaveDetails = result;
             },
             error => {
                 // Handle errors here

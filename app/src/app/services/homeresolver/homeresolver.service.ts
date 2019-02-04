@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { NDataModelService, NSessionStorageService, NLoginService } from 'neutrinos-seed-services';
 import { Observable } from 'rxjs/Rx';
-import { userService } from '../User/user.service';
+import { userService } from '../user/user.service';
 import { Router } from '@angular/router';
 
 @Injectable()

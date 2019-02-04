@@ -74,7 +74,7 @@
                 },
                 {
                     "_key": "class",
-                    "_value": " margin-tb",
+                    "_value": "margin-tb",
                     "_type": "kv",
                     "_attrDef": "p"
                 },
@@ -258,7 +258,7 @@
                                 },
                                 {
                                     "_key": "Title",
-                                    "_value": "  Employee Information",
+                                    "_value": "Employee Information",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 }
@@ -745,7 +745,7 @@
                                     },
                                     {
                                         "_key": "placeholder",
-                                        "_value": "  Last Name",
+                                        "_value": "Last Name",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -775,7 +775,7 @@
                                     },
                                     {
                                         "_key": "name",
-                                        "_value": " lastName",
+                                        "_value": "lastName",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -1010,7 +1010,7 @@
                                     },
                                     {
                                         "_key": "placeholder",
-                                        "_value": " Email ID",
+                                        "_value": "Email ID",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -1193,7 +1193,7 @@
                                     },
                                     {
                                         "_key": "IconName",
-                                        "_value": " person",
+                                        "_value": "person",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     }
@@ -1275,7 +1275,7 @@
                                     },
                                     {
                                         "_key": "placeholder",
-                                        "_value": " Employee ID",
+                                        "_value": "Employee ID",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -1829,7 +1829,7 @@
                                     },
                                     {
                                         "_key": "[(ngModel)]",
-                                        "_value": " dm.employee.staff.managerName",
+                                        "_value": "dm.employee.staff.managerName",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -1859,7 +1859,7 @@
                                     },
                                     {
                                         "_key": "*ngFor",
-                                        "_value": " let manager of managers",
+                                        "_value": "let manager of managers",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -1883,7 +1883,7 @@
                                     },
                                     {
                                         "_key": "[required]",
-                                        "_value": " userObj && userObj.groupList.indexOf('Employee') > -1 ? 'required': null",
+                                        "_value": "userObj && userObj.groupList.indexOf('Employee') > -1 ? 'required': null",
                                         "_type": "kv",
                                         "_attrDef": "c"
                                     }

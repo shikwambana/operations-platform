@@ -98,6 +98,14 @@
                 {
                     "path": "userregistration",
                     "component": "userregistrationComponent"
+                },
+                {
+                    "path": "myleaves",
+                    "component": "myleavesComponent"
+                },
+                {
+                    "path": "myprofile",
+                    "component": "myprofileComponent"
                 }
             ]
         },

@@ -19,6 +19,7 @@ import { userService } from '../../services/user/user.service';
 export class myapprovalsComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
 
+    userObj;
     leaveRequests = [];
 
     constructor(private bdms: NDataModelService, private uService: userService) {
@@ -27,7 +28,10 @@ export class myapprovalsComponent extends NBaseComponent implements OnInit {
     }
 
     ngOnInit() {
+
+        this.get('employee', { "staff.username": this.currentUserData.username }, {}, {}, 1, 1);
         this.get('leaverequest', { "managerName": this.uService.user.staff.displayName }, {}, { _id: -1 });
+        
     }
 
     reject(leave) {
@@ -56,6 +60,7 @@ export class myapprovalsComponent extends NBaseComponent implements OnInit {
         this.mm.get(dataModelName, this, filter, keys, sort, pagenumber, pagesize,
             result => {
                 // On Success code here
+                this.uService.user = result[0];
                 this.leaveRequests = result;
             },
             error => {
