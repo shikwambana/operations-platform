@@ -175,7 +175,7 @@
     margin-bottom: 2%;
 }
 .otherservicesCardsContainer {
-    height: 65vh; 
+    height: 40vh;
     overflow: auto;
 }
 .otherServiceCards {
@@ -198,7 +198,7 @@
     margin: 0 auto;
 }
 .formCard .mat-form-field-infix {
-    width: 325px !important;
+    width: 22em !important;
 }
 .changeColor .mat-option-0 .mat-option-1 .mat-option-2 {
     background: yellow;
@@ -209,21 +209,6 @@
 .mat-icon-button {
     color: white;
 }
-// Form Height
-// .formHeight {
-//     height: 79vh !important;
-//     overflow: auto !important;
-//     padding-top: 5vh !important;
-// }
-// .formWidth {
-//     height: 71vh !important;
-//     width: 86% !important;
-//     overflow: auto !important;
-//     padding-top: 56vh !important;
-//     margin: 0 auto !important;
-//     overflow-x: hidden !important;
-//     text-align: center;
-// }
 .formWidth .mat-form-field-infix {
     width: 42vh !important;
 }

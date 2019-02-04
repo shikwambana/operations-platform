@@ -73,5 +73,10 @@
         "appPageName": "transport",
         "componentName": "transportComponent",
         "isEntry": false
+    },
+    "4cc4cd53-cad2-5076-22a9-79569fd4f631": {
+        "appPageName": "flight",
+        "componentName": "flightComponent",
+        "isEntry": false
     }
 }

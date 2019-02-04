@@ -4,7 +4,7 @@ import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
 import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
-import { operations } from '../../models/operations.model';
+import { flight } from '../../models/flight.model';
 
 /**
  * Service import Example :
@@ -12,46 +12,14 @@ import { operations } from '../../models/operations.model';
  */
 
 @Component({
-    selector: 'bh-otherservices',
-    templateUrl: './otherservices.template.html'
+    selector: 'bh-flight',
+    templateUrl: './flight.template.html'
 })
 
-export class otherservicesComponent extends NBaseComponent implements OnInit {
+export class flightComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
 
-    operations = new operations();
-
-    operationsIcons = [
-        {
-            image: "Web/visa.jpg",
-            link: "../extension",
-            text: "Visa Extension"
-        },
-        {
-            image: "Web/images.png",
-            link: "../guesthouse",
-            text: "Guest House"
-        },
-        {
-            image: "Web/transportation.jpg",
-            link: "../transport",
-            text: "Transport Request"
-        },
-        {
-            image: "Web/flight.jpg",
-            link: "../flight",
-            text: "Flight Information"
-        },
-        {
-            image: "Web/hr.jpg",
-            link: "../hr",
-            text: "HR Policies"
-        }
-    ]
-
-    submit() {
-        this.put('operations', this.operations);
-    }
+    flight = new flight();
 
     constructor(private bdms: NDataModelService) {
         super();
@@ -60,6 +28,10 @@ export class otherservicesComponent extends NBaseComponent implements OnInit {
 
     ngOnInit() {
 
+    }
+
+    submit() {
+        this.put('flight', this.flight);
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {

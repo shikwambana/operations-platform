@@ -5,6 +5,9 @@
         "categories": "operations-platform-rt",
         "visa": "neutrinos-delivery-rt",
         "services": "operations",
-        "guesthouse": "operations"
+        "guesthouse": "operations",
+        "transport": "operations",
+        "flight": "operations",
+        "operations": "operations"
     }
 }

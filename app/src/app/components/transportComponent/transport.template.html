@@ -1,18 +1,54 @@
-<div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+<div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
   <mat-card ngClass.sm="formHeight" ngClass.xs="formHeight" fxLayoutAlign="center center" class="formCard">
     <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
-      <div fxLayout="row wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div fxLayout="row wrap" fxLayoutAlign="center center" fxShow="true" fxHide="false">
         <h1>Transport Requests</h1>
       </div>
-      <div fxLayout="row wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div fxLayout="row wrap" fxLayoutAlign="center center" fxShow="true" fxHide="false">
         <h3>Please ensure that all bookings are made 24 hours in advance.</h3>
       </div>
       <form #transport="ngForm">
-        <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
-          <mat-form-field><input matInput="" placeholder="Choose a Date" [matDatepicker]="picker" [(ngModel)]="transport.date" name="date">
-            <mat-datepicker-toggle matSuffix="" [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker=""></mat-datepicker>
-          </mat-form-field>
+        <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+          <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start stretch" fxShow="true" fxHide="false" fxLayout.xs="column" fxLayout.sm="column">
+            <div fxLayout="column wrap" fxFlex="50" fxLayoutAlign="center center" fxShow="true" fxHide="false">
+              <mat-form-field class="search-full-width"><input matInput="" placeholder="Choose a Date" [matDatepicker]="picker" [(ngModel)]="transport.date" name="date">
+                <mat-datepicker-toggle matSuffix="" [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker=""></mat-datepicker>
+              </mat-form-field>
+            </div>
+            <div fxLayout="column wrap" fxFlex="50" fxLayoutAlign="center center" fxShow="true" fxHide="false">
+              <mat-form-field>
+                <mat-select class="search-full-width" placeholder="Destination" [(ngModel)]="transport.destination" required name="destination">
+                  <mat-option *ngFor="let option of options" [value]="option">{{ option }}</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+          <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start stretch" fxShow="true" fxHide="false" fxLayout.xs="column" fxLayout.sm="column">
+            <div fxLayout="column wrap" fxFlex="50" fxLayoutAlign="center center" fxShow="true" fxHide="false">
+              <mat-form-field class="search-full-width"><input matInput="" [(ngModel)]="transport.from" name="from" placeholder="From" required></mat-form-field>
+            </div>
+            <div fxLayout="column wrap" fxFlex="50" fxLayoutAlign="center center" fxShow="true" fxHide="false">
+              <mat-form-field class="search-full-width"><input matInput="" [(ngModel)]="transport.to" name="to" placeholder="To" required></mat-form-field>
+            </div>
+          </div>
+          <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start stretch" fxShow="true" fxHide="false" fxLayout.xs="column" fxLayout.sm="column">
+            <div fxLayout="column wrap" fxFlex="50" fxLayoutAlign="center center" fxShow="true" fxHide="false">
+              <mat-form-field class="search-full-width"><input matInput="" [(ngModel)]="transport.time" name="time" placeholder="Time" required></mat-form-field>
+            </div>
+            <div fxLayout="column wrap" fxFlex="50" fxLayoutAlign="center center" fxShow="true" fxHide="false">
+              <mat-form-field class="search-full-width"><input matInput="" [(ngModel)]="transport.additional_info" name="additional_info" placeholder="Additional Information"></mat-form-field>
+            </div>
+          </div>
+          <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start stretch" fxShow="true" fxHide="false" fxLayout.xs="column" fxLayout.sm="column">
+            <div fxLayout="column wrap" fxFlex="50" fxLayoutAlign="center center" fxShow="true" fxHide="false">
+              <mat-form-field class="search-full-width"><input matInput="" [(ngModel)]="transport.whatsapp_number" name="whatsapp_num" type="number" placeholder="Whatsapp Number" required></mat-form-field>
+            </div>
+            <div fxLayout="column wrap" fxFlex="50" fxLayoutAlign="center center" fxShow="true" fxHide="false">
+              <mat-form-field class="search-full-width"><input matInput="" [(ngModel)]="transport.email" name="email" type="email" placeholder="Email" required></mat-form-field>
+            </div>
+          </div>
+          <div fxLayout="row wrap" fxLayoutAlign="center center" fxShow="true" fxHide="false"><button mat-raised-button="" style="color:white;" [disabled]="!transport.valid" (click)="submit()">Submit</button></div>
         </div>
       </form>
     </div>

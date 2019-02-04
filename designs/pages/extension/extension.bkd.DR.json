@@ -370,13 +370,13 @@
                             },
                             {
                                 "_key": "layoutAlign",
-                                "_value": "center",
+                                "_value": "start",
                                 "_type": "a",
                                 "_attrDef": "p"
                             },
                             {
                                 "_key": "pLayoutAlign",
-                                "_value": "center",
+                                "_value": "stretch",
                                 "_type": "a",
                                 "_attrDef": "p"
                             },
@@ -428,13 +428,13 @@
                                 },
                                 {
                                     "_key": "layoutAlign",
-                                    "_value": "space-between",
+                                    "_value": "start",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
                                 {
                                     "_key": "pLayoutAlign",
-                                    "_value": "center",
+                                    "_value": "stretch",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
@@ -765,13 +765,13 @@
                                 },
                                 {
                                     "_key": "layoutAlign",
-                                    "_value": "space-between",
+                                    "_value": "start",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
                                 {
                                     "_key": "pLayoutAlign",
-                                    "_value": "center",
+                                    "_value": "stretch",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
@@ -1144,13 +1144,13 @@
                                 },
                                 {
                                     "_key": "layoutAlign",
-                                    "_value": "space-between",
+                                    "_value": "start",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
                                 {
                                     "_key": "pLayoutAlign",
-                                    "_value": "center",
+                                    "_value": "stretch",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
@@ -1475,13 +1475,13 @@
                                 },
                                 {
                                     "_key": "layoutAlign",
-                                    "_value": "space-between",
+                                    "_value": "start",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
                                 {
                                     "_key": "pLayoutAlign",
-                                    "_value": "center",
+                                    "_value": "stretch",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
@@ -1812,13 +1812,13 @@
                                 },
                                 {
                                     "_key": "layoutAlign",
-                                    "_value": "start",
+                                    "_value": "center",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
                                 {
                                     "_key": "pLayoutAlign",
-                                    "_value": "stretch",
+                                    "_value": "center",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },

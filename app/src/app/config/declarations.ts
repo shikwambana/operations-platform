@@ -12,6 +12,8 @@ window['neutrinos'] = {
 }
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-flightComponent
+import { flightComponent } from '../components/flightComponent/flight.component';
 //CORE_REFERENCE_IMPORT-transportComponent
 import { transportComponent } from '../components/transportComponent/transport.component';
 //CORE_REFERENCE_IMPORT-operationsService
@@ -82,6 +84,8 @@ export const appDeclarations = [
   PageNotFoundComponent,
   NMapComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-flightComponent
+flightComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-transportComponent
 transportComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-otherservicesComponent
@@ -146,5 +150,5 @@ children: [{path: '', component: searchComponent}]},{path: 'login', component: l
 children: [{path: 'hr', component: hrpolicyadminComponent,
 children: []},{path: 'edit', component: editpolicyComponent},{path: 'policy', component: policyComponent},{path: 'policies', component: policiesComponent,
 children: []},{path: '', component: policiesComponent}]},{path: 'menu', component: displayComponent,
-children: [{path: 'otherservices', component: otherservicesComponent},{path: 'guesthouse', component: guesthouseComponent},{path: 'policies', component: policiesComponent},{path: 'extension', component: extensionComponent},{path: 'transport', component: transportComponent}]},{path: '', redirectTo: '/login', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
+children: [{path: 'otherservices', component: otherservicesComponent},{path: 'guesthouse', component: guesthouseComponent},{path: 'policies', component: policiesComponent},{path: 'extension', component: extensionComponent},{path: 'transport', component: transportComponent},{path: 'flight', component: flightComponent}]},{path: '', redirectTo: '/login', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_END
