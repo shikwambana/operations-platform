@@ -118,7 +118,7 @@
                         },
                         {
                             "_key": "fxFlex",
-                            "_value": "",
+                            "_value": "85",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -218,13 +218,13 @@
                         },
                         {
                             "_key": "layoutAlign",
-                            "_value": "start",
+                            "_value": "center",
                             "_type": "a",
                             "_attrDef": "p"
                         },
                         {
                             "_key": "pLayoutAlign",
-                            "_value": "stretch",
+                            "_value": "end",
                             "_type": "a",
                             "_attrDef": "p"
                         },
@@ -300,7 +300,7 @@
                 "designerReference": [
                     {
                         "_key": "style",
-                        "_value": "height: 60%; background-color: black; width: 30%;",
+                        "_value": "height: 60%;  width: 30%;",
                         "_type": "kv",
                         "_attrDef": "p"
                     },
@@ -411,8 +411,8 @@
                             "_attrDef": "p"
                         }
                     ],
-                    "7aa5116f-11e6-d406-9fc8-3cdbc239ddc5": {
-                        "paletteKey": "NG-H2",
+                    "41266ad4-125f-9052-ba2c-d892b210206b": {
+                        "paletteKey": "HTML",
                         "designerReference": [
                             {
                                 "_key": "style",
@@ -427,9 +427,44 @@
                                 "_attrDef": "p"
                             },
                             {
-                                "_key": "H2 Text",
-                                "_value": "Home",
+                                "_key": "html",
+                                "_value": "<nav class=\"navbar navbar-fixed-top navbar-dark bg-inverse\">\r\n    <div class=\"container\">\r\n        <ul class=\"nav navbar-nav\" routerLinkActive=\"active\">\r\n            <li class=\"nav-item\"><a class=\"nav-link\" routerLink=\"policies\">Policies</a></li>\r\n            <li class=\"nav-item\"><a class=\"nav-link\" routerLink=\"hr\">Admin policies</a></li>\r\n        </ul>\r\n    </div>\r\n</nav>\r\n",
                                 "_type": "a",
+                                "_attrDef": "p"
+                            }
+                        ]
+                    },
+                    "495a1d82-2a6f-19d8-bd94-f52ad1f66019": {
+                        "paletteKey": "NG-button",
+                        "designerReference": [
+                            {
+                                "_key": "style",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "class",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "buttonname",
+                                "_value": "Log Out",
+                                "_type": "a",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "color",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "(click)",
+                                "_value": "logoutUser()",
+                                "_type": "kv",
                                 "_attrDef": "p"
                             }
                         ]

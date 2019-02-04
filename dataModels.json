@@ -40,7 +40,7 @@
             },
             {
                 "name": "acknowledgement",
-                "fieldType": 2,
+                "fieldType": 4,
                 "isArray": false
             },
             {
@@ -49,5 +49,25 @@
                 "isArray": false
             }
         ]
+    },
+    "33af7552-2021-e659-1ad9-4c7ba6e38d4c": {
+        "dataModelId": "33af7552-2021-e659-1ad9-4c7ba6e38d4c",
+        "name": "categories",
+        "description": "Categories for policies",
+        "dataSource": "operations-platform-rt",
+        "fields": [
+            {
+                "name": "category",
+                "fieldType": 2,
+                "isArray": true
+            }
+        ]
+    },
+    "d0db7b92-4c67-19fa-a6df-17e3bba06bb9": {
+        "dataModelId": "d0db7b92-4c67-19fa-a6df-17e3bba06bb9",
+        "name": "visa",
+        "description": "visa",
+        "dataSource": "neutrinos-delivery-rt",
+        "fields": []
     }
 }

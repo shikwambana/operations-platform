@@ -12,6 +12,28 @@ window['neutrinos'] = {
 }
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-operationsService
+import { operationsService } from '../services/operations/operations.service';
+//CORE_REFERENCE_IMPORT-otherservicesComponent
+import { otherservicesComponent } from '../components/otherservicesComponent/otherservices.component';
+//CORE_REFERENCE_IMPORT-extensionComponent
+import { extensionComponent } from '../components/extensionComponent/extension.component';
+//CORE_REFERENCE_IMPORT-guesthouseComponent
+import { guesthouseComponent } from '../components/guesthouseComponent/guesthouse.component';
+//CORE_REFERENCE_IMPORT-searchComponent
+import { searchComponent } from '../components/searchComponent/search.component';
+//CORE_REFERENCE_IMPORT-policiesComponent
+import { policiesComponent } from '../components/policiesComponent/policies.component';
+//CORE_REFERENCE_IMPORT-policyComponent
+import { policyComponent } from '../components/policyComponent/policy.component';
+//CORE_REFERENCE_IMPORT-displayComponent
+import { displayComponent } from '../components/displayComponent/display.component';
+//CORE_REFERENCE_IMPORT-dialogComponent
+import { dialogComponent } from '../components/dialogComponent/dialog.component';
+//CORE_REFERENCE_IMPORT-editpolicyComponent
+import { editpolicyComponent } from '../components/editpolicyComponent/editpolicy.component';
+//CORE_REFERENCE_IMPORT-policiesService
+import { policiesService } from '../services/policies/policies.service';
 //CORE_REFERENCE_IMPORT-homepageComponent
 import { homepageComponent } from '../components/homepageComponent/homepage.component';
 //CORE_REFERENCE_IMPORT-hrpolicyadminComponent
@@ -58,6 +80,24 @@ export const appDeclarations = [
   PageNotFoundComponent,
   NMapComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-otherservicesComponent
+otherservicesComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-extensionComponent
+extensionComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-guesthouseComponent
+guesthouseComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-searchComponent
+searchComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-policiesComponent
+policiesComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-policyComponent
+policyComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-displayComponent
+displayComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-dialogComponent
+dialogComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-editpolicyComponent
+editpolicyComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-homepageComponent
 homepageComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-hrpolicyadminComponent
@@ -85,6 +125,10 @@ export const appProviders = [
   },
   NAuthGuardService,
   //CORE_REFERENCE_PUSH_TO_PRO_ARRAY
+//CORE_REFERENCE_PUSH_TO_PRO_ARRAY-operationsService
+operationsService,
+//CORE_REFERENCE_PUSH_TO_PRO_ARRAY-policiesService
+policiesService,
 
 ];
 
@@ -93,6 +137,10 @@ export const appProviders = [
 */
 
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_START
-export const appRoutes = [{path: 'home', component: homeComponent, canActivate: [NAuthGuardService]},{path: 'login', component: loginComponent},{path: 'unauthorized', redirectTo: '/login', pathMatch: 'full'},{path: 'hrpolicy', component: hrpolicyadminComponent},{path: 'homepage', component: homepageComponent,
-children: [{path: 'hr', component: hrpolicyadminComponent}]},{path: '', redirectTo: '/home', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
+export const appRoutes = [{path: 'home', component: homeComponent, canActivate: [NAuthGuardService],
+children: []},{path: 'login', component: loginComponent},{path: 'unauthorized', redirectTo: '/login', pathMatch: 'full'},{path: 'homepage', component: homepageComponent, canActivate: [NAuthGuardService],
+children: [{path: 'hr', component: hrpolicyadminComponent,
+children: []},{path: 'edit', component: editpolicyComponent},{path: 'policy', component: policyComponent},{path: 'policies', component: policiesComponent,
+children: []},{path: '', component: policiesComponent},{path: 'search', component: searchComponent}]},{path: 'menu', component: displayComponent,
+children: [{path: 'otherservices', component: otherservicesComponent},{path: 'guesthouse', component: guesthouseComponent},{path: 'policies', component: policiesComponent},{path: 'extension', component: extensionComponent}]},{path: '', redirectTo: '/login', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_END

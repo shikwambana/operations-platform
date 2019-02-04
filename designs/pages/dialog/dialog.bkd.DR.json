@@ -1,0 +1,84 @@
+{
+    "2fdd00de-ddfd-f0d1-606c-bb2fdfdae795": {
+        "paletteKey": "FlexLayoutCol",
+        "designerReference": [
+            {
+                "_key": "style",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "class",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "fxFlex",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "fxLayoutGap",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "wrap",
+                "_value": "wrap",
+                "_type": "a",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "layoutAlign",
+                "_value": "start",
+                "_type": "a",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "pLayoutAlign",
+                "_value": "stretch",
+                "_type": "a",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "fxShow",
+                "_value": "true",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "fxHide",
+                "_value": "false",
+                "_type": "kv",
+                "_attrDef": "p"
+            }
+        ],
+        "83c022b3-70d7-2a0c-0b91-37295b896bec": {
+            "paletteKey": "HTML",
+            "designerReference": [
+                {
+                    "_key": "style",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "class",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "html",
+                    "_value": "<h1 mat-dialog-title>Favorite Animal</h1>\r\n<div mat-dialog-content>\r\n  My favorite animal is:\r\n  <ul>\r\n    <li>\r\n      <span *ngIf=\"data.animal === 'panda'\">&#10003;</span> Panda\r\n    </li>\r\n    <li>\r\n      <span *ngIf=\"data.animal === 'unicorn'\">&#10003;</span> Unicorn\r\n    </li>\r\n    <li>\r\n      <span *ngIf=\"data.animal === 'lion'\">&#10003;</span> Lion\r\n    </li>\r\n  </ul>\r\n</div>\r\n",
+                    "_type": "a",
+                    "_attrDef": "p"
+                }
+            ]
+        }
+    }
+}

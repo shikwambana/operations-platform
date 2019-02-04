@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { ModelMethods } from '../../lib/model.methods';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 import { NDataModelService, NLogoutService } from 'neutrinos-seed-services';
+import { operationsService } from '../../services/operations/operations.service';
 
 @Component({
     selector: 'bh-home',
@@ -14,27 +15,33 @@ import { NDataModelService, NLogoutService } from 'neutrinos-seed-services';
 export class homeComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
 
-    constructor(private bdms: NDataModelService, private logoutService: NLogoutService, private router: Router) {
+    homeLinks = ["home", "apply leave", ""]
+
+    constructor(private bdms: NDataModelService, private logoutService: NLogoutService, private operationsService: operationsService, private router: Router) {
         super();
         this.mm = new ModelMethods(bdms);
     }
 
     ngOnInit() {
-
+        this.get('policies');
     }
 
     logoutUser() {
-      this.logoutService.logout();
-      this.router.navigate(['/login']);
+        this.logoutService.logout();
+        this.router.navigate(['/login']);
     }
 
-    get(dataModelName, filter ?, keys ?, sort ?, pagenumber ?, pagesize ?) {
+    get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, this, filter, keys, sort, pagenumber, pagesize,
             result => {
                 // On Success code here
+                console.log(result, 'policies');
+                this.operationsService.policies = result;
+                console.log(this.operationsService.policies, "home");
             },
             error => {
                 // Handle errors here
+                console.log(error,'policies')
             });
     }
 
@@ -80,7 +87,7 @@ export class homeComponent extends NBaseComponent implements OnInit {
             })
     }
 
-    delete (dataModelName, filter) {
+    delete(dataModelName, filter) {
         this.mm.delete(dataModelName, filter,
             result => {
                 // On Success code here

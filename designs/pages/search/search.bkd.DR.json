@@ -1,0 +1,84 @@
+{
+    "74dc4754-8b9b-411a-60f6-3c75f6d3d564": {
+        "paletteKey": "FlexLayoutCol",
+        "designerReference": [
+            {
+                "_key": "style",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "class",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "fxFlex",
+                "_value": "100",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "fxLayoutGap",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "wrap",
+                "_value": "wrap",
+                "_type": "a",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "layoutAlign",
+                "_value": "center",
+                "_type": "a",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "pLayoutAlign",
+                "_value": "center",
+                "_type": "a",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "fxShow",
+                "_value": "true",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "fxHide",
+                "_value": "false",
+                "_type": "kv",
+                "_attrDef": "p"
+            }
+        ],
+        "5998913e-ea1f-8003-dfba-c6bf29dc64e2": {
+            "paletteKey": "HTML",
+            "designerReference": [
+                {
+                    "_key": "style",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "class",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "html",
+                    "_value": "<form class=\"search-form\">\r\n\t<mat-form-field class=\"search-full-width\">\r\n\t\t<input type=\"text\" placeholder=\"Search for Services\" aria-label=\"Operation\" matInput [formControl]=\"myControl\" [matAutocomplete]=\"auto\">\r\n\t\t<mat-autocomplete autoActiveFirstOption #auto=\"matAutocomplete\">\r\n\t\t\t<mat-option *ngFor=\"let operation of filteredOperations | async\" [value]=\"operation.name\">\r\n\t\t\t\t{{operation.name}}\r\n\t\t\t\t<mat-option *ngFor=\"let titles of operation.operationObj | async\" [value]=\"titles\">\r\n\t\t\t\t\t{{titles}}\r\n\t\t\t\t</mat-option>\r\n\t\t\t</mat-option>\r\n\t\t</mat-autocomplete>\r\n\t</mat-form-field>\r\n</form>",
+                    "_type": "a",
+                    "_attrDef": "p"
+                }
+            ]
+        }
+    }
+}

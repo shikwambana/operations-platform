@@ -11,3 +11,271 @@
     background-color: #ee1c22;
     color: white;
 }
+
+
+//=============================================================================================
+// home page navigation
+//=============================================================================================
+
+
+.navbar-nav {
+    text-decoration: none; 
+    margin: 10px 0;
+    color: red;
+}
+
+//=============================================================================================
+// TUKISO - Home component
+//=============================================================================================
+/*Importing default angular material css theme. */
+
+// login page
+.login-card .mat-card-image:first-child {
+    margin-top:0 !important
+}
+
+.primary-red-btn {
+    background-color: #ee1c22;
+    color: white;
+}
+
+// home page
+.home {
+    box-sizing: border-box;
+    padding: 10px;
+    background: url('assets/web/homeBg.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+}
+.homeToolBar {
+    background:transparent;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    padding: 45px 0 !important;
+    width: 95% !important;
+}
+.homeSidenavContainer {
+    height: 88vh;
+    top: 10vh;
+    width: 100%;
+    background: transparent;
+}
+.homeDesktopLinks .mat-raised-button {
+    font-size: 2em;     
+    line-height: 1.5em !important;     
+    font-weight: bold;     
+    background: transparent !important;
+    color:  #b71c1c;
+    box-shadow: none !important;
+    text-align: left !important;
+}
+.homeDesktopLinks .mat-raised-button:hover {
+    color: white;
+} 
+.homeMenuSmallBtn {
+    background: red !important;
+    padding: 3px !important;
+    border-radius: 42px;
+    display: block;
+    min-width: 40px !important;
+}
+.homeMenuSmallBtn:hover {
+    background: white !important;
+}
+.homeMenuSmallBtn:hover  mat-icon {
+    color: red !important;
+}
+.homeMainLogoutBtn {
+    color:red; 
+    font-weight:bold;
+    background: transparent;
+    border: solid 2px red !important;
+    border-radius: 5px;
+}
+.homeMainLogoutBtn:hover {
+    color:white; 
+    border: solid 2px white !important;
+}
+.mat-drawer {
+    background-color: transparent;
+}
+.mat-drawer .mat-raised-button {
+    background-color: #b71c1c;
+    margin: 3px 3px;
+    color: white;
+}
+.mat-drawer .mat-raised-button:hover {
+    background-color: white;
+    color: #b71c1c;
+}
+// Search
+.search-form {
+    min-width: 150px;
+    max-width: 100%;
+    width: 70%;
+}
+.search-full-width {
+    width: 100%;
+    background-color: transparent;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 0 20px;
+    color: white;
+}
+.mat-autocomplete-panel {
+    width: 100%;
+    background-color: #b71c1c;
+}
+.mat-option-text {
+    color: white;
+    font-weight: bold;
+}
+.mat-autocomplete-panel .mat-option.mat-selected:not(.mat-active):not(:hover):not(.mat-option-disabled) {
+    background: grey;
+}
+// Change the input style
+.mat-form-field-label {
+    color: white !important;
+}
+.mat-focused .mat-form-field-label {
+    color: red !important;
+}
+.mat-form-field-underline {
+    background-color: red !important;
+ } 
+.mat-form-field-ripple {
+   background-color: white !important;;
+} 
+// login remember me checkbox color
+.mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+    background-color: red;
+}
+.mat-checkbox-frame {
+    border-color: white;
+}
+// Menu Content
+.menuContent {
+    height: 85vh !important;
+    margin-top: 10vh !important;
+    color: white;
+    width: 100%;
+}
+// Operations Icons
+.operationsIconsRow {
+    width: 98% !important;
+}
+.cardSM {
+    margin-bottom: 3%;
+}
+.cardXS {
+    margin-bottom: 2%;
+}
+.otherservicesCardsContainer {
+    height: 65vh; 
+    overflow: auto;
+}
+.otherServiceCards {
+    background: rgba(255, 0, 0, 0.6);
+    height: 280px;
+    border-radius: 48px;
+}
+.otherServiceCards:hover {
+    background: red;
+}
+// Scroll Bar
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px red; 
+  border-radius: 10px;
+  background: transparent; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 0, 0, 0.6); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 0, 0, 0.9); 
+}
+
+// My Forms
+.formCard {
+    background-color:rgba(122, 122, 122, 0.3);
+    color: white;
+    width: 100%;
+}
+.formCard .mat-form-field-infix {
+    width: 325px !important;
+}
+.changeColor .mat-option-0 .mat-option-1 .mat-option-2 {
+    background: yellow;
+}
+.mat-select-panel .mat-optgroup-label, .mat-select-panel .mat-option {
+    background: red;
+}
+// Form Height
+.formHeight {
+    height: 79vh !important;
+    // width: 80% !important;
+    overflow: auto !important;
+    padding-top: 30vh !important;
+}
+.formWidth {
+    height: 71vh !important;
+    width: 86% !important;
+    overflow: auto !important;
+    padding-top: 56vh !important;
+    margin: 0 auto !important;
+    overflow-x: hidden !important;
+    text-align: center;
+}
+.formWidth .mat-form-field-infix {
+    width: 42vh !important;
+}
+
+
+// For screens with a maximum width of 415px
+@media only screen and (max-width: 415px){
+    .formWidth {
+        padding-top: 56vh !important;
+    }
+    .formWidth .mat-form-field-infix {
+        width: 32vh !important;
+    }
+}
+// For screens with a maximum width of 599px
+@media only screen and (max-width: 599px){
+    .emptyRow {
+        height: 250px !important;
+    }
+}
+// For screens with a maximum width of 768px
+@media only screen and (max-width: 768px){
+    .formWidth .mat-form-field-infix {
+        height: 81vh !important;
+        overflow: auto !important;
+        padding-top: 0vh !important;
+    }
+}
+// For screens with a maximum width of 959px
+@media only screen and (max-width: 959px){
+    .emptyRow {
+        height: 250px !important;
+    }
+}
+
+//=============================================================================================
+// </Home component>
+//=============================================================================================

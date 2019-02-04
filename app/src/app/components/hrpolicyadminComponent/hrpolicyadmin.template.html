@@ -1,6 +1,14 @@
 <div fxLayout="column wrap" style="margin: 20px;" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
   <div fxLayout="column wrap" style="margin: 20px 0;" fxLayoutAlign="  none" fxShow="true" fxHide="false">
-    <mat-accordion [displayMode]="linear" multi="false">
+    <div fxLayout="column wrap" style="margin: 10px 0;" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div fxLayout="row wrap" fxLayoutAlign="center stretch" fxShow="true" fxHide="false">
+        <div fxLayout="column wrap" fxFlex="85" fxLayoutAlign="center start" fxShow="true" fxHide="false">
+          <h2>Here you can add and edit all the company policies</h2>
+        </div>
+        <div fxLayout="column wrap" fxLayoutAlign="center end" fxShow="false" fxHide="true"><button mat-raised-button="" (click)="openDialog()">Add Category</button></div>
+      </div>
+    </div>
+    <mat-accordion multi="false">
       <mat-expansion-panel hideToggle="true">
         <mat-expansion-panel-header>
           <mat-panel-title>
@@ -12,8 +20,14 @@
           </mat-panel-description>
         </mat-expansion-panel-header>
         <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
-          <mat-form-field><input matInput="" placeholder="Policy Title" required></mat-form-field>
-          <mat-form-field style="height:100px;"><textarea matInput="" placeholder="Policy Content" required></textarea></mat-form-field><button mat-raised-button="">Submit Policy</button>
+          <mat-form-field><input matInput="" [(ngModel)]="policies.title" placeholder="Policy Title" required></mat-form-field>
+          <mat-form-field><textarea matInput="" [(ngModel)]="policies.content" placeholder="Policy Content" required></textarea></mat-form-field>
+          <mat-form-field>
+            <mat-select placeholder="Select a category" [(ngModel)]="policies.category" required>
+              <mat-option *ngFor="let category of categories" [value]="category">{{category}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-checkbox [(ngModel)]="policies.acknowledgement" name="policies.acknowledgement" required>I have read the Ts and Cs</mat-checkbox><button mat-raised-button="" (click)="addPolicy()">Submit Policy</button>
         </div>
       </mat-expansion-panel>
     </mat-accordion>
@@ -32,17 +46,17 @@
       <!-- Name Column -->
       <ng-container matColumnDef="name">
         <th mat-header-cell="" *matHeaderCellDef=""> Policy Name </th>
-        <td mat-cell="" *matCellDef="let element"> {{element.name}} </td>
+        <td mat-cell="" *matCellDef="let element"> {{element.title}} </td>
       </ng-container>
 
       <!-- Symbol Column -->
       <ng-container matColumnDef="symbol">
         <th mat-header-cell="" *matHeaderCellDef=""> Category </th>
-        <td mat-cell="" *matCellDef="let element"> {{element.symbol}} </td>
+        <td mat-cell="" *matCellDef="let element"> {{element.category}} </td>
       </ng-container>
 
       <tr mat-header-row="" *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row="" *matRowDef="let row; columns: displayedColumns;"></tr>
+      <tr mat-row="" *matRowDef="let row; columns: displayedColumns;" (click)="selectedPolicy(row)" style="cursor:pointer"></tr>
     </table>
   </div>
 </div>

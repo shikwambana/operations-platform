@@ -4,11 +4,21 @@ import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
 import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
+import { policiesComponent } from '../policiesComponent/policies.component';
+import { Router } from '@angular/router';
+
 
 /**
  * Service import Example :
  * import { HeroService } from '../services/hero/hero.service';
  */
+
+// export const routerConfig: Routes = [
+//     {
+//         path: 'policy',
+//         component: policiesComponent
+//     }
+// ];
 
 @Component({
     selector: 'bh-homepage',
@@ -18,13 +28,18 @@ import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 export class homepageComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
 
-    constructor(private bdms: NDataModelService) {
+    constructor(private bdms: NDataModelService, private router: Router) {
         super();
         this.mm = new ModelMethods(bdms);
     }
 
     ngOnInit() {
 
+    }
+
+    logoutUser() {
+    //   this.logoutService.logout();
+      this.router.navigate(['../login']);
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
