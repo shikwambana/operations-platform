@@ -1,0 +1,13 @@
+{
+    "appPageId": "60fe60a8-7824-fe39-a8ed-f43be3a18a73",
+    "appPageName": "find",
+    "componentName": "findComponent",
+    "selectorName": "bh-find",
+    "htmlFileName": "find.template.html",
+    "tsFileName": "find.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

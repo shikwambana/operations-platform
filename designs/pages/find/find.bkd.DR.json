@@ -1,0 +1,84 @@
+{
+    "7e42dfe0-7f7b-b900-ba2c-b9dc862d3cda": {
+        "paletteKey": "FlexLayoutCol",
+        "designerReference": [
+            {
+                "_key": "style",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "class",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "fxFlex",
+                "_value": "100",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "fxLayoutGap",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "wrap",
+                "_value": "wrap",
+                "_type": "a",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "layoutAlign",
+                "_value": "center",
+                "_type": "a",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "pLayoutAlign",
+                "_value": "center",
+                "_type": "a",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "fxShow",
+                "_value": "true",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "fxHide",
+                "_value": "false",
+                "_type": "kv",
+                "_attrDef": "p"
+            }
+        ],
+        "c84737cc-0187-2220-66d3-a0f41f5d5cf7": {
+            "paletteKey": "HTML",
+            "designerReference": [
+                {
+                    "_key": "style",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "class",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "html",
+                    "_value": "<form [formGroup]=\"stateForm\">\r\n  <mat-form-field>\r\n    <input type=\"text\" matInput placeholder=\"Search\" formControlName=\"stateGroup\" required [matAutocomplete]=\"autoGroup\">\r\n      <mat-autocomplete #autoGroup=\"matAutocomplete\">\r\n        <mat-optgroup *ngFor=\"let group of stateGroupOptions | async\" [label]=\"group.letter\" (click)=\"nav(group)\">\r\n          <mat-option *ngFor=\"let name of group.names\" [value]=\"name\">\r\n            {{name.title}}\r\n          </mat-option>\r\n      </mat-optgroup>\r\n    </mat-autocomplete>\r\n  </mat-form-field>\r\n</form>",
+                    "_type": "a",
+                    "_attrDef": "p"
+                }
+            ]
+        }
+    }
+}

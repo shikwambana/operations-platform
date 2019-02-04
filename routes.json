@@ -8,7 +8,12 @@
             "resolve": "",
             "data": "",
             "canActivate": "NAuthGuardService",
-            "children": []
+            "children": [
+                {
+                    "path": "search",
+                    "component": "findComponent"
+                }
+            ]
         },
         {
             "path": "login",
@@ -75,7 +80,12 @@
                 },
                 {
                     "path": "extension",
-                    "component": "extensionComponent"
+                    "component": "extensionComponent",
+                    "children": []
+                },
+                {
+                    "component": "searchComponent",
+                    "path": "search"
                 }
             ]
         },

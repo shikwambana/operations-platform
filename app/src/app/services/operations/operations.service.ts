@@ -8,4 +8,17 @@ import { services } from '../../models/services.model';
 export class operationsService {
     policies: policies;
     services: services;
+    searchFilter= [];
+
+//    combineData(){
+//        for(let i =0; i < this.policies.length; i++ ){
+//            this.searchFilter.push(this.policies[i]);
+//        }
+//        for(let i =0; i < this.services.length; i++ ){
+//            this.searchFilter.push(this.policies[i]);
+//        }
+
+//     console.log(this.searchFilter);
+
+//    }
 }

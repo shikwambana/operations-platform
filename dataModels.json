@@ -69,5 +69,23 @@
         "description": "visa",
         "dataSource": "neutrinos-delivery-rt",
         "fields": []
+    },
+    "3a4c709c-fece-7856-89da-9f543138f1f1": {
+        "dataModelId": "3a4c709c-fece-7856-89da-9f543138f1f1",
+        "name": "services",
+        "description": "link to individual services",
+        "dataSource": "operations",
+        "fields": [
+            {
+                "name": "title",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "link",
+                "fieldType": 2,
+                "isArray": false
+            }
+        ]
     }
 }

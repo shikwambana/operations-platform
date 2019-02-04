@@ -8,94 +8,86 @@ import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 import { Router } from '@angular/router';
 import { operationsService } from '../../services/operations/operations.service';
 
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { FormControl } from '@angular/forms';
+import { FormBuilder, FormGroup, FormControl  } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 
 
+export interface StateGroup {
+  category: string;
+  names: [{
+      title: string;
+      link: string;
+  }]
+}
+
+export const _filter = (opt: string[], value: string): string[] => {
+  const filterValue = value.toLowerCase();
+
+  return opt.filter(item => item.toLowerCase().indexOf(filterValue) === 0);
+};
+
 
 @Component({
-    selector: 'bh-search',
-    templateUrl: './search.template.html'
+    selector: 'bh-find',
+    templateUrl: './find.template.html'
 })
 
-export class searchComponent extends NBaseComponent implements OnInit {
+export class findComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
 
-  
-    services;
-    policies;
+    filter : any[];
+    stateForm: FormGroup = this.fb.group({
+    stateGroup: '',
+  });
 
-    //Tukiso's search ======================================================
+  stateGroups = [{
+    letter: 'Policies',
+    names: this.filter
+  }];
 
-    // myControl = new FormControl();
+  stateGroupOptions: Observable<any[]>;
 
-    // // operations = this.operationsService.searchFilter;
-    // operations = [{
-    //     title: 'Services',
-    //     operationObj: this.operationsService.services
-    // }, {
-    //     title: 'Policies',
-    //     operationObj: this.operationsService.policies
-    // }];
-    // filteredOperations: Observable<any>;
-
-    //==============================================================
-
-
-
-    constructor(private bdms: NDataModelService, private operationsService: operationsService, private router: Router) {
+    constructor(private bdms: NDataModelService, private router: Router, private fb: FormBuilder) {
         super();
         this.mm = new ModelMethods(bdms);
     }
 
     ngOnInit() {
-        this.get('services');
+
         this.get('policies');
+         this.stateGroupOptions = this.stateForm.get('stateGroup')!.valueChanges
+      .pipe(
+        startWith(''),
+        map(value => this._filterGroup(value))
+      );
+    }
 
-        // this.filteredOperations = this.myControl.valueChanges.pipe(
-        //     startWith(''),
-        //     map(value => this._filter(value))
-        // );
-
-      
-
+   
+    nav(row){
+        console.log(row);
+        this.router.navigate([row.names[0].link]);
     }
 
 
-    
-    // private _filter(value: string): any[] {
-    //     const filterValue = value.toLowerCase();
+    private _filterGroup(value: string): StateGroup[] {
+    if (value) {
+      return this.stateGroups
+        .map(group => ({letter: group.letter, names: _filter(group.names.title, value)}))
+        .filter(group => group.names.length > 0);
+    }
 
-    //     return this.operations.filter(operation => operation.title.toLowerCase().indexOf(filterValue) === 0);
-    // }
+    return this.stateGroups;
+  }
+
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, this, filter, keys, sort, pagenumber, pagesize,
             result => {
                 // On Success code here
-                if (dataModelName == 'services') {
-
-                    this.operationsService.services = result;
-                    this.services = this.operationsService.services;
-
-                    //add to services to array
-                    for (let i = 0; i < result.length; i++) {
-                        this.operationsService.searchFilter.push(this.services[i]);
-                    }
-                }
-                if (dataModelName == 'policies') {
-                    this.operationsService.policies = result;
-                    this.policies = this.operationsService.policies;
-
-                    //add policies to array
-                    for (let i = 0; i < result.length; i++) {
-                        this.operationsService.searchFilter.push(this.policies[i]);
-                    }
-
-                    console.log(this.operationsService.searchFilter);
-                }
+                filter = result;
+                console.log(filter);
+                
             },
             error => {
                 // Handle errors here
