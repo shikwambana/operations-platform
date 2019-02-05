@@ -38,19 +38,19 @@ export class editpolicyComponent extends NBaseComponent implements OnInit {
     ngOnInit() {
       this.selectedPolicy =  this.PoliciesService.getSelectedPolicy();
       if(!this.selectedPolicy){
-          this.router.navigate(['/homepage/hr']);
+          this.router.navigate(['/human-resource/hr']);
       }
     }
 
     updatePolicy(){
         let id = this.selectedPolicy['_id'];
         this.updateById('policies',id,this.selectedPolicy);
-        this.router.navigate(['/homepage/hr']);
+        this.router.navigate(['/human-resource/hr']);
 
     }
 
      goBack(){
-         this.router.navigate(['/homepage/hr']);
+         this.router.navigate(['/human-resource/hr']);
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {

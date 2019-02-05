@@ -38,14 +38,13 @@ export class policiesComponent extends NBaseComponent implements OnInit {
 
     ngOnInit() {
         this.get('policies');
-
     }
     
 
     viewPolicy(policy){
         console.log(policy);
         this.PoliciesService.setSelectedPolicy(policy);
-        this.router.navigate(['/homepage/policy']);
+        this.router.navigate(['/human-resource/policy']);
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {

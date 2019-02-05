@@ -19,11 +19,6 @@
         "componentName": "hrpolicyadminComponent",
         "isEntry": false
     },
-    "55ea5da2-d723-8052-4740-3c4299b27c64": {
-        "appPageName": "homepage",
-        "componentName": "homepageComponent",
-        "isEntry": false
-    },
     "5cec9809-1f95-a1cb-f646-97f6b5763019": {
         "appPageName": "editpolicy",
         "componentName": "editpolicyComponent",

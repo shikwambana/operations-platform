@@ -27,6 +27,14 @@ export class transportComponent extends NBaseComponent implements OnInit {
 
     }
 
+<<<<<<< HEAD
+=======
+    submit() {
+        console.log(this.transport);
+        this.put('transport', this.transport);
+    }
+
+>>>>>>> origin/tukiso
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, this, filter, keys, sort, pagenumber, pagesize,
             result => {

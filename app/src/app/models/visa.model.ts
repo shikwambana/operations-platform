@@ -14,8 +14,8 @@ export class visa {
   @JsonProperty('expiry_date', Date, true)
   public expiry_date: Date = undefined;
 
-  @JsonProperty('passport_numer', String, true)
-  public passport_numer: string = undefined;
+  @JsonProperty('passport_number', String, true)
+  public passport_number: string = undefined;
 
   @JsonProperty('renew', String, true)
   public renew: string = undefined;
