@@ -59,11 +59,6 @@
         "componentName": "guesthouseComponent",
         "isEntry": false
     },
-    "83555f1b-a793-1ab3-64a3-9deb2f20bee4": {
-        "appPageName": "extension",
-        "componentName": "extensionComponent",
-        "isEntry": false
-    },
     "27cf0d11-d036-5e5e-80f4-8e5e6eef19bf": {
         "appPageName": "otherservices",
         "componentName": "otherservicesComponent",

@@ -6,3 +6,5 @@ export { visa } from './visa.model';
 export { services } from './services.model';
 export { guesthouse } from './guesthouse.model';
 export { leaverequest } from './leaverequest.model';
+export { transport } from './transport.model';
+export { flight } from './flight.model';

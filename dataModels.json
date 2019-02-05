@@ -183,5 +183,91 @@
                 "isArray": false
             }
         ]
+    },
+    "d4eae192-8b29-4461-7726-137deb188794": {
+        "dataModelId": "d4eae192-8b29-4461-7726-137deb188794",
+        "name": "transport",
+        "description": "transport request",
+        "dataSource": "operations",
+        "fields": [
+            {
+                "name": "date",
+                "fieldType": 3,
+                "isArray": false
+            },
+            {
+                "name": "destination",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "from",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "to",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "time",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "additional_info",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "whatsapp_num",
+                "fieldType": 1,
+                "isArray": false
+            },
+            {
+                "name": "email",
+                "fieldType": 2,
+                "isArray": false
+            }
+        ]
+    },
+    "ccebd729-1b3f-7337-d927-9681b83b7241": {
+        "dataModelId": "ccebd729-1b3f-7337-d927-9681b83b7241",
+        "name": "flight",
+        "description": "flight details",
+        "dataSource": "operations",
+        "fields": [
+            {
+                "name": "airlines",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "ticket_number",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "arrival",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "departure",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "airport",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "date",
+                "fieldType": 2,
+                "isArray": false
+            }
+        ]
     }
 }

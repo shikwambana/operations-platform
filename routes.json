@@ -75,10 +75,6 @@
                     "component": "policiesComponent"
                 },
                 {
-                    "path": "extension",
-                    "component": "extensionComponent"
-                },
-                {
                     "component": "transportComponent",
                     "path": "transport"
                 }

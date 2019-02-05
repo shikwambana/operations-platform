@@ -19,6 +19,8 @@ export class operationsComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
 
     leaves;    
+    transport;
+    flight;
     constructor(private bdms: NDataModelService) {
         super();
         this.mm = new ModelMethods(bdms);
@@ -26,6 +28,8 @@ export class operationsComponent extends NBaseComponent implements OnInit {
 
     ngOnInit() {
         this.get('leaverequest');
+        this.get('flight');
+        this.get('transport');
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
@@ -34,6 +38,12 @@ export class operationsComponent extends NBaseComponent implements OnInit {
                 // On Success code here
                 if(dataModelName == 'leaverequest'){
                     this.leaves = result;
+                }
+                if(dataModelName == 'transport'){
+                    this.transport = result;
+                }
+                if(dataModelName == 'flight'){
+                    this.flight = result;
                 }
                 console.log(result);
             },
