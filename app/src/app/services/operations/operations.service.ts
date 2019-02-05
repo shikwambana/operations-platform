@@ -8,32 +8,4 @@ import { services } from '../../models/services.model';
 export class operationsService {
     policies: policies;
     services: services;
-    displayer = "/menu";
-
-    BtnRoutes = [
-        {
-            name: "Home",
-            link: "/home"
-        },
-        {
-            name: "Apply Leave",
-            link: this.displayer + "/applyleave"
-        },
-        {
-            name: "Other Services",
-            link: this.displayer + "/otherservices"
-        },
-        {
-            name: "Emergency Contacts",
-            link: this.displayer + "/emergencies"
-        },
-        {
-            name: "HR Policies",
-            link: this.displayer + "/policies"
-        },
-        {
-            name: "Contact HR",
-            link: this.displayer + "/contacthr"
-        }
-    ]
 }

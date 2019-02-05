@@ -323,24 +323,24 @@
                                 "_attrDef": "p"
                             }
                         ],
-                        "54d0d510-0025-0632-2eee-382fd68897c0": {
-                            "paletteKey": "NG-button",
+                        "83c77967-5263-3f75-48df-2a7a8cd3c402": {
+                            "paletteKey": "NG-RaisedButton",
                             "designerReference": [
                                 {
                                     "_key": "style",
-                                    "_value": "background:white;padding:10px;border-radius:50%;",
+                                    "_value": "",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
                                 {
                                     "_key": "class",
-                                    "_value": "homeMenuSmallBtn",
+                                    "_value": "homeMainLogoutBtn",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
                                 {
                                     "_key": "buttonname",
-                                    "_value": "<mat-icon style=\"color:white;\">menu</mat-icon>",
+                                    "_value": "Logout",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
@@ -352,12 +352,18 @@
                                 },
                                 {
                                     "_key": "(click)",
-                                    "_value": "sidenav.toggle();",
+                                    "_value": "logoutUser()",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
                                 {
-                                    "_key": "fxShow",
+                                    "_key": "fxHide.sm",
+                                    "_value": "true",
+                                    "_type": "kv",
+                                    "_attrDef": "c"
+                                },
+                                {
+                                    "_key": "fxHide.xs",
                                     "_value": "true",
                                     "_type": "kv",
                                     "_attrDef": "c"
@@ -426,8 +432,8 @@
                     "_attrDef": "p"
                 }
             ],
-            "edc27976-1744-3094-0a88-02929e70f3a7": {
-                "paletteKey": "NG-sidenav-container",
+            "216f6677-d37e-f3bb-2f2d-07d220dc8b2a": {
+                "paletteKey": "NG-RouterOutlet",
                 "designerReference": [
                     {
                         "_key": "style",
@@ -437,228 +443,11 @@
                     },
                     {
                         "_key": "class",
-                        "_value": "homeSidenavContainer",
+                        "_value": "",
                         "_type": "kv",
                         "_attrDef": "p"
                     }
-                ],
-                "ff6ae908-30a5-112d-8b9a-82b235ccf197": {
-                    "paletteKey": "NG-sidenav",
-                    "designerReference": [
-                        {
-                            "_key": "style",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "class",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "mode",
-                            "_value": "over",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "opened",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "position",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "fxLayout",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "(opened)",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "(closed)",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "(toggle)",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        }
-                    ],
-                    "53156f95-4979-1490-09a3-c9fbe1531e94": {
-                        "paletteKey": "FlexLayoutCol",
-                        "designerReference": [
-                            {
-                                "_key": "style",
-                                "_value": "",
-                                "_type": "kv",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "class",
-                                "_value": "",
-                                "_type": "kv",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "fxFlex",
-                                "_value": "",
-                                "_type": "kv",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "fxLayoutGap",
-                                "_value": "",
-                                "_type": "kv",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "wrap",
-                                "_value": "wrap",
-                                "_type": "a",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "layoutAlign",
-                                "_value": "start",
-                                "_type": "a",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "pLayoutAlign",
-                                "_value": "stretch",
-                                "_type": "a",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "fxShow",
-                                "_value": "true",
-                                "_type": "kv",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "fxHide",
-                                "_value": "false",
-                                "_type": "kv",
-                                "_attrDef": "p"
-                            }
-                        ],
-                        "3c7fb82d-fd64-1c6e-90da-f5f882668ef7": {
-                            "paletteKey": "NG-RaisedButton",
-                            "designerReference": [
-                                {
-                                    "_key": "style",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "class",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "buttonname",
-                                    "_value": "{{link.name}}",
-                                    "_type": "a",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "color",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "(click)",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "routerLink",
-                                    "_value": "{{link.link}}",
-                                    "_type": "kv",
-                                    "_attrDef": "c"
-                                },
-                                {
-                                    "_key": "*ngFor",
-                                    "_value": "let link of BtnRoutes",
-                                    "_type": "kv",
-                                    "_attrDef": "c"
-                                }
-                            ]
-                        },
-                        "83c77967-5263-3f75-48df-2a7a8cd3c402": {
-                            "paletteKey": "NG-RaisedButton",
-                            "designerReference": [
-                                {
-                                    "_key": "style",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "class",
-                                    "_value": "homeMainLogoutBtn",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "buttonname",
-                                    "_value": "Logout",
-                                    "_type": "a",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "color",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "(click)",
-                                    "_value": "logoutUser()",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                }
-                            ]
-                        }
-                    }
-                },
-                "216f6677-d37e-f3bb-2f2d-07d220dc8b2a": {
-                    "paletteKey": "NG-RouterOutlet",
-                    "designerReference": [
-                        {
-                            "_key": "style",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "class",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        }
-                    ]
-                }
+                ]
             }
         }
     }

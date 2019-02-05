@@ -55,12 +55,12 @@
     position: fixed;
     top: 0;
     z-index: 2;
-    padding: 35px 0 !important;
+    padding: 45px 0 !important;
     width: 95% !important;
 }
 .homeSidenavContainer {
-    height: 87vh;
-    top: 5vh;
+    height: 88vh;
+    top: 10vh;
     width: 100%;
     background: transparent;
 }
@@ -175,7 +175,7 @@
     margin-bottom: 2%;
 }
 .otherservicesCardsContainer {
-    height: 40vh;
+    height: 65vh; 
     overflow: auto;
 }
 .otherServiceCards {
@@ -187,18 +187,37 @@
     background: red;
 }
 // Scroll Bar
+/* width */
 ::-webkit-scrollbar {
-    display: none;
+  width: 20px;
 }
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px red; 
+  border-radius: 10px;
+  background: transparent; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 0, 0, 0.6); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 0, 0, 0.9); 
+}
+
 // My Forms
 .formCard {
-    background-color:rgba(0, 0, 0, 0.5);
+    background-color:rgba(122, 122, 122, 0.3);
     color: white;
-    width: 90%;
-    margin: 0 auto;
+    width: 100%;
 }
 .formCard .mat-form-field-infix {
-    width: 22em !important;
+    width: 325px !important;
 }
 .changeColor .mat-option-0 .mat-option-1 .mat-option-2 {
     background: yellow;
@@ -206,8 +225,21 @@
 .mat-select-panel .mat-optgroup-label, .mat-select-panel .mat-option {
     background: red;
 }
-.mat-icon-button {
-    color: white;
+// Form Height
+.formHeight {
+    height: 79vh !important;
+    // width: 80% !important;
+    overflow: auto !important;
+    padding-top: 30vh !important;
+}
+.formWidth {
+    height: 71vh !important;
+    width: 86% !important;
+    overflow: auto !important;
+    padding-top: 56vh !important;
+    margin: 0 auto !important;
+    overflow-x: hidden !important;
+    text-align: center;
 }
 .formWidth .mat-form-field-infix {
     width: 42vh !important;
@@ -222,17 +254,11 @@
     .formWidth .mat-form-field-infix {
         width: 32vh !important;
     }
-    .formCard .mat-form-field-infix {
-        width: 270px !important;
-    }
 }
 // For screens with a maximum width of 599px
 @media only screen and (max-width: 599px){
     .emptyRow {
         height: 250px !important;
-    }
-    .search-full-width {
-        padding: 0 !important;
     }
 }
 // For screens with a maximum width of 768px

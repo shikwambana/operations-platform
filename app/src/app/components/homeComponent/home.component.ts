@@ -15,7 +15,7 @@ import { operationsService } from '../../services/operations/operations.service'
 export class homeComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
 
-    BtnRoutes: any[] = this.operationsService.BtnRoutes;
+    homeLinks = ["home", "apply leave", ""]
 
     constructor(private bdms: NDataModelService, private logoutService: NLogoutService, private operationsService: operationsService, private router: Router) {
         super();

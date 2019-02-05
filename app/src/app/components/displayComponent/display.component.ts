@@ -6,7 +6,6 @@ import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
 import { NDataModelService, NLogoutService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
-import { operationsService } from '../../services/operations/operations.service';
 
 /**
  * Service import Example :
@@ -21,9 +20,7 @@ import { operationsService } from '../../services/operations/operations.service'
 export class displayComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
 
-    BtnRoutes: any[] = this.operationsService.BtnRoutes;
-
-    constructor(private bdms: NDataModelService, private logoutService: NLogoutService, private operationsService: operationsService, private router: Router) {
+    constructor(private bdms: NDataModelService, private logoutService: NLogoutService, private router: Router) {
         super();
         this.mm = new ModelMethods(bdms);
     }

@@ -4,7 +4,6 @@ import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
 import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
-import { guesthouse } from "../../models/guesthouse.model";
 
 /**
  * Service import Example :
@@ -19,14 +18,6 @@ import { guesthouse } from "../../models/guesthouse.model";
 export class guesthouseComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
 
-    guesthouse = new guesthouse();
-
-    options: String[] = [
-        'opt1',
-        'opt2',
-        'opt3'
-    ]
-
     constructor(private bdms: NDataModelService) {
         super();
         this.mm = new ModelMethods(bdms);
@@ -34,10 +25,6 @@ export class guesthouseComponent extends NBaseComponent implements OnInit {
 
     ngOnInit() {
 
-    }
-
-    submit() {
-        this.put('guesthouse', this.guesthouse);
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
@@ -72,11 +59,9 @@ export class guesthouseComponent extends NBaseComponent implements OnInit {
     validatePut(formObj, dataModelName, dataModelObject) {
         this.mm.validatePut(formObj, dataModelName, dataModelObject,
             result => {
-                console.log('saved');
                 // On Success code here
             }, error => {
                 // Handle errors here
-                console.log(error);
             })
     }
 

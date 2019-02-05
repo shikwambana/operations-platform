@@ -68,15 +68,5 @@
         "appPageName": "otherservices",
         "componentName": "otherservicesComponent",
         "isEntry": false
-    },
-    "bfce6d72-49fe-2c08-5d3f-116297d96519": {
-        "appPageName": "transport",
-        "componentName": "transportComponent",
-        "isEntry": false
-    },
-    "4cc4cd53-cad2-5076-22a9-79569fd4f631": {
-        "appPageName": "flight",
-        "componentName": "flightComponent",
-        "isEntry": false
     }
 }

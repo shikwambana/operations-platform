@@ -1,31 +1,3 @@
 <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
-  <mat-card fxLayoutAlign="center center" ngClass.sm="" ngClass.xs="" class="formCard">
-    <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
-      <div fxLayout="row wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
-        <h1>Guesthouse Services</h1>
-      </div>
-      <div fxLayout="row wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
-        <h3>Fields marked with an <span style="color:red">*</span> are required</h3>
-      </div>
-      <form #services="ngForm">
-        <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
-          <mat-form-field><textarea matInput="" [(ngModel)]="guesthouse.problem" ngModel="" pattern="[a-zA-Z0-9]*" name="problem" placeholder="What is the problem?" required></textarea></mat-form-field>
-          <mat-form-field>
-            <mat-select placeholder="Guesthouse" [(ngModel)]="guesthouse.guest_house" required name="ghouse">
-              <mat-option *ngFor="let option of options" [value]="option">{{option}}</mat-option>
-            </mat-select>
-          </mat-form-field>
-          <mat-form-field><input matInput="" [(ngModel)]="guesthouse.unit_number" name="unit_number" type="number" placeholder="Unit number" required minlength="3"></mat-form-field>
-          <mat-form-field><input matInput="" placeholder="When would you like the problem resolved?" [matDatepicker]="picker" [(ngModel)]="guesthouse.date" name="date">
-            <mat-datepicker-toggle matSuffix="" [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker="" type="date"></mat-datepicker>
-          </mat-form-field>
-          <mat-form-field><input matInput="" [(ngModel)]="guesthouse.to_know" name="to_know" type="string" placeholder="Anything else you would like us to know?" required ngModel="" pattern="[a-zA-Z0-9]*"></mat-form-field>
-          <mat-form-field><input matInput="" [(ngModel)]="guesthouse.name" name="name" placeholder="Enter your name?" required ngModel="" pattern="[a-zA-Z]*"></mat-form-field>
-          <mat-form-field><input matInput="" [(ngModel)]="guesthouse.whatsapp_num" name="whatspp_num" type="number" placeholder="Whatsapp number:" required></mat-form-field>
-          <div fxLayout="column wrap" fxLayoutAlign="center center" fxShow="true" fxHide="false"><button mat-raised-button="" [disabled]="!services.valid" (click)="submit()">Submit</button></div>
-        </div>
-      </form>
-    </div>
-  </mat-card>
+  <h1>Guest House Works</h1>
 </div>

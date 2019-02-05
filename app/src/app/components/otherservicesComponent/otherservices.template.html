@@ -5,31 +5,11 @@
   <div fxLayout="row wrap" style="text-align:center;" fxFlex="80" fxLayoutAlign="center center" fxShow="true" fxHide="false">
     <p>This web-app should be used as a tool to perform S.O.Ps here at Neutrinos-International. All queries, concerns and requests should be logged via this web-app. Please adhere to the specifications needed in each field, and most importantly the time frames which have been stipulated.</p>
   </div>
-  <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
-    <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
-      <div fxLayout="row wrap" class="otherservicesCardsContainer" fxLayoutAlign="space-around stretch" fxShow="true" fxHide="false">
-        <mat-card *ngFor="let icon of operationsIcons" routerLink="{{icon.link}}" fxFlex="19" fxFlex.sm="47" ngClass.sm="cardSM" fxFlex.xs="95" ngClass.xs="cardXS" class="otherServiceCards"><img mat-card-image="" style="height:200px;" imgSrc="{{icon.image}}">
-          <mat-card-title style="text-align:center;color: white;border-radius:10px;width:85%;padding: 8px 7px;font-size:18px;">{{icon.text}}</mat-card-title>
-        </mat-card>
-      </div>
-      <form>
-        <div fxLayout="row wrap" fxLayoutAlign="center center" fxShow="true" fxHide="false">
-          <h1 ngClass.xs="formHeight" style="color:red;">Any issues? Contact us below</h1>
-        </div>
-        <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
-          <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start stretch" fxShow="true" fxHide="false" fxLayout.sm="column" fxLayout.xs="column">
-            <div fxLayout="column wrap" fxFlex="33" fxLayoutAlign="center center" fxShow="true" fxHide="false">
-              <mat-form-field><input matInput="" [(ngModel)]="operations.name" name="name" placeholder="Name" required></mat-form-field>
-            </div>
-            <div fxLayout="column wrap" fxFlex="33" fxLayoutAlign="center center" fxShow="true" fxHide="false">
-              <mat-form-field><input matInput="" [(ngModel)]="operations.email" name="email" placeholder="Email" required></mat-form-field>
-            </div>
-            <div fxLayout="column wrap" fxFlex="33" fxLayoutAlign="center center" fxShow="true" fxHide="false">
-              <mat-form-field><input matInput="" [(ngModel)]="operations.message" name="message" placeholder="Message" required></mat-form-field>
-            </div>
-          </div>
-        </div>
-      </form>
+  <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="end end" fxShow="true" fxHide="false">
+    <div fxLayout="row wrap" class="otherservicesCardsContainer" fxLayoutAlign="space-around stretch" fxShow="true" fxHide="false">
+      <mat-card *ngFor="let icon of operationsIcons" routerLink="{{icon.link}}" fxFlex="19" fxFlex.sm="47" ngClass.sm="cardSM" fxFlex.xs="95" ngClass.xs="cardXS" class="otherServiceCards"><img mat-card-image="" style="height:200px;" imgSrc="{{icon.image}}">
+        <mat-card-title style="text-align:center;color: white;border-radius:10px;width:85%;padding: 8px 7px;font-size:18px;">{{icon.text}}</mat-card-title>
+      </mat-card>
     </div>
   </div>
 </div>
