@@ -8,10 +8,13 @@ export class policies {
   @JsonProperty('content', String, true)
   public content: string = undefined;
 
-  @JsonProperty('acknowledgement', Boolean, true)
-  public acknowledgement: boolean = undefined;
-
   @JsonProperty('category', String, true)
   public category: string = undefined;
+
+  @JsonProperty('procedure', String, true)
+  public procedure: string = undefined;
+
+  @JsonProperty('link', String, true)
+  public link: string = undefined;
 
 }

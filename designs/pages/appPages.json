@@ -68,5 +68,20 @@
         "appPageName": "operations",
         "componentName": "operationsComponent",
         "isEntry": false
+    },
+    "84c8c506-e38d-8be5-07d5-b09d2af6752b": {
+        "appPageName": "flight",
+        "componentName": "flightComponent",
+        "isEntry": false
+    },
+    "10dc8a2f-7502-1da1-ff65-42163dbcfe41": {
+        "appPageName": "extension",
+        "componentName": "extensionComponent",
+        "isEntry": false
+    },
+    "1c79efea-9b04-0d34-38b2-d8bdc37cc6ed": {
+        "appPageName": "addPolicy",
+        "componentName": "addpolicyComponent",
+        "isEntry": false
     }
 }
