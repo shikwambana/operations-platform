@@ -11,40 +11,12 @@ import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
  */
 
 @Component({
-    selector: 'bh-otherservices',
-    templateUrl: './otherservices.template.html'
+    selector: 'bh-manager',
+    templateUrl: './manager.template.html'
 })
 
-export class otherservicesComponent extends NBaseComponent implements OnInit {
+export class managerComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
-
-    operationsIcons = [
-        {
-            image: "Web/visa.jpg",
-            link: "../extension",
-            text: "Visa Extension"
-        },
-        {
-            image: "Web/images.png",
-            link: "../guesthouse",
-            text: "Guest House"
-        },
-        {
-            image: "Web/transportation.jpg",
-            link: "../transport",
-            text: "Transport Request"
-        },
-        {
-            image: "Web/flight.jpg",
-            link: "../flight",
-            text: "Flight Information"
-        },
-        {
-            image: "Web/hr.jpg",
-            link: "../hr",
-            text: "HR Policies"
-        }
-    ]
 
     constructor(private bdms: NDataModelService) {
         super();

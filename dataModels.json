@@ -68,13 +68,7 @@
         "name": "visa",
         "description": "visa",
         "dataSource": "neutrinos-delivery-rt",
-        "fields": [
-            {
-                "name": "passport_number",
-                "fieldType": 2,
-                "isArray": false
-            }
-        ]
+        "fields": []
     },
     "76cf35b7-e10b-6eaf-89c7-91ad65b4ef04": {
         "dataModelId": "76cf35b7-e10b-6eaf-89c7-91ad65b4ef04",
@@ -137,100 +131,54 @@
             }
         ]
     },
-    "c17b8b7e-b9f0-dbcc-1a03-637f82a3e971": {
-        "dataModelId": "c17b8b7e-b9f0-dbcc-1a03-637f82a3e971",
-        "name": "transport",
-        "description": "transport",
+    "8d27391f-ee3e-e792-4edf-d1e1fef7b576": {
+        "dataModelId": "8d27391f-ee3e-e792-4edf-d1e1fef7b576",
+        "name": "leaverequest",
+        "description": "leave request",
         "dataSource": "operations",
         "fields": [
             {
-                "name": "date",
+                "name": "leaveType",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "fromDate",
                 "fieldType": 3,
                 "isArray": false
             },
             {
-                "name": "destination",
-                "fieldType": 2,
+                "name": "toDate",
+                "fieldType": 3,
                 "isArray": false
             },
             {
-                "name": "from",
-                "fieldType": 2,
-                "isArray": false
-            },
-            {
-                "name": "to",
-                "fieldType": 2,
-                "isArray": false
-            },
-            {
-                "name": "time",
-                "fieldType": 2,
-                "isArray": false
-            },
-            {
-                "name": "additional_info",
-                "fieldType": 2,
-                "isArray": false
-            },
-            {
-                "name": "whatsapp_num",
+                "name": "duration",
                 "fieldType": 1,
                 "isArray": false
             },
             {
-                "name": "email",
-                "fieldType": 2,
-                "isArray": false
-            }
-        ]
-    },
-    "558029a5-fff5-35b8-eb51-ce6743e980d6": {
-        "dataModelId": "558029a5-fff5-35b8-eb51-ce6743e980d6",
-        "name": "flight",
-        "description": "flight",
-        "dataSource": "operations",
-        "fields": [
-            {
-                "name": "airlines",
+                "name": "leaveStatus",
                 "fieldType": 2,
                 "isArray": false
             },
             {
-                "name": "ticket_number",
+                "name": "username",
                 "fieldType": 2,
                 "isArray": false
             },
             {
-                "name": "arrival",
+                "name": "fullName",
                 "fieldType": 2,
                 "isArray": false
             },
             {
-                "name": "departure",
-                "fieldType": 2,
-                "isArray": false
-            }
-        ]
-    },
-    "310c3cdd-89d9-633b-7edb-b52e3c9180df": {
-        "dataModelId": "310c3cdd-89d9-633b-7edb-b52e3c9180df",
-        "name": "operations",
-        "description": "operations",
-        "dataSource": "operations",
-        "fields": [
-            {
-                "name": "name",
+                "name": "managerName",
                 "fieldType": 2,
                 "isArray": false
             },
             {
-                "name": "email",
-                "fieldType": 2,
-                "isArray": false
-            },
-            {
-                "name": "message",
+                "name": "leaveReason",
                 "fieldType": 2,
                 "isArray": false
             }

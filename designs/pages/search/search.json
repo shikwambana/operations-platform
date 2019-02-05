@@ -1,0 +1,13 @@
+{
+    "appPageId": "87f6a57e-45c8-4318-c149-9842b5fa8951",
+    "appPageName": "search",
+    "componentName": "searchComponent",
+    "selectorName": "bh-search",
+    "htmlFileName": "search.template.html",
+    "tsFileName": "search.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

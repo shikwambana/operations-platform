@@ -1,0 +1,15 @@
+<div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="center center" fxShow="true" fxHide="false">
+  <form class="search-form">
+    <mat-form-field class="search-full-width">
+      <input type="text" placeholder="Search for Services" aria-label="Operation" matInput="" [formControl]="myControl" [matAutocomplete]="auto">
+      <mat-autocomplete autoActiveFirstOption="" #auto="matAutocomplete">
+        <mat-option *ngFor="let operation of filteredOperations | async" [value]="operation.name">
+          {{operation.name}}
+          <mat-option *ngFor="let titles of operation.operationObj | async" [value]="titles">
+            {{titles}}
+          </mat-option>
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
+</div>

@@ -8,8 +8,8 @@
         <h3>Fields marked with an <span style="color:red">*</span> are required</h3>
       </div>
       <form #teamReg="ngForm">
-        <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
-          <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start stretch" fxShow="true" fxHide="false" fxLayout.xs="column" fxLayout.sm="column">
+        <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="center center" fxShow="true" fxHide="false">
+          <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="space-between center" fxShow="true" fxHide="false" fxLayout.xs="column" fxLayout.sm="column">
             <div fxLayout="column wrap" fxFlex="50" fxLayoutAlign="center center" fxShow="true" fxHide="false">
               <mat-form-field class="search-full-width"><input matInput="" [(ngModel)]="visa.full_name" name="full_name" placeholder="Full Name" required id="fullName" minlength="4" ngModel="" pattern="[a-zA-Z]*"></mat-form-field>
             </div>
@@ -17,7 +17,7 @@
               <mat-form-field class="search-full-width"><input matInput="" [(ngModel)]="visa.email" name="email" placeholder="Email" required id="email" email="true"></mat-form-field>
             </div>
           </div>
-          <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start stretch" fxShow="true" fxHide="false" fxLayout.sm="column" fxLayout.xs="column">
+          <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="space-between center" fxShow="true" fxHide="false" fxLayout.sm="column" fxLayout.xs="column">
             <div fxLayout="column wrap" fxFlex="50" fxLayoutAlign="center center" fxShow="true" fxHide="false">
               <mat-form-field color="black" class="search-full-width"><input matInput="" [(ngModel)]="visa.phone" name="phone" type="number" placeholder="Phone Number" required></mat-form-field>
             </div>
@@ -28,7 +28,7 @@
               </mat-form-field>
             </div>
           </div>
-          <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start stretch" fxShow="true" fxHide="false" fxLayout.sm="column" fxLayout.xs="column">
+          <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="space-between center" fxShow="true" fxHide="false" fxLayout.sm="column" fxLayout.xs="column">
             <div fxLayout="column wrap" fxFlex="50" fxLayoutAlign="center center" fxShow="true" fxHide="false">
               <mat-form-field class="search-full-width"><input matInput="" [(ngModel)]="visa.passport_number" name="passport_number" placeholder="Passport Number" required id="passport" minlength="8" pattern="^[a-z0-9_-]{8,15}$"></mat-form-field>
             </div>
@@ -36,7 +36,7 @@
               <mat-form-field class="search-full-width"><input matInput="" [(ngModel)]="visa.renew" name="renew" type="date" placeholder="When would you like to go renew your visa?" required id="when"></mat-form-field>
             </div>
           </div>
-          <div fxLayout="row wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false" fxLayout.sm="column" fxLayout.xs="column">
+          <div fxLayout="row wrap" fxLayoutAlign="space-between center" fxShow="true" fxHide="false" fxLayout.sm="column" fxLayout.xs="column">
             <div fxLayout="column wrap" fxFlex="50" fxLayoutAlign="center center" fxShow="true" fxHide="false">
               <mat-form-field class="search-full-width"><input matInput="" [(ngModel)]="visa.time" name="time" type="time" placeholder="Time" required id="time"></mat-form-field>
             </div>
@@ -48,7 +48,7 @@
               </mat-form-field>
             </div>
           </div>
-          <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="center center" fxShow="true" fxHide="false"><button mat-raised-button="" style="color:white;" [attr.disabled]="!teamReg.valid" (click)="submit()">Submit</button></div>
+          <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start stretch" fxShow="true" fxHide="false"><button mat-raised-button="" style="color:white;" [attr.disabled]="!teamReg.valid" (click)="submit()">Submit</button></div>
         </div>
       </form>
     </div>

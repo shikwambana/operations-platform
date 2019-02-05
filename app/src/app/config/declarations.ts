@@ -12,10 +12,10 @@ window['neutrinos'] = {
 }
 
 //CORE_REFERENCE_IMPORTS
-//CORE_REFERENCE_IMPORT-lookComponent
-import { lookComponent } from '../components/lookComponent/look.component';
-//CORE_REFERENCE_IMPORT-flightComponent
-import { flightComponent } from '../components/flightComponent/flight.component';
+//CORE_REFERENCE_IMPORT-operationsComponent
+import { operationsComponent } from '../components/operationsComponent/operations.component';
+//CORE_REFERENCE_IMPORT-managerComponent
+import { managerComponent } from '../components/managerComponent/manager.component';
 //CORE_REFERENCE_IMPORT-transportComponent
 import { transportComponent } from '../components/transportComponent/transport.component';
 //CORE_REFERENCE_IMPORT-operationsService
@@ -26,6 +26,8 @@ import { otherservicesComponent } from '../components/otherservicesComponent/oth
 import { extensionComponent } from '../components/extensionComponent/extension.component';
 //CORE_REFERENCE_IMPORT-guesthouseComponent
 import { guesthouseComponent } from '../components/guesthouseComponent/guesthouse.component';
+//CORE_REFERENCE_IMPORT-searchComponent
+import { searchComponent } from '../components/searchComponent/search.component';
 //CORE_REFERENCE_IMPORT-policiesComponent
 import { policiesComponent } from '../components/policiesComponent/policies.component';
 //CORE_REFERENCE_IMPORT-policyComponent
@@ -84,9 +86,10 @@ export const appDeclarations = [
   PageNotFoundComponent,
   NMapComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
-
-//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-flightComponent
-flightComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-operationsComponent
+operationsComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-managerComponent
+managerComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-transportComponent
 transportComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-otherservicesComponent
@@ -95,6 +98,8 @@ otherservicesComponent,
 extensionComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-guesthouseComponent
 guesthouseComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-searchComponent
+searchComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-policiesComponent
 policiesComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-policyComponent
@@ -145,9 +150,9 @@ policiesService,
 
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_START
 export const appRoutes = [{path: 'home', component: homeComponent, canActivate: [NAuthGuardService],
-children: [{path: '', component: otherservicesComponent}]},{path: 'login', component: loginComponent},{path: 'unauthorized', redirectTo: '/login', pathMatch: 'full'},{path: 'homepage', component: homepageComponent, canActivate: [NAuthGuardService],
+children: [{path: '', component: searchComponent}]},{path: 'login', component: loginComponent},{path: 'unauthorized', redirectTo: '/login', pathMatch: 'full'},{path: 'homepage', component: homepageComponent, canActivate: [NAuthGuardService],
 children: [{path: 'hr', component: hrpolicyadminComponent,
 children: []},{path: 'edit', component: editpolicyComponent},{path: 'policy', component: policyComponent},{path: 'policies', component: policiesComponent,
-children: []},{path: '', component: policiesComponent}]},{path: 'menu', component: displayComponent,
-children: [{path: 'otherservices', component: otherservicesComponent},{path: 'guesthouse', component: guesthouseComponent},{path: 'policies', component: policiesComponent},{path: 'extension', component: extensionComponent},{path: 'transport', component: transportComponent},{path: 'flight', component: flightComponent}]},{path: '', redirectTo: '/login', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
+children: []},{path: '', component: managerComponent}]},{path: 'menu', component: displayComponent,
+children: [{path: 'otherservices', component: otherservicesComponent},{path: 'guesthouse', component: guesthouseComponent},{path: 'policies', component: policiesComponent},{path: 'extension', component: extensionComponent},{path: 'transport', component: transportComponent}]},{path: '', redirectTo: '/login', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_END

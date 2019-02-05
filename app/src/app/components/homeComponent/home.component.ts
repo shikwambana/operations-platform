@@ -23,7 +23,7 @@ export class homeComponent extends NBaseComponent implements OnInit {
     }
 
     ngOnInit() {
-        // this.get('policies');
+        this.get('policies');
     }
 
     logoutUser() {

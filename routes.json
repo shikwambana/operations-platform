@@ -11,7 +11,7 @@
             "children": [
                 {
                     "path": "''",
-                    "component": "otherservicesComponent"
+                    "component": "searchComponent"
                 }
             ]
         },
@@ -53,7 +53,7 @@
                 },
                 {
                     "path": "''",
-                    "component": "policiesComponent"
+                    "component": "managerComponent"
                 }
             ],
             "canActivate": "NAuthGuardService"
@@ -81,10 +81,6 @@
                 {
                     "component": "transportComponent",
                     "path": "transport"
-                },
-                {
-                    "component": "flightComponent",
-                    "path": "flight"
                 }
             ]
         },
