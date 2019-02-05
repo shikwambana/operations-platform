@@ -4,6 +4,7 @@ import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
 import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
+import { operations } from '../../models/operations.model';
 
 /**
  * Service import Example :
@@ -17,6 +18,8 @@ import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 
 export class otherservicesComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
+
+    operations = new operations();
 
     operationsIcons = [
         {
@@ -45,6 +48,10 @@ export class otherservicesComponent extends NBaseComponent implements OnInit {
             text: "HR Policies"
         }
     ]
+
+    submit() {
+        this.put('operations', this.operations);
+    }
 
     constructor(private bdms: NDataModelService) {
         super();
@@ -79,8 +86,10 @@ export class otherservicesComponent extends NBaseComponent implements OnInit {
         this.mm.put(dataModelName, dataModelObject,
             result => {
                 // On Success code here
+                console.log('saved');
             }, error => {
                 // Handle errors here
+                console.log(error);
             })
     }
 

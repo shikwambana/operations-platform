@@ -4,6 +4,10 @@
         "policies": "operations",
         "categories": "operations-platform-rt",
         "visa": "neutrinos-delivery-rt",
-        "services": "operations"
+        "services": "operations",
+        "guesthouse": "operations",
+        "transport": "operations",
+        "flight": "operations",
+        "operations": "operations"
     }
 }

@@ -15,7 +15,7 @@ import { operationsService } from '../../services/operations/operations.service'
 export class homeComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
 
-    homeLinks = ["home", "apply leave", ""]
+    BtnRoutes: any[] = this.operationsService.BtnRoutes;
 
     constructor(private bdms: NDataModelService, private logoutService: NLogoutService, private operationsService: operationsService, private router: Router) {
         super();
@@ -23,7 +23,7 @@ export class homeComponent extends NBaseComponent implements OnInit {
     }
 
     ngOnInit() {
-        // this.get('policies');
+        this.get('policies');
     }
 
     logoutUser() {

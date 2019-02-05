@@ -4,94 +4,43 @@ import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
 import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
+import { flight } from '../../models/flight.model';
 
-import { Router } from '@angular/router';
-import { operationsService } from '../../services/operations/operations.service';
-
-import { FormBuilder, FormGroup, FormControl  } from '@angular/forms';
-import { Observable } from 'rxjs';
-import { map, startWith } from 'rxjs/operators';
-
-
-export interface StateGroup {
-  category: string;
-  names: [{
-      title: string;
-      link: string;
-  }]
-}
-
-export const _filter = (opt: string[], value: string): string[] => {
-  const filterValue = value.toLowerCase();
-
-  return opt.filter(item => item.toLowerCase().indexOf(filterValue) === 0);
-};
-
+/**
+ * Service import Example :
+ * import { HeroService } from '../services/hero/hero.service';
+ */
 
 @Component({
-    selector: 'bh-find',
-    templateUrl: './find.template.html'
+    selector: 'bh-flight',
+    templateUrl: './flight.template.html'
 })
 
-export class findComponent extends NBaseComponent implements OnInit {
+export class flightComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
 
-    filter : any[];
-    stateForm: FormGroup = this.fb.group({
-    stateGroup: '',
-  });
+    flight = new flight();
 
-  stateGroups = [{
-    letter: 'Policies',
-    names: this.filter
-  }];
-
-  stateGroupOptions: Observable<any[]>;
-
-    constructor(private bdms: NDataModelService, private router: Router, private fb: FormBuilder) {
+    constructor(private bdms: NDataModelService) {
         super();
         this.mm = new ModelMethods(bdms);
     }
 
     ngOnInit() {
 
-        this.get('policies');
-         this.stateGroupOptions = this.stateForm.get('stateGroup')!.valueChanges
-      .pipe(
-        startWith(''),
-        map(value => this._filterGroup(value))
-      );
     }
 
-   
-    nav(row){
-        console.log(row);
-        this.router.navigate([row.names[0].link]);
+    submit() {
+        this.put('flight', this.flight);
     }
-
-
-    private _filterGroup(value: string): StateGroup[] {
-    if (value) {
-      return this.stateGroups
-        .map(group => ({letter: group.letter, names: _filter(group.names.title, value)}))
-        .filter(group => group.names.length > 0);
-    }
-
-    return this.stateGroups;
-  }
-
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, this, filter, keys, sort, pagenumber, pagesize,
             result => {
                 // On Success code here
-                filter = result;
-                console.log(filter);
-                
             },
             error => {
                 // Handle errors here
-                console.log(error);
             });
     }
 
@@ -109,8 +58,10 @@ export class findComponent extends NBaseComponent implements OnInit {
         this.mm.put(dataModelName, dataModelObject,
             result => {
                 // On Success code here
+                console.log('saved');
             }, error => {
                 // Handle errors here
+                console.log(error);
             })
     }
 
@@ -137,7 +88,7 @@ export class findComponent extends NBaseComponent implements OnInit {
             })
     }
 
-    delete(dataModelName, filter) {
+    delete (dataModelName, filter) {
         this.mm.delete(dataModelName, filter,
             result => {
                 // On Success code here

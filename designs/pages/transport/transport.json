@@ -1,0 +1,13 @@
+{
+    "appPageId": "bfce6d72-49fe-2c08-5d3f-116297d96519",
+    "appPageName": "transport",
+    "componentName": "transportComponent",
+    "selectorName": "bh-transport",
+    "htmlFileName": "transport.template.html",
+    "tsFileName": "transport.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

@@ -8,17 +8,32 @@ import { services } from '../../models/services.model';
 export class operationsService {
     policies: policies;
     services: services;
-    searchFilter= [];
+    displayer = "/menu";
 
-//    combineData(){
-//        for(let i =0; i < this.policies.length; i++ ){
-//            this.searchFilter.push(this.policies[i]);
-//        }
-//        for(let i =0; i < this.services.length; i++ ){
-//            this.searchFilter.push(this.policies[i]);
-//        }
-
-//     console.log(this.searchFilter);
-
-//    }
+    BtnRoutes = [
+        {
+            name: "Home",
+            link: "/home"
+        },
+        {
+            name: "Apply Leave",
+            link: this.displayer + "/applyleave"
+        },
+        {
+            name: "Other Services",
+            link: this.displayer + "/otherservices"
+        },
+        {
+            name: "Emergency Contacts",
+            link: this.displayer + "/emergencies"
+        },
+        {
+            name: "HR Policies",
+            link: this.displayer + "/policies"
+        },
+        {
+            name: "Contact HR",
+            link: this.displayer + "/contacthr"
+        }
+    ]
 }
