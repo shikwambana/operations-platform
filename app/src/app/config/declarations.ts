@@ -138,9 +138,9 @@ policiesService,
 
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_START
 export const appRoutes = [{path: 'home', component: homeComponent, canActivate: [NAuthGuardService],
-children: []},{path: 'login', component: loginComponent},{path: 'unauthorized', redirectTo: '/login', pathMatch: 'full'},{path: 'human-resource', component: displayComponent, canActivate: [NAuthGuardService],
+children: []},{path: 'login', component: loginComponent},{path: 'unauthorized', redirectTo: '/login', pathMatch: 'full'},{path: 'human-resource', component: displayComponent,
 children: [{path: 'hr', component: hrpolicyadminComponent,
 children: []},{path: 'edit', component: editpolicyComponent},{path: 'policy', component: policyComponent},{path: 'policies', component: policiesComponent,
-children: []},{path: '', component: managerComponent}]},{path: 'menu', component: displayComponent,
-children: [{path: 'otherservices', component: otherservicesComponent},{path: 'guesthouse', component: guesthouseComponent},{path: 'policies', component: policiesComponent}]},{path: '', redirectTo: '/login', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
+children: []},{path: '', component: managerComponent}]},{path: 'operations', component: displayComponent,
+children: [{path: 'operation', component: otherservicesComponent},{path: 'guesthouse', component: guesthouseComponent}]},{path: '', redirectTo: '/home', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_END

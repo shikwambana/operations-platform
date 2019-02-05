@@ -8,12 +8,7 @@
             "resolve": "",
             "data": "",
             "canActivate": "NAuthGuardService",
-            "children": [
-                {
-                    "path": "''",
-                    "component": "searchComponent"
-                }
-            ]
+            "children": []
         },
         {
             "path": "login",
@@ -30,8 +25,8 @@
             "pathMatch": "full"
         },
         {
-            "path": "homepage",
-            "component": "homepageComponent",
+            "path": "human-resource",
+            "component": "displayComponent",
             "children": [
                 {
                     "path": "hr",
@@ -56,27 +51,19 @@
                     "component": "managerComponent"
                 }
             ],
-            "canActivate": "NAuthGuardService"
+            "canActivate": ""
         },
         {
-            "path": "menu",
+            "path": "operations",
             "component": "displayComponent",
             "children": [
                 {
-                    "path": "otherservices",
+                    "path": "operation",
                     "component": "otherservicesComponent"
                 },
                 {
                     "path": "guesthouse",
                     "component": "guesthouseComponent"
-                },
-                {
-                    "path": "policies",
-                    "component": "policiesComponent"
-                },
-                {
-                    "component": "transportComponent",
-                    "path": "transport"
                 }
             ]
         },
@@ -84,7 +71,7 @@
             "path": "''",
             "component": "",
             "pathMatch": "full",
-            "redirectTo": "/login",
+            "redirectTo": "/home",
             "resolve": "",
             "data": "",
             "canActivate": "",
