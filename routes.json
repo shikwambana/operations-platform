@@ -1,0 +1,103 @@
+{
+    "routes": [
+        {
+            "path": "home",
+            "component": "homeComponent",
+            "pathMatch": "",
+            "redirectTo": "",
+            "resolve": "",
+            "data": "",
+            "canActivate": "NAuthGuardService",
+            "children": [
+                {
+                    "path": "''",
+                    "component": "searchComponent"
+                }
+            ]
+        },
+        {
+            "path": "login",
+            "component": "loginComponent",
+            "pathMatch": "",
+            "redirectTo": "",
+            "resolve": "",
+            "data": "",
+            "canActivate": ""
+        },
+        {
+            "path": "unauthorized",
+            "redirectTo": "/login",
+            "pathMatch": "full"
+        },
+        {
+            "path": "homepage",
+            "component": "homepageComponent",
+            "children": [
+                {
+                    "path": "hr",
+                    "component": "hrpolicyadminComponent",
+                    "children": []
+                },
+                {
+                    "path": "edit",
+                    "component": "editpolicyComponent"
+                },
+                {
+                    "component": "policyComponent",
+                    "path": "policy"
+                },
+                {
+                    "component": "policiesComponent",
+                    "path": "policies",
+                    "children": []
+                },
+                {
+                    "path": "''",
+                    "component": "managerComponent"
+                }
+            ],
+            "canActivate": "NAuthGuardService"
+        },
+        {
+            "path": "menu",
+            "component": "displayComponent",
+            "children": [
+                {
+                    "path": "otherservices",
+                    "component": "otherservicesComponent"
+                },
+                {
+                    "path": "guesthouse",
+                    "component": "guesthouseComponent"
+                },
+                {
+                    "path": "policies",
+                    "component": "policiesComponent"
+                },
+                {
+                    "component": "transportComponent",
+                    "path": "transport"
+                }
+            ]
+        },
+        {
+            "path": "''",
+            "component": "",
+            "pathMatch": "full",
+            "redirectTo": "/login",
+            "resolve": "",
+            "data": "",
+            "canActivate": "",
+            "default": true
+        },
+        {
+            "path": "**",
+            "component": "PageNotFoundComponent",
+            "pathMatch": "",
+            "redirectTo": "",
+            "resolve": "",
+            "data": "",
+            "canActivate": ""
+        }
+    ]
+}

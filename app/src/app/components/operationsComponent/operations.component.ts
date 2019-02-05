@@ -4,48 +4,52 @@ import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
 import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
-import { visa } from '../../models/visa.model';
+
 /**
  * Service import Example :
  * import { HeroService } from '../services/hero/hero.service';
  */
 
 @Component({
-    selector: 'bh-extension',
-    templateUrl: './extension.template.html'
+    selector: 'bh-operations',
+    templateUrl: './operations.template.html'
 })
 
-export class extensionComponent extends NBaseComponent implements OnInit {
+export class operationsComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
 
-    visa = new visa();
-
-    docOptions: String[] = [
-        'Doc 1',
-        'Doc 2',
-        'Doc 3'
-    ]
-
+    leaves;    
+    transport;
+    flight;
     constructor(private bdms: NDataModelService) {
         super();
         this.mm = new ModelMethods(bdms);
     }
 
     ngOnInit() {
-
-    }
-
-    submit() {
-        this.put('visa',this.visa);
+        this.get('leaverequest');
+        this.get('flight');
+        this.get('transport');
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, this, filter, keys, sort, pagenumber, pagesize,
             result => {
                 // On Success code here
+                if(dataModelName == 'leaverequest'){
+                    this.leaves = result;
+                }
+                if(dataModelName == 'transport'){
+                    this.transport = result;
+                }
+                if(dataModelName == 'flight'){
+                    this.flight = result;
+                }
+                console.log(result);
             },
             error => {
                 // Handle errors here
+                console.log(error);
             });
     }
 
@@ -63,10 +67,8 @@ export class extensionComponent extends NBaseComponent implements OnInit {
         this.mm.put(dataModelName, dataModelObject,
             result => {
                 // On Success code here
-                console.log('saved');
             }, error => {
                 // Handle errors here
-                console.log(error);
             })
     }
 

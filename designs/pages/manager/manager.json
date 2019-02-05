@@ -1,0 +1,13 @@
+{
+    "appPageId": "1332244f-3dfc-f434-0aa4-8d835d315272",
+    "appPageName": "manager",
+    "componentName": "managerComponent",
+    "selectorName": "bh-manager",
+    "htmlFileName": "manager.template.html",
+    "tsFileName": "manager.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

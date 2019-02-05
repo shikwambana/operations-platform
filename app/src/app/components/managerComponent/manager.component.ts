@@ -11,11 +11,11 @@ import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
  */
 
 @Component({
-    selector: 'bh-transport',
-    templateUrl: './transport.template.html'
+    selector: 'bh-manager',
+    templateUrl: './manager.template.html'
 })
 
-export class transportComponent extends NBaseComponent implements OnInit {
+export class managerComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
 
     constructor(private bdms: NDataModelService) {
