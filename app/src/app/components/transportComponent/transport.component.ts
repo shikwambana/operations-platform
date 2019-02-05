@@ -37,6 +37,7 @@ export class transportComponent extends NBaseComponent implements OnInit {
     }
 
     submit() {
+        console.log(this.transport);
         this.put('transport', this.transport);
     }
 

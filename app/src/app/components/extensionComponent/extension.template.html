@@ -14,12 +14,12 @@
               <mat-form-field class="search-full-width"><input matInput="" [(ngModel)]="visa.full_name" name="full_name" placeholder="Full Name" required id="fullName" minlength="4" ngModel="" pattern="[a-zA-Z]*"></mat-form-field>
             </div>
             <div fxLayout="column wrap" fxFlex="50" fxLayoutAlign="center center" fxShow="true" fxHide="false">
-              <mat-form-field class="search-full-width"><input matInput="" [(ngModel)]="visa.email" name="email" placeholder="Email" required id="email" email="true"></mat-form-field>
+              <mat-form-field class="search-full-width"><input matInput="" [(ngModel)]="visa.email" name="email" type="email" placeholder="Email" required id="email"></mat-form-field>
             </div>
           </div>
           <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start stretch" fxShow="true" fxHide="false" fxLayout.sm="column" fxLayout.xs="column">
             <div fxLayout="column wrap" fxFlex="50" fxLayoutAlign="center center" fxShow="true" fxHide="false">
-              <mat-form-field color="black" class="search-full-width"><input matInput="" [(ngModel)]="visa.phone" name="phone" type="number" placeholder="Phone Number" required></mat-form-field>
+              <mat-form-field class="search-full-width"><input matInput="" [(ngModel)]="visa.phone" name="phone" type="number" placeholder="Phone Number" required></mat-form-field>
             </div>
             <div fxLayout="column wrap" fxFlex="50" fxLayoutAlign="center center" fxShow="true" fxHide="false">
               <mat-form-field class="search-full-width"><input matInput="" placeholder="When will your visa expire?" [matDatepicker]="picker" [(ngModel)]="visa.expiry_date" name="expiry_date">
@@ -48,7 +48,7 @@
               </mat-form-field>
             </div>
           </div>
-          <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="center center" fxShow="true" fxHide="false"><button mat-raised-button="" style="color:white;" [attr.disabled]="!teamReg.valid" (click)="submit()">Submit</button></div>
+          <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="center center" fxShow="true" fxHide="false"><button mat-raised-button="" [disabled]="!teamReg.valid" (click)="submit()">Submit</button></div>
         </div>
       </form>
     </div>

@@ -8,12 +8,7 @@
             "resolve": "",
             "data": "",
             "canActivate": "NAuthGuardService",
-            "children": [
-                {
-                    "path": "''",
-                    "component": "searchComponent"
-                }
-            ]
+            "children": []
         },
         {
             "path": "login",
@@ -30,8 +25,8 @@
             "pathMatch": "full"
         },
         {
-            "path": "homepage",
-            "component": "homepageComponent",
+            "path": "human-resource",
+            "component": "displayComponent",
             "children": [
                 {
                     "path": "hr",
@@ -59,11 +54,11 @@
             "canActivate": "NAuthGuardService"
         },
         {
-            "path": "menu",
+            "path": "operations",
             "component": "displayComponent",
             "children": [
                 {
-                    "path": "otherservices",
+                    "path": "operation",
                     "component": "otherservicesComponent"
                 },
                 {

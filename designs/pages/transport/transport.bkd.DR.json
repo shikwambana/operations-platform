@@ -1272,7 +1272,7 @@
                                         },
                                         {
                                             "_key": "type",
-                                            "_value": "",
+                                            "_value": "text",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         }
@@ -1561,7 +1561,7 @@
                                         },
                                         {
                                             "_key": "[(ngModel)]",
-                                            "_value": "transport.whatsapp_number",
+                                            "_value": "transport.whatsapp_num",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
