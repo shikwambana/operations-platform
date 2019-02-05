@@ -8,6 +8,9 @@
         "guesthouse": "operations",
         "leaverequest": "operations",
         "transport": "operations",
-        "flight": "operations"
+        "flight": "operations",
+        "staff": "operations",
+        "employee": "operations",
+        "leaves": "operations"
     }
 }
