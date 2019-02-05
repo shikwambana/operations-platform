@@ -281,35 +281,6 @@
                             "_attrDef": "c"
                         }
                     ]
-                },
-                "617518e0-6e49-dfff-381d-6b8ee02d9859": {
-                    "paletteKey": "NG-MenuItem",
-                    "designerReference": [
-                        {
-                            "_key": "style",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "class",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "MenuItemName",
-                            "_value": "MyApprovals",
-                            "_type": "a",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "routerLink",
-                            "_value": "../lms/myapprovals",
-                            "_type": "kv",
-                            "_attrDef": "c"
-                        }
-                    ]
                 }
             }
         },
