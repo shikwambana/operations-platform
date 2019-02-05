@@ -17,12 +17,7 @@ export class flight {
   @JsonProperty('airport', String, true)
   public airport: string = undefined;
 
-<<<<<<< HEAD
   @JsonProperty('date', String, true)
   public date: string = undefined;
-=======
-  @JsonProperty('date', Date, true)
-  public date: Date = undefined;
->>>>>>> origin/tukiso
 
 }

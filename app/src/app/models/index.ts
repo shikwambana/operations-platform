@@ -5,5 +5,4 @@ export { categories } from './categories.model';
 export { services } from './services.model';
 export { guesthouse } from './guesthouse.model';
 export { leaverequest } from './leaverequest.model';
-export { transport } from './transport.model';
 export { flight } from './flight.model';

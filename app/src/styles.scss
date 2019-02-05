@@ -11,24 +11,11 @@
     background-color: #ee1c22;
     color: white;
 }
-
-
-//=============================================================================================
-// home page navigation
-//=============================================================================================
-
-
 .navbar-nav {
     text-decoration: none; 
     margin: 10px 0;
     color: red;
 }
-
-//=============================================================================================
-// TUKISO - Home component
-//=============================================================================================
-/*Importing default angular material css theme. */
-
 // login page
 .login-card .mat-card-image:first-child {
     margin-top:0 !important
@@ -67,16 +54,25 @@
 .homeDesktopLinks .mat-raised-button {
     font-size: 2em;
     line-height: 1.5em !important;
-    background: white !important;
-    color: #b71c1c;
+    background:  rgba(255, 0, 0, 0.6) !important;
+    color: white;
     margin: 0 2em;
-    width: 23%;
+    width: 65%;
     border-radius: 5px;
     padding: 10px 0;
 }
 .homeDesktopLinks .mat-raised-button:hover {
-    color: white !important;
-    background: #b71c1c !important;
+    color: #b71c1c !important;
+    background: white !important;
+}
+.homeLinkBtnSm {
+    width: 100% !important;
+    margin-bottom: 2em !important;
+} 
+.homeLinkBtnXs {
+    width: 70% !important;
+    margin-bottom: 1em !important;
+    font-size: 20px;
 } 
 .homeMenuSmallBtn {
     background: red !important;
@@ -92,15 +88,15 @@
     color: red !important;
 }
 .homeMainLogoutBtn {
-    color:red; 
+    color:white; 
     font-weight:bold;
     background: transparent;
-    border: solid 2px red !important;
+    border: solid 2px white !important;
     border-radius: 5px;
 }
 .homeMainLogoutBtn:hover {
-    color:white; 
-    border: solid 2px white !important;
+    color:red; 
+    border: solid 2px red !important;
 }
 .homeParag {
     width: 65% !important;
@@ -205,7 +201,7 @@
     margin: 0 auto;
 }
 .formCard .mat-form-field-infix {
-    width: 325px !important;
+    width: 22em !important;
 }
 .changeColor .mat-option-0 .mat-option-1 .mat-option-2 {
     background: yellow;
@@ -216,21 +212,6 @@
 .mat-icon-button {
     color: white;
 }
-// Form Height
-// .formHeight {
-//     height: 79vh !important;
-//     overflow: auto !important;
-//     padding-top: 5vh !important;
-// }
-// .formWidth {
-//     height: 71vh !important;
-//     width: 86% !important;
-//     overflow: auto !important;
-//     padding-top: 56vh !important;
-//     margin: 0 auto !important;
-//     overflow-x: hidden !important;
-//     text-align: center;
-// }
 .formWidth .mat-form-field-infix {
     width: 42vh !important;
 }
