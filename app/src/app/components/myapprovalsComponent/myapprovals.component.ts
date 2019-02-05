@@ -29,8 +29,8 @@ export class myapprovalsComponent extends NBaseComponent implements OnInit {
 
     ngOnInit() {
 
-        this.get('employee', { "staff.username": this.currentUserData.username }, {}, {}, 1, 1);
-        this.get('leaverequest', { "managerName": this.uService.user.staff.displayName }, {}, { _id: -1 });
+        // this.get('leaverequest', { "managerName": this.uService.user.staff.displayName }, {}, { _id: -1 });
+        this.get('leaverequest');
         
     }
 
@@ -60,7 +60,7 @@ export class myapprovalsComponent extends NBaseComponent implements OnInit {
         this.mm.get(dataModelName, this, filter, keys, sort, pagenumber, pagesize,
             result => {
                 // On Success code here
-                this.uService.user = result[0];
+                //this.uService.user = result[0];
                 this.leaveRequests = result;
             },
             error => {

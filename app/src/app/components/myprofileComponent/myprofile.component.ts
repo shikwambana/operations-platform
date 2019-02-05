@@ -26,14 +26,14 @@ export class myprofileComponent extends NBaseComponent implements OnInit {
     }
 
     ngOnInit() {
-     this.get('employee', { "staff.username": this.currentUserData.username }, {}, {}, 1, 1);
+     //this.get('employee', { "staff.username": this.currentUserData.username }, {}, {}, 1, 1);
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, this, filter, keys, sort, pagenumber, pagesize,
             result => {
                 // On Success code here
-                this.uService.user = result[0];
+                //this.uService.user = result[0];
             },
             error => {
                 // Handle errors here

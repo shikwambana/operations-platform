@@ -28,7 +28,7 @@ export class myleavesComponent extends NBaseComponent implements OnInit {
 
     ngOnInit() {
        // get the list of all the applied leaves
-        this.get('employee', { "staff.username": this.currentUserData.username }, {}, {}, 1, 1);
+        //this.get('employee', { "staff.username": this.currentUserData.username }, {}, {}, 1, 1);
         this.get('leaverequest', { "username": this.uService.user.staff.username}, {}, {_id: -1});
         
     }
@@ -37,7 +37,7 @@ export class myleavesComponent extends NBaseComponent implements OnInit {
         this.mm.get(dataModelName, this, filter, keys, sort, pagenumber, pagesize,
             result => {
                 // On Success code here
-                this.uService.user = result[0];
+                //this.uService.user = result[0];
                 this.leaveDetails = result;
             },
             error => {

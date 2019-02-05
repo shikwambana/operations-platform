@@ -79,14 +79,14 @@
                     "_attrDef": "p"
                 },
                 {
-                    "_key": "*ngIf",
-                    "_value": "leaveRequests.length == 0",
+                    "_key": "fxFlexAlign",
+                    "_value": "center",
                     "_type": "kv",
                     "_attrDef": "c"
                 },
                 {
-                    "_key": "fxFlexAlign",
-                    "_value": "center",
+                    "_key": "*ngIf",
+                    "_value": "leaveRequests.length == 0",
                     "_type": "kv",
                     "_attrDef": "c"
                 }

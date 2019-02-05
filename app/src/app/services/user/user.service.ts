@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class userService {
     private __currentUser;
-    user;
+    // user;
     // user = {
     //     "staff" : {
     //         "displayName" : "Hello";

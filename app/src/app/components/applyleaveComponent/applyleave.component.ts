@@ -27,7 +27,10 @@ export class applyleaveComponent extends NBaseComponent implements OnInit {
     // types of available leaves
     leaves = [
         { leave: "annualLeaves", value: "Annual Leave" },
-        { leave: "sickLeaves", value: "Sick Leave" }
+        { leave: "sickLeaves", value: "Sick Leave" },
+        { leave: "MaternityLeaves", value: "Maternity Leave" },
+        { leave: "StudyLeaves", value: "Study Leave" },
+        { leave: "FamilyResponsibility", value: "FamilyResponsibility Leave" }
     ]
 
     constructor(private bdms: NDataModelService,
@@ -44,7 +47,7 @@ export class applyleaveComponent extends NBaseComponent implements OnInit {
         this.dm.leaverequest.username = this.uService.user.staff.username;
         this.dm.leaverequest.managerName = this.uService.user.staff.managerName;
         this.dm.leaverequest.leaveStatus = "pending";
-        this.get('employee', { "staff.username": this.currentUserData.username }, {}, {}, 1, 1);
+        this.get('employee');
 
     }
 
@@ -90,10 +93,11 @@ export class applyleaveComponent extends NBaseComponent implements OnInit {
         this.mm.get(dataModelName, this, filter, keys, sort, pagenumber, pagesize,
             result => {
                 // On Success code here
-                this.uService.user = result[0];
+                //this.uService.user = result[0];
             },
             error => {
                 // Handle errors here
+                console.log(error);
             });
     }
 

@@ -150,7 +150,7 @@
                 "designerReference": [
                     {
                         "_key": "style",
-                        "_value": "",
+                        "_value": "background-color:#a0bbe5;",
                         "_type": "kv",
                         "_attrDef": "p"
                     },

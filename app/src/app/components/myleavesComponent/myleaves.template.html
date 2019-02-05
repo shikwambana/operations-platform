@@ -1,7 +1,7 @@
 <div fxLayout="column wrap" class="margin-tb" fxFlex="100" fxLayoutGap="1.8em" fxLayoutAlign="  none" fxShow="true" fxHide="false">
   <div fxLayout="column wrap" fxFlex="100" fxLayoutGap="1.5em" fxLayoutAlign="center center" fxShow="true" fxHide="false" fxFlex.gt-md="40" fxFlex.md="50" fxFlex.sm="60" fxFlex.xs="80">
     <mat-card class="card">
-      <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+      <div fxLayout="column wrap" style="background-color:#a0bbe5;" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
         <div fxLayout="row wrap" fxLayoutAlign="center center" fxShow="true" fxHide="false">
           <h4>Leave Information</h4>
         </div>
@@ -23,7 +23,7 @@
     </mat-card>
     <mat-card *ngFor="let leave of leaveDetails" class="card">
       <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
-        <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="center center" fxShow="true" fxHide="false" fxLayout.xs="column">
+        <div fxLayout="row wrap" style="background-color:#a0bbe5;" fxLayoutGap="1em" fxLayoutAlign="center center" fxShow="true" fxHide="false" fxLayout.xs="column">
           <div fxLayout="column wrap" fxFlex="80" fxLayoutAlign="center center" fxShow="true" fxHide="false">
             <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="center center" fxShow="true" fxHide="false" fxLayout.xs="column">
               <mat-form-field><input matInput="" placeholder="From Date" value="{{leave.fromDate | date: &apos;dd/MMM/yyyy&apos;}}" required disabled="disabled"></mat-form-field>

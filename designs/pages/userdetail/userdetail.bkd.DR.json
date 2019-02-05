@@ -230,7 +230,7 @@
             "designerReference": [
                 {
                     "_key": "style",
-                    "_value": "",
+                    "_value": "background-color:grey",
                     "_type": "kv",
                     "_attrDef": "p"
                 },

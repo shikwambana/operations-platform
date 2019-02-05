@@ -9,7 +9,7 @@
       <bh-myprofile style="width:100%"></bh-myprofile>
     </div>
   </mat-tab>
-  <mat-tab label=" My Approvals" *ngIf="uService.isManager()">
+  <mat-tab style="background-color:grey" label=" My Approvals" *ngIf="uService.isManager()">
     <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="center center" fxShow="true" fxHide="false">
       <bh-myapprovals style="width:100%">
         <bh-myapprovals></bh-myapprovals>

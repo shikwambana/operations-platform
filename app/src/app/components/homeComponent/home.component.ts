@@ -30,6 +30,7 @@ export class homeComponent extends NBaseComponent implements OnInit {
 
     ngOnInit() {
         // this.get('employee');
+        
         // For lms
          this.currentUserData = this.ss.getValue('userObj');
          this.ss.set
