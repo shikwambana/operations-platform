@@ -39,12 +39,17 @@
                 "isArray": false
             },
             {
-                "name": "acknowledgement",
-                "fieldType": 4,
+                "name": "category",
+                "fieldType": 2,
                 "isArray": false
             },
             {
-                "name": "category",
+                "name": "procedure",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "link",
                 "fieldType": 2,
                 "isArray": false
             }

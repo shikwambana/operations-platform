@@ -12,6 +12,10 @@ window['neutrinos'] = {
 }
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-extensionComponent
+import { extensionComponent } from '../components/extensionComponent/extension.component';
+//CORE_REFERENCE_IMPORT-flightComponent
+import { flightComponent } from '../components/flightComponent/flight.component';
 //CORE_REFERENCE_IMPORT-operationsComponent
 import { operationsComponent } from '../components/operationsComponent/operations.component';
 //CORE_REFERENCE_IMPORT-managerComponent
@@ -44,6 +48,12 @@ import { loaderComponent } from '../components/loaderComponent/loader.component'
 import { homeComponent } from '../components/homeComponent/home.component';
 //CORE_REFERENCE_IMPORT-loginComponent
 import { loginComponent } from '../components/loginComponent/login.component';
+//CORE_REFERENCE_IMPORT-loginComponent
+import { flightComponent } from '../components/flightComponent/flight.component';
+//CORE_REFERENCE_IMPORT-loginComponent
+import { homepageComponent } from '../components/homepageComponent/homepage.component';
+//CORE_REFERENCE_IMPORT-loginComponent
+import { transportComponent } from '../components/transportComponent/transport.component';
 
 /**
  * Reads datasource object and injects the datasource object into window object
@@ -80,8 +90,18 @@ export const appDeclarations = [
   PageNotFoundComponent,
   NMapComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-extensionComponent
+extensionComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-flightComponent
+flightComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-operationsComponent
 operationsComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-operationsComponent
+transportComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-operationsComponent
+flightComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-operationsComponent
+homepageComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-managerComponent
 managerComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-otherservicesComponent

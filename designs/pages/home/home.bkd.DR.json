@@ -323,59 +323,6 @@
                                 "_attrDef": "p"
                             }
                         ],
-                        "fab45431-30f4-deab-21d0-df85999d07f3": {
-                            "paletteKey": "NG-button",
-                            "designerReference": [
-                                {
-                                    "_key": "style",
-                                    "_value": "background:white;padding:10px;border-radius:50%;",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "class",
-                                    "_value": "homeMenuSmallBtn",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "buttonname",
-                                    "_value": "<mat-icon style=\"color:white;\">menu</mat-icon>",
-                                    "_type": "a",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "color",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "(click)",
-                                    "_value": "sidenav.toggle();",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "fxHide",
-                                    "_value": "true",
-                                    "_type": "kv",
-                                    "_attrDef": "c"
-                                },
-                                {
-                                    "_key": "fxShow.sm",
-                                    "_value": "true",
-                                    "_type": "kv",
-                                    "_attrDef": "c"
-                                },
-                                {
-                                    "_key": "fxShow.xs",
-                                    "_value": "true",
-                                    "_type": "kv",
-                                    "_attrDef": "c"
-                                }
-                            ]
-                        },
                         "9dc1d9a5-1fc0-53b1-7f63-6ac24d8f4e6b": {
                             "paletteKey": "NG-RaisedButton",
                             "designerReference": [

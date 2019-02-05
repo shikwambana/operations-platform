@@ -3,9 +3,7 @@
     <mat-toolbar class="homeToolBar">
       <div fxLayout="column wrap" fxFlex="20" fxLayoutAlign="start none" fxShow="true" fxHide="false" fxFlex.sm="30" fxFlex.xs="40"><img imgSrc="Web/homelogo.png" routerLink="/home"></div>
       <div fxLayout="column wrap" fxFlex="80" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
-        <div fxLayout="row wrap" fxLayoutAlign="end stretch" fxShow="true" fxHide="false"><button mat-button="" style="background:white;padding:10px;border-radius:50%;" class="homeMenuSmallBtn" fxHide="true" fxShow.sm="true" fxShow.xs="true" (click)="sidenav.toggle();">
-            <mat-icon style="color:white;">menu</mat-icon>
-          </button><button mat-raised-button="" class="homeMainLogoutBtn" fxHide.sm="true" fxHide.xs="true" fxShow="true" (click)="logoutUser()">Logout</button></div>
+        <div fxLayout="row wrap" fxLayoutAlign="end stretch" fxShow="true" fxHide="false"><button mat-raised-button="" class="homeMainLogoutBtn" fxHide.sm="true" fxHide.xs="true" fxShow="true" (click)="logoutUser()">Logout</button></div>
       </div>
     </mat-toolbar>
   </header>
