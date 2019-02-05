@@ -8,3 +8,6 @@ export { guesthouse } from './guesthouse.model';
 export { leaverequest } from './leaverequest.model';
 export { transport } from './transport.model';
 export { flight } from './flight.model';
+export { staff } from './staff.model';
+export { employee } from './employee.model';
+export { leaves } from './leaves.model';

@@ -269,5 +269,98 @@
                 "isArray": false
             }
         ]
+    },
+    "56c6a375-8b07-7731-beaf-2b089df63532": {
+        "dataModelId": "56c6a375-8b07-7731-beaf-2b089df63532",
+        "name": "staff",
+        "description": "staff",
+        "dataSource": "operations",
+        "fields": [
+            {
+                "name": "firstName",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "lastName",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "employeeID",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "username",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "displayName",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "department",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "groupList",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "managerName",
+                "fieldType": 2,
+                "isArray": false
+            }
+        ]
+    },
+    "9442ffaa-02a2-8331-bc9c-6617336aebe8": {
+        "dataModelId": "9442ffaa-02a2-8331-bc9c-6617336aebe8",
+        "name": "employee",
+        "description": "employee",
+        "dataSource": "operations",
+        "fields": [
+            {
+                "name": "staff",
+                "fieldType": 5,
+                "isArray": false,
+                "complexTypeName": "staff",
+                "complexTypeId": "56c6a375-8b07-7731-beaf-2b089df63532"
+            },
+            {
+                "name": "leaves",
+                "fieldType": 5,
+                "isArray": false,
+                "complexTypeName": "leaves",
+                "complexTypeId": "47f31439-55a2-a72a-86ff-19a3973cf7f4"
+            }
+        ]
+    },
+    "47f31439-55a2-a72a-86ff-19a3973cf7f4": {
+        "dataModelId": "47f31439-55a2-a72a-86ff-19a3973cf7f4",
+        "name": "leaves",
+        "description": "leaves",
+        "dataSource": "operations",
+        "fields": [
+            {
+                "name": "annualLeaves",
+                "fieldType": 1,
+                "isArray": false
+            },
+            {
+                "name": "sickLeaves",
+                "fieldType": 1,
+                "isArray": false
+            },
+            {
+                "name": "approvedLeaves",
+                "fieldType": 1,
+                "isArray": false
+            }
+        ]
     }
 }
