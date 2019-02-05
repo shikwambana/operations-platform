@@ -48,7 +48,7 @@
                 },
                 {
                     "path": "''",
-                    "component": "managerComponent"
+                    "component": "policiesComponent"
                 }
             ],
             "canActivate": "NAuthGuardService"
@@ -70,8 +70,12 @@
                     "component": "policiesComponent"
                 },
                 {
-                    "component": "transportComponent",
-                    "path": "transport"
+                    "path": "extension",
+                    "component": "extensionComponent"
+                },
+                {
+                    "component": "flightComponent",
+                    "path": "flight"
                 }
             ]
         },

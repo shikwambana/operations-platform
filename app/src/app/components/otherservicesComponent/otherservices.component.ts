@@ -33,11 +33,6 @@ export class otherservicesComponent extends NBaseComponent implements OnInit {
             text: "Guest House"
         },
         {
-            image: "Web/transportation.jpg",
-            link: "/operations/transport",
-            text: "Transport Request"
-        },
-        {
             image: "Web/flight.jpg",
             link: "/operations/flight",
             text: "Flight Information"

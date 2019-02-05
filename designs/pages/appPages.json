@@ -59,11 +59,6 @@
         "componentName": "otherservicesComponent",
         "isEntry": false
     },
-    "bfce6d72-49fe-2c08-5d3f-116297d96519": {
-        "appPageName": "transport",
-        "componentName": "transportComponent",
-        "isEntry": false
-    },
     "1332244f-3dfc-f434-0aa4-8d835d315272": {
         "appPageName": "manager",
         "componentName": "managerComponent",
