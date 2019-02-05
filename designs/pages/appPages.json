@@ -59,11 +59,6 @@
         "componentName": "guesthouseComponent",
         "isEntry": false
     },
-    "83555f1b-a793-1ab3-64a3-9deb2f20bee4": {
-        "appPageName": "extension",
-        "componentName": "extensionComponent",
-        "isEntry": false
-    },
     "27cf0d11-d036-5e5e-80f4-8e5e6eef19bf": {
         "appPageName": "otherservices",
         "componentName": "otherservicesComponent",
@@ -74,9 +69,14 @@
         "componentName": "transportComponent",
         "isEntry": false
     },
-    "4cc4cd53-cad2-5076-22a9-79569fd4f631": {
-        "appPageName": "flight",
-        "componentName": "flightComponent",
+    "1332244f-3dfc-f434-0aa4-8d835d315272": {
+        "appPageName": "manager",
+        "componentName": "managerComponent",
+        "isEntry": false
+    },
+    "f2b7c004-67f7-06d7-bf05-b096cf6fb280": {
+        "appPageName": "operations",
+        "componentName": "operationsComponent",
         "isEntry": false
     }
 }

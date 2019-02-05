@@ -14,4 +14,10 @@ export class flight {
   @JsonProperty('departure', String, true)
   public departure: string = undefined;
 
+  @JsonProperty('airport', String, true)
+  public airport: string = undefined;
+
+  @JsonProperty('date', String, true)
+  public date: string = undefined;
+
 }

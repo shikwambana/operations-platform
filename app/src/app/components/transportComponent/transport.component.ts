@@ -4,7 +4,6 @@ import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
 import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
-import { transport } from '../../models/transport.model';
 
 /**
  * Service import Example :
@@ -19,14 +18,6 @@ import { transport } from '../../models/transport.model';
 export class transportComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
 
-    transport = new transport();
-
-    options: String[] = [
-        'Opt1',
-        'Opt2',
-        'Opt3'
-    ]
-
     constructor(private bdms: NDataModelService) {
         super();
         this.mm = new ModelMethods(bdms);
@@ -34,10 +25,6 @@ export class transportComponent extends NBaseComponent implements OnInit {
 
     ngOnInit() {
 
-    }
-
-    submit() {
-        this.put('transport', this.transport);
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
@@ -64,10 +51,8 @@ export class transportComponent extends NBaseComponent implements OnInit {
         this.mm.put(dataModelName, dataModelObject,
             result => {
                 // On Success code here
-                console.log('saved');
             }, error => {
                 // Handle errors here
-                console.log(error);
             })
     }
 

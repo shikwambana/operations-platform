@@ -6,8 +6,8 @@
         "visa": "neutrinos-delivery-rt",
         "services": "operations",
         "guesthouse": "operations",
+        "leaverequest": "operations",
         "transport": "operations",
-        "flight": "operations",
-        "operations": "operations"
+        "flight": "operations"
     }
 }
