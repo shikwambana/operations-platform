@@ -78,5 +78,10 @@
         "appPageName": "extension",
         "componentName": "extensionComponent",
         "isEntry": false
+    },
+    "1c79efea-9b04-0d34-38b2-d8bdc37cc6ed": {
+        "appPageName": "addPolicy",
+        "componentName": "addpolicyComponent",
+        "isEntry": false
     }
 }

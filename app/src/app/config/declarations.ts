@@ -12,6 +12,8 @@ window['neutrinos'] = {
 }
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-addpolicyComponent
+import { addpolicyComponent } from '../components/addpolicyComponent/addpolicy.component';
 //CORE_REFERENCE_IMPORT-extensionComponent
 import { extensionComponent } from '../components/extensionComponent/extension.component';
 //CORE_REFERENCE_IMPORT-flightComponent
@@ -48,8 +50,6 @@ import { loaderComponent } from '../components/loaderComponent/loader.component'
 import { homeComponent } from '../components/homeComponent/home.component';
 //CORE_REFERENCE_IMPORT-loginComponent
 import { loginComponent } from '../components/loginComponent/login.component';
-//CORE_REFERENCE_IMPORT-loginComponent
-import { flightComponent } from '../components/flightComponent/flight.component';
 //CORE_REFERENCE_IMPORT-loginComponent
 import { homepageComponent } from '../components/homepageComponent/homepage.component';
 //CORE_REFERENCE_IMPORT-loginComponent
@@ -90,10 +90,10 @@ export const appDeclarations = [
   PageNotFoundComponent,
   NMapComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-addpolicyComponent
+addpolicyComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-extensionComponent
 extensionComponent,
-//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-flightComponent
-flightComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-operationsComponent
 operationsComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-operationsComponent
