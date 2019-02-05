@@ -49,11 +49,6 @@
         "componentName": "policiesComponent",
         "isEntry": false
     },
-    "4575c47d-b98e-6a6e-da3c-0815c7c4c887": {
-        "appPageName": "search",
-        "componentName": "searchComponent",
-        "isEntry": false
-    },
     "566b51fb-e41f-38e5-8c26-d8b6accaaa52": {
         "appPageName": "guesthouse",
         "componentName": "guesthouseComponent",

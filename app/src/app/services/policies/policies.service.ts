@@ -5,6 +5,7 @@ import { policies } from "../../models/policies.model"
 @Injectable()
 export class policiesService {
 selectedPolicy: policies;
+policies: policies;
 
     setSelectedPolicy(policy){
         this.selectedPolicy = policy;
@@ -13,5 +14,9 @@ selectedPolicy: policies;
     getSelectedPolicy(){
         console.log(this.selectedPolicy);
         return this.selectedPolicy;
+    }
+
+    getPolicies(){
+        return this.policies;
     }
 }

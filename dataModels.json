@@ -68,7 +68,13 @@
         "name": "visa",
         "description": "visa",
         "dataSource": "neutrinos-delivery-rt",
-        "fields": []
+        "fields": [
+            {
+                "name": "passport_number",
+                "fieldType": 2,
+                "isArray": false
+            }
+        ]
     },
     "76cf35b7-e10b-6eaf-89c7-91ad65b4ef04": {
         "dataModelId": "76cf35b7-e10b-6eaf-89c7-91ad65b4ef04",
