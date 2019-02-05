@@ -80,7 +80,7 @@ export class hrpolicyadminComponent extends NBaseComponent implements OnInit {
     selectedPolicy(row) {
         this.PoliciesService.setSelectedPolicy(row);
         console.log(row);
-        this.router.navigate(['/homepage/edit']);
+        this.router.navigate(['/human-resource/edit']);
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {

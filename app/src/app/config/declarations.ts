@@ -16,8 +16,6 @@ window['neutrinos'] = {
 import { operationsComponent } from '../components/operationsComponent/operations.component';
 //CORE_REFERENCE_IMPORT-managerComponent
 import { managerComponent } from '../components/managerComponent/manager.component';
-//CORE_REFERENCE_IMPORT-transportComponent
-import { transportComponent } from '../components/transportComponent/transport.component';
 //CORE_REFERENCE_IMPORT-operationsService
 import { operationsService } from '../services/operations/operations.service';
 //CORE_REFERENCE_IMPORT-otherservicesComponent
@@ -38,8 +36,6 @@ import { dialogComponent } from '../components/dialogComponent/dialog.component'
 import { editpolicyComponent } from '../components/editpolicyComponent/editpolicy.component';
 //CORE_REFERENCE_IMPORT-policiesService
 import { policiesService } from '../services/policies/policies.service';
-//CORE_REFERENCE_IMPORT-homepageComponent
-import { homepageComponent } from '../components/homepageComponent/homepage.component';
 //CORE_REFERENCE_IMPORT-hrpolicyadminComponent
 import { hrpolicyadminComponent } from '../components/hrpolicyadminComponent/hrpolicyadmin.component';
 //CORE_REFERENCE_IMPORT-loaderComponent
@@ -88,8 +84,6 @@ export const appDeclarations = [
 operationsComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-managerComponent
 managerComponent,
-//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-transportComponent
-transportComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-otherservicesComponent
 otherservicesComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-guesthouseComponent
@@ -106,8 +100,6 @@ displayComponent,
 dialogComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-editpolicyComponent
 editpolicyComponent,
-//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-homepageComponent
-homepageComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-hrpolicyadminComponent
 hrpolicyadminComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-loaderComponent
@@ -146,9 +138,9 @@ policiesService,
 
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_START
 export const appRoutes = [{path: 'home', component: homeComponent, canActivate: [NAuthGuardService],
-children: [{path: '', component: searchComponent}]},{path: 'login', component: loginComponent},{path: 'unauthorized', redirectTo: '/login', pathMatch: 'full'},{path: 'homepage', component: homepageComponent, canActivate: [NAuthGuardService],
+children: []},{path: 'login', component: loginComponent},{path: 'unauthorized', redirectTo: '/login', pathMatch: 'full'},{path: 'human-resource', component: displayComponent, canActivate: [NAuthGuardService],
 children: [{path: 'hr', component: hrpolicyadminComponent,
 children: []},{path: 'edit', component: editpolicyComponent},{path: 'policy', component: policyComponent},{path: 'policies', component: policiesComponent,
 children: []},{path: '', component: managerComponent}]},{path: 'menu', component: displayComponent,
-children: [{path: 'otherservices', component: otherservicesComponent},{path: 'guesthouse', component: guesthouseComponent},{path: 'policies', component: policiesComponent},{path: 'transport', component: transportComponent}]},{path: '', redirectTo: '/login', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
+children: [{path: 'otherservices', component: otherservicesComponent},{path: 'guesthouse', component: guesthouseComponent},{path: 'policies', component: policiesComponent}]},{path: '', redirectTo: '/login', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_END

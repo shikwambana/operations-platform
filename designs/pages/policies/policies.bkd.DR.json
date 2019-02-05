@@ -74,7 +74,7 @@
                 },
                 {
                     "_key": "fxFlex",
-                    "_value": "24",
+                    "_value": "",
                     "_type": "kv",
                     "_attrDef": "p"
                 },
@@ -92,13 +92,13 @@
                 },
                 {
                     "_key": "layoutAlign",
-                    "_value": "space-between",
+                    "_value": "space-evenly",
                     "_type": "a",
                     "_attrDef": "p"
                 },
                 {
                     "_key": "pLayoutAlign",
-                    "_value": "none",
+                    "_value": "stretch",
                     "_type": "a",
                     "_attrDef": "p"
                 },
@@ -120,13 +120,13 @@
                 "designerReference": [
                     {
                         "_key": "style",
-                        "_value": "margin: 10px; width: 25%;",
+                        "_value": "",
                         "_type": "kv",
                         "_attrDef": "p"
                     },
                     {
                         "_key": "class",
-                        "_value": "",
+                        "_value": "policiesCard",
                         "_type": "kv",
                         "_attrDef": "p"
                     },
@@ -135,31 +135,32 @@
                         "_value": "let policies of policy",
                         "_type": "kv",
                         "_attrDef": "c"
+                    },
+                    {
+                        "_key": "(click)",
+                        "_value": "viewPolicy(policies)",
+                        "_type": "kv",
+                        "_attrDef": "c"
+                    },
+                    {
+                        "_key": "fxFlex",
+                        "_value": "30",
+                        "_type": "kv",
+                        "_attrDef": "c"
+                    },
+                    {
+                        "_key": "fxFlex.sm",
+                        "_value": "49",
+                        "_type": "kv",
+                        "_attrDef": "c"
+                    },
+                    {
+                        "_key": "fxFlex.xs",
+                        "_value": "100",
+                        "_type": "kv",
+                        "_attrDef": "c"
                     }
                 ],
-                "e0226c37-0832-99d7-98e6-383b4e2eb73a": {
-                    "paletteKey": "NG-CardTitle",
-                    "designerReference": [
-                        {
-                            "_key": "style",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "class",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "Title",
-                            "_value": "{{ policies.title }}",
-                            "_type": "a",
-                            "_attrDef": "p"
-                        }
-                    ]
-                },
                 "567b4a9b-a2bd-40ce-2a5e-754fccbcad2f": {
                     "paletteKey": "NG-CardContent",
                     "designerReference": [
@@ -176,6 +177,29 @@
                             "_attrDef": "p"
                         }
                     ],
+                    "e0226c37-0832-99d7-98e6-383b4e2eb73a": {
+                        "paletteKey": "NG-CardTitle",
+                        "designerReference": [
+                            {
+                                "_key": "style",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "class",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "Title",
+                                "_value": "{{ policies.title }}",
+                                "_type": "a",
+                                "_attrDef": "p"
+                            }
+                        ]
+                    },
                     "0be64275-035e-b413-0cb1-714966e6fb15": {
                         "paletteKey": "NG-H4",
                         "designerReference": [
@@ -198,75 +222,6 @@
                                 "_attrDef": "p"
                             }
                         ]
-                    }
-                },
-                "53a40a92-9491-28b6-7055-5e1becf417b3": {
-                    "paletteKey": "NG-CardFooter",
-                    "designerReference": [
-                        {
-                            "_key": "style",
-                            "_value": "margin: 0 -24px -24px 6px;",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "class",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        }
-                    ],
-                    "7740b906-856e-9cb9-f597-a4f9d1611021": {
-                        "paletteKey": "NG-CardActions",
-                        "designerReference": [
-                            {
-                                "_key": "style",
-                                "_value": "padding: 5px;",
-                                "_type": "kv",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "class",
-                                "_value": "",
-                                "_type": "kv",
-                                "_attrDef": "p"
-                            }
-                        ],
-                        "cc13f3a0-4626-4500-b199-0eb16c69555c": {
-                            "paletteKey": "NG-RaisedButton",
-                            "designerReference": [
-                                {
-                                    "_key": "style",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "class",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "buttonname",
-                                    "_value": "View Policy",
-                                    "_type": "a",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "color",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "(click)",
-                                    "_value": "viewPolicy(policies)",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                }
-                            ]
-                        }
                     }
                 }
             }

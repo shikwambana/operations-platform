@@ -24,28 +24,18 @@ export class otherservicesComponent extends NBaseComponent implements OnInit {
     operationsIcons = [
         {
             image: "Web/visa.jpg",
-            link: "../extension",
+            link: "/operations/extension",
             text: "Visa Extension"
         },
         {
             image: "Web/images.png",
-            link: "../guesthouse",
+            link: "/operations/guesthouse",
             text: "Guest House"
         },
         {
-            image: "Web/transportation.jpg",
-            link: "../transport",
-            text: "Transport Request"
-        },
-        {
             image: "Web/flight.jpg",
-            link: "../flight",
+            link: "/operations/flight",
             text: "Flight Information"
-        },
-        {
-            image: "Web/hr.jpg",
-            link: "../hr",
-            text: "HR Policies"
         }
     ]
 

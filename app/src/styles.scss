@@ -11,24 +11,11 @@
     background-color: #ee1c22;
     color: white;
 }
-
-
-//=============================================================================================
-// home page navigation
-//=============================================================================================
-
-
 .navbar-nav {
     text-decoration: none; 
     margin: 10px 0;
     color: red;
 }
-
-//=============================================================================================
-// TUKISO - Home component
-//=============================================================================================
-/*Importing default angular material css theme. */
-
 // login page
 .login-card .mat-card-image:first-child {
     margin-top:0 !important
@@ -65,16 +52,27 @@
     background: transparent;
 }
 .homeDesktopLinks .mat-raised-button {
-    font-size: 2em;     
-    line-height: 1.5em !important;     
-    font-weight: bold;     
-    background: transparent !important;
-    color:  #b71c1c;
-    box-shadow: none !important;
-    text-align: left !important;
+    font-size: 2em;
+    line-height: 1.5em !important;
+    background:  rgba(255, 0, 0, 0.6) !important;
+    color: white;
+    margin: 0 2em;
+    width: 65%;
+    border-radius: 5px;
+    padding: 10px 0;
 }
 .homeDesktopLinks .mat-raised-button:hover {
-    color: white;
+    color: #b71c1c !important;
+    background: white !important;
+}
+.homeLinkBtnSm {
+    width: 100% !important;
+    margin-bottom: 2em !important;
+} 
+.homeLinkBtnXs {
+    width: 70% !important;
+    margin-bottom: 1em !important;
+    font-size: 20px;
 } 
 .homeMenuSmallBtn {
     background: red !important;
@@ -90,15 +88,19 @@
     color: red !important;
 }
 .homeMainLogoutBtn {
-    color:red; 
+    color:white; 
     font-weight:bold;
     background: transparent;
-    border: solid 2px red !important;
+    border: solid 2px white !important;
     border-radius: 5px;
 }
 .homeMainLogoutBtn:hover {
-    color:white; 
-    border: solid 2px white !important;
+    color:red; 
+    border: solid 2px red !important;
+}
+.homeParag {
+    width: 65% !important;
+    margin: 0 auto !important;
 }
 .mat-drawer {
     background-color: transparent;
@@ -175,13 +177,14 @@
     margin-bottom: 2%;
 }
 .otherservicesCardsContainer {
-    height: 65vh; 
+    height: 50vh;
     overflow: auto;
 }
 .otherServiceCards {
     background: rgba(255, 0, 0, 0.6);
     height: 280px;
     border-radius: 48px;
+    margin-bottom: 2%;
 }
 .otherServiceCards:hover {
     background: red;
@@ -198,7 +201,7 @@
     margin: 0 auto;
 }
 .formCard .mat-form-field-infix {
-    width: 325px !important;
+    width: 22em !important;
 }
 .changeColor .mat-option-0 .mat-option-1 .mat-option-2 {
     background: yellow;
@@ -209,25 +212,49 @@
 .mat-icon-button {
     color: white;
 }
-// Form Height
-// .formHeight {
-//     height: 79vh !important;
-//     overflow: auto !important;
-//     padding-top: 5vh !important;
-// }
-// .formWidth {
-//     height: 71vh !important;
-//     width: 86% !important;
-//     overflow: auto !important;
-//     padding-top: 56vh !important;
-//     margin: 0 auto !important;
-//     overflow-x: hidden !important;
-//     text-align: center;
-// }
 .formWidth .mat-form-field-infix {
     width: 42vh !important;
 }
+// Policies .otherServiceCards
+.policiesCard {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    margin-bottom: 2%;
+    box-shadow: 0px 2px 2px rgba(255, 0, 0, 0.5) !important;
+}
+.policiesCard:hover {
+    background: rgba(255, 0, 0, 0.5) !important;
+    box-shadow: 1px 3px 0px rgba(0, 0, 0, 0.5) !important;
+}
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: red;
+}
 
+// My Tabs
+.mat-tab-group {
+    height: 82vh;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.4);
+}
+.mat-tab-body-wrapper {
+    width: 95%;
+    margin: 2% auto;
+    background: rgba(0, 0, 0, 0.5) !important;
+    color: white !important;
+}
+.policyCard, .mat-tab-body-wrapper .mat-raised-button {
+    background: white !important;
+    color: red !important;
+}
+.policyCard, .mat-tab-body-wrapper .mat-raised-button:hover {
+    background: none !important;
+    // border: white 2px solid !important;
+    color: white !important;
+}
+.mat-tab-label {
+    color: white !important;
+}
 
 // For screens with a maximum width of 415px
 @media only screen and (max-width: 415px){

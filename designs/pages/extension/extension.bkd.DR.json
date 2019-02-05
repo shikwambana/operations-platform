@@ -710,19 +710,13 @@
                                         },
                                         {
                                             "_key": "type",
-                                            "_value": "",
+                                            "_value": "email",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
                                         {
                                             "_key": "id",
                                             "_value": "email",
-                                            "_type": "kv",
-                                            "_attrDef": "c"
-                                        },
-                                        {
-                                            "_key": "email",
-                                            "_value": "true",
                                             "_type": "kv",
                                             "_attrDef": "c"
                                         }
@@ -899,7 +893,7 @@
                                         },
                                         {
                                             "_key": "color",
-                                            "_value": "black",
+                                            "_value": "",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
@@ -1840,7 +1834,7 @@
                                 "designerReference": [
                                     {
                                         "_key": "style",
-                                        "_value": "color:white;",
+                                        "_value": "",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -1869,7 +1863,7 @@
                                         "_attrDef": "p"
                                     },
                                     {
-                                        "_key": "[attr.disabled]",
+                                        "_key": "[disabled]",
                                         "_value": "!teamReg.valid",
                                         "_type": "kv",
                                         "_attrDef": "c"

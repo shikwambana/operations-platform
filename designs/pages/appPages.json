@@ -19,11 +19,6 @@
         "componentName": "hrpolicyadminComponent",
         "isEntry": false
     },
-    "55ea5da2-d723-8052-4740-3c4299b27c64": {
-        "appPageName": "homepage",
-        "componentName": "homepageComponent",
-        "isEntry": false
-    },
     "5cec9809-1f95-a1cb-f646-97f6b5763019": {
         "appPageName": "editpolicy",
         "componentName": "editpolicyComponent",
@@ -62,11 +57,6 @@
     "27cf0d11-d036-5e5e-80f4-8e5e6eef19bf": {
         "appPageName": "otherservices",
         "componentName": "otherservicesComponent",
-        "isEntry": false
-    },
-    "bfce6d72-49fe-2c08-5d3f-116297d96519": {
-        "appPageName": "transport",
-        "componentName": "transportComponent",
         "isEntry": false
     },
     "1332244f-3dfc-f434-0aa4-8d835d315272": {

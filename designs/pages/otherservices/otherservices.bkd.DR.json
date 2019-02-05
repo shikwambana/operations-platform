@@ -4,7 +4,7 @@
         "designerReference": [
             {
                 "_key": "style",
-                "_value": "",
+                "_value": "color:white;",
                 "_type": "kv",
                 "_attrDef": "p"
             },
@@ -150,7 +150,7 @@
                 },
                 {
                     "_key": "class",
-                    "_value": "",
+                    "_value": "homeParag",
                     "_type": "kv",
                     "_attrDef": "p"
                 },
@@ -424,7 +424,7 @@
                             },
                             {
                                 "_key": "fxFlex",
-                                "_value": "19",
+                                "_value": "49",
                                 "_type": "kv",
                                 "_attrDef": "c"
                             },
@@ -586,7 +586,7 @@
                             "designerReference": [
                                 {
                                     "_key": "style",
-                                    "_value": "color:red;",
+                                    "_value": "",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
