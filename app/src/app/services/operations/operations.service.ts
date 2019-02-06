@@ -12,24 +12,24 @@ export class operationsService {
 
     BtnRoutes = [
         {
-            name: "Apply Leave",
-            link: this.displayer + "/applyleave"
-        },
-        {
-            name: "Other Services",
-            link: this.displayer + "/operation"
-        },
-        {
-            name: "Emergency Contacts",
-            link: this.displayer + "/emergencies"
+            name: "Operations",
+            link: this.displayer
         },
         {
             name: "HR",
             link: "/admin"
         },
         {
+            name: "Apply Leave",
+            link: this.displayer + "/admin/applyleave"
+        },
+        {
             name: "Contact HR",
-            link: this.displayer + "/contacthr"
+            link: this.displayer + "/admin/contacthr"
+        },
+        {
+            name: "Emergency Contacts",
+            link: this.displayer + "/emergencies"
         }
     ]
 }
