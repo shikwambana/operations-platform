@@ -83,5 +83,45 @@
         "appPageName": "addPolicy",
         "componentName": "addpolicyComponent",
         "isEntry": false
+    },
+    "6f2dcd21-088f-d9bc-33ab-19f3b6f9a520": {
+        "appPageName": "myapprovals",
+        "componentName": "myapprovalsComponent",
+        "isEntry": false
+    },
+    "d8fed3e0-1882-b10f-4163-9099e06c3a2b": {
+        "appPageName": "userdetail",
+        "componentName": "userdetailComponent",
+        "isEntry": false
+    },
+    "13e3a741-d785-e56f-497f-1a3a6d0762fa": {
+        "appPageName": "applyleave",
+        "componentName": "applyleaveComponent",
+        "isEntry": false
+    },
+    "5e2a4694-3db3-bcb6-727d-210b745a2cf9": {
+        "appPageName": "userregistration",
+        "componentName": "userregistrationComponent",
+        "isEntry": false
+    },
+    "ba97003e-a73d-57c7-1e56-259df9949730": {
+        "appPageName": "myleaves",
+        "componentName": "myleavesComponent",
+        "isEntry": false
+    },
+    "815d809d-a052-b7dc-e4ef-eb42767ee9f9": {
+        "appPageName": "myprofile",
+        "componentName": "myprofileComponent",
+        "isEntry": false
+    },
+    "6d46a22f-ab4d-a41e-74c6-fa76e2bb356a": {
+        "appPageName": "lms",
+        "componentName": "lmsComponent",
+        "isEntry": false
+    },
+    "5b803270-e56a-de3f-79bb-a6f6bc69ab5f": {
+        "appPageName": "contact",
+        "componentName": "contactComponent",
+        "isEntry": false
     }
 }

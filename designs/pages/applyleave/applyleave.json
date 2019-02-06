@@ -1,0 +1,13 @@
+{
+    "appPageId": "13e3a741-d785-e56f-497f-1a3a6d0762fa",
+    "appPageName": "applyleave",
+    "componentName": "applyleaveComponent",
+    "selectorName": "bh-applyleave",
+    "htmlFileName": "applyleave.template.html",
+    "tsFileName": "applyleave.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

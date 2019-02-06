@@ -1,80 +1,56 @@
 /*DEFAULT GENERATED TEMPLATE. DO NOT CHANGE SELECTOR TEMPLATE_URL AND CLASS NAME*/
 import { Component, OnInit } from '@angular/core'
-import { Router } from '@angular/router';
-
 import { ModelMethods } from '../../lib/model.methods';
+// import { BDataModelService } from '../service/bDataModel.service';
+import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
-import { NDataModelService, NLogoutService, NSessionStorageService  } from 'neutrinos-seed-services';
-import { operationsService } from '../../services/operations/operations.service';
-import { userService } from '../../services/user/user.service';
+import {userService } from '../../services/user/user.service';
+
+/**
+ * Service import Example :
+ * import { HeroService } from '../services/hero/hero.service';
+ */
 
 @Component({
-    selector: 'bh-home',
-    templateUrl: './home.template.html'
+    selector: 'bh-userdetail',
+    templateUrl: './userdetail.template.html'
 })
 
-export class homeComponent extends NBaseComponent implements OnInit {
+export class userdetailComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
-    
-    BtnRoutes: any[] = this.operationsService.BtnRoutes;
-    currentUserData;
 
-    constructor(private bdms: NDataModelService, 
-        private logoutService: NLogoutService, 
-        private operationsService: operationsService, 
-        private router: Router,
-        private ss: NSessionStorageService,
-        private uService: userService) {
+    constructor(private bdms: NDataModelService, public uService: userService) {
         super();
         this.mm = new ModelMethods(bdms);
     }
 
     ngOnInit() {
-        this.get('policies');
-         // For lms
-         this.currentUserData = this.ss.getValue('userObj');
-         this.get('employee', { "staff.username": this.currentUserData.username }, {}, {}, 1, 1);
-   
-    }
-
-    logoutUser() {
-        this.logoutService.logout();
-        this.router.navigate(['/login']);
+        this.get('employee');
+        //this.get('employee', { "staff.username": this.currentUserData.username }, {}, {}, 1, 1);
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, this, filter, keys, sort, pagenumber, pagesize,
             result => {
                 // On Success code here
-                if(dataModelName == "policies"){
-                this.operationsService.policies = result;
-
-                }
-               
-                if (dataModelName == 'employee' && result.length == 0) {
-                    // routing the employee form
-                    this.router.navigate(['lms/userregistration']);
-                } else {
-                    // setting the current logged user data in the User service
-                    console.log(result);
-                    this.uService.user = result[0];
-                    // showing emloyee information here
-                    // this.router.navigate(['/lms/userdetail']);
-                }
+                 console.log(result);
+                 //this.uService.user = result[0];
             },
             error => {
                 // Handle errors here
-                console.log(error,'policies')
+                console.log(error);
             });
     }
 
     getById(dataModelName, dataModelId) {
         this.mm.getById(dataModelName, dataModelId,
             result => {
+               
                 // On Success code here
             },
             error => {
                 // Handle errors here
+                
             })
     }
 
@@ -110,7 +86,7 @@ export class homeComponent extends NBaseComponent implements OnInit {
             })
     }
 
-    delete(dataModelName, filter) {
+    delete (dataModelName, filter) {
         this.mm.delete(dataModelName, filter,
             result => {
                 // On Success code here

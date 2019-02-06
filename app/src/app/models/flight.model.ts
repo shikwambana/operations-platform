@@ -20,4 +20,10 @@ export class flight {
   @JsonProperty('date', String, true)
   public date: string = undefined;
 
+  @JsonProperty('username', String, true)
+  public username: string = undefined;
+
+  @JsonProperty('fullName', String, true)
+  public fullName: string = undefined;
+
 }

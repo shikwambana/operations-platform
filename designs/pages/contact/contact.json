@@ -1,0 +1,13 @@
+{
+    "appPageId": "5b803270-e56a-de3f-79bb-a6f6bc69ab5f",
+    "appPageName": "contact",
+    "componentName": "contactComponent",
+    "selectorName": "bh-contact",
+    "htmlFileName": "contact.template.html",
+    "tsFileName": "contact.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}
