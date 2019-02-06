@@ -10,7 +10,7 @@
   <div fxLayout="column wrap" style="color:white;" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
     <div fxLayout="row wrap" style="height: 100px" class="emptyRow" fxLayoutAlign="start stretch" fxShow="true" fxHide="false"></div>
     <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="center center" fxShow="true" fxHide="false">
-      <h1 style="font-size: 7vh;">Hello <i>{{ user.username }}</i></h1>
+      <h1 style="font-size: 7vh;">Hello <i>{{ currentUserData.displayName}}</i></h1>
     </div>
     <div fxLayout="row wrap" class="homeDesktopLinks" fxFlex="100" fxLayoutAlign="center center" fxShow="true" fxHide="false" fxLayout.sm="column" fxLayout.xs="column" fxFlex.xs="">
       <div fxLayout="column wrap" fxFlex="50" fxLayoutAlign="center center" fxShow="true" fxHide="false"><button mat-raised-button="" style="padding: 10px 0px;" routerLink="/policies" ngClass.sm="homeLinkBtnSm" ngClass.xs="homeLinkBtnXs">Human Resource</button></div>

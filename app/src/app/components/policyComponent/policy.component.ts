@@ -33,7 +33,7 @@ export class policyComponent extends NBaseComponent implements OnInit {
     ngOnInit() {
         this.selectedPolicy =  this.PoliciesService.getSelectedPolicy();
         if(!this.selectedPolicy){
-          this.router.navigate(['/human-resource/policies']);
+          this.router.navigate(['/policies']);
       }
     }
 
@@ -48,8 +48,13 @@ export class policyComponent extends NBaseComponent implements OnInit {
     }
 
     goBack(){
-         this.router.navigate(['/human-resource/policies']);
+         this.router.navigate(['/policies']);
     }
+
+    goToForm(){
+        this.router.navigate(['/operations/' + this.selectedPolicy.formlink]);
+    }
+
     getById(dataModelName, dataModelId) {
         this.mm.getById(dataModelName, dataModelId,
             result => {

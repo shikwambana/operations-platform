@@ -21,6 +21,7 @@ export class applyleaveComponent extends NBaseComponent implements OnInit {
     // new leaverequest object
     leaveRequest;
 
+    currentUserData;
     // minimum datte
     minDate = new Date();
 
@@ -43,6 +44,9 @@ export class applyleaveComponent extends NBaseComponent implements OnInit {
 
     ngOnInit() {
         // mapping the current user information for filling the leaverequest data model
+        // this.currentUserData = this.ss.getValue('userObj');
+        //  this.get('employee', { "staff.username": this.currentUserData.username }, {}, {}, 1, 1);
+
         this.dm.leaverequest.fullName = this.uService.user.staff.displayName;
         this.dm.leaverequest.username = this.uService.user.staff.username;
         this.dm.leaverequest.managerName = this.uService.user.staff.managerName;
@@ -94,6 +98,8 @@ export class applyleaveComponent extends NBaseComponent implements OnInit {
             result => {
                 // On Success code here
                 //this.uService.user = result[0];
+                this.uService.user = result[0];
+                console.log(result)
             },
             error => {
                 // Handle errors here

@@ -43,11 +43,13 @@ export class homeComponent extends NBaseComponent implements OnInit {
         this.mm.get(dataModelName, this, filter, keys, sort, pagenumber, pagesize,
             result => {
                 // On Success code here
+                 console.log(result);
+                 
                 if (dataModelName == 'employee' && result.length == 0) {
                     // routing the employee form
                 } else {
                     // setting the current logged user data in the User service
-                    console.log(result, "check this user");
+                   
                     this.uService.user = result[0];
                     var user = this.uService.user;
                    

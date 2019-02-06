@@ -560,7 +560,7 @@
                         },
                         {
                             "_key": "H1 Text",
-                            "_value": "Hello <i>{{ user.username }}</i>",
+                            "_value": "Hello <i>{{ currentUserData.displayName}}</i>",
                             "_type": "a",
                             "_attrDef": "p"
                         }
