@@ -195,6 +195,12 @@
                     "_value": "false",
                     "_type": "kv",
                     "_attrDef": "p"
+                },
+                {
+                    "_key": "fxHide.xs",
+                    "_value": "true",
+                    "_type": "kv",
+                    "_attrDef": "c"
                 }
             ],
             "7dae17fc-3ab4-87ca-a97d-38c46c37cb64": {
@@ -424,7 +430,7 @@
                             },
                             {
                                 "_key": "fxFlex",
-                                "_value": "49",
+                                "_value": "32",
                                 "_type": "kv",
                                 "_attrDef": "c"
                             },

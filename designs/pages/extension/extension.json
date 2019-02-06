@@ -1,0 +1,13 @@
+{
+    "appPageId": "4d8d354f-315b-c11c-b887-526152e5710d",
+    "appPageName": "extension",
+    "componentName": "extensionComponent",
+    "selectorName": "bh-extension",
+    "htmlFileName": "extension.template.html",
+    "tsFileName": "extension.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

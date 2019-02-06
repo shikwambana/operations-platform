@@ -736,7 +736,7 @@
                             },
                             {
                                 "_key": "routerLink",
-                                "_value": "/human-resource",
+                                "_value": "/admin",
                                 "_type": "kv",
                                 "_attrDef": "c"
                             },
@@ -848,7 +848,7 @@
                             },
                             {
                                 "_key": "routerLink",
-                                "_value": "/operations/operation",
+                                "_value": "/operations",
                                 "_type": "kv",
                                 "_attrDef": "c"
                             },

@@ -67,8 +67,24 @@
         "dataModelId": "d0db7b92-4c67-19fa-a6df-17e3bba06bb9",
         "name": "visa",
         "description": "visa",
-        "dataSource": "neutrinos-delivery-rt",
-        "fields": []
+        "dataSource": "operations",
+        "fields": [
+            {
+                "name": "full_name",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "email",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "phone",
+                "fieldType": 1,
+                "isArray": false
+            }
+        ]
     },
     "76cf35b7-e10b-6eaf-89c7-91ad65b4ef04": {
         "dataModelId": "76cf35b7-e10b-6eaf-89c7-91ad65b4ef04",
