@@ -8,12 +8,7 @@
             "resolve": "",
             "data": "",
             "canActivate": "NAuthGuardService",
-            "children": [
-                {
-                    "path": "''",
-                    "component": "searchComponent"
-                }
-            ]
+            "children": []
         },
         {
             "path": "login",
@@ -31,7 +26,7 @@
         },
         {
             "path": "human-resource",
-            "component": "homepageComponent",
+            "component": "displayComponent",
             "children": [
                 {
                     "path": "hr",
@@ -53,7 +48,7 @@
                 },
                 {
                     "path": "''",
-                    "component": "managerComponent"
+                    "component": "policiesComponent"
                 }
             ],
             "canActivate": "NAuthGuardService"
@@ -63,7 +58,7 @@
             "component": "displayComponent",
             "children": [
                 {
-                    "path": "''",
+                    "path": "operation",
                     "component": "otherservicesComponent"
                 },
                 {
@@ -75,8 +70,12 @@
                     "component": "policiesComponent"
                 },
                 {
-                    "component": "transportComponent",
-                    "path": "transport"
+                    "path": "extension",
+                    "component": "extensionComponent"
+                },
+                {
+                    "component": "flightComponent",
+                    "path": "flight"
                 }
             ]
         },
