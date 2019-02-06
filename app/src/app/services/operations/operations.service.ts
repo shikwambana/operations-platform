@@ -13,8 +13,8 @@ export class operationsService {
             link: "/operations"
         },
         {
-            name: "HR",
-            link: "/admin"
+            name: "My Profile",
+            link: "/leave/userdetail"
         },
         {
             name: "Apply Leave",

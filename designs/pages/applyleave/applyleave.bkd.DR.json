@@ -55,30 +55,6 @@
                 "_value": "false",
                 "_type": "kv",
                 "_attrDef": "p"
-            },
-            {
-                "_key": "fxFlex.gt-md",
-                "_value": "40",
-                "_type": "kv",
-                "_attrDef": "c"
-            },
-            {
-                "_key": "fxFlex.sm",
-                "_value": "70",
-                "_type": "kv",
-                "_attrDef": "c"
-            },
-            {
-                "_key": "fxFlex.md",
-                "_value": "60",
-                "_type": "kv",
-                "_attrDef": "c"
-            },
-            {
-                "_key": "fxFlex.xs",
-                "_value": "100",
-                "_type": "kv",
-                "_attrDef": "c"
             }
         ],
         "a6e3f7c4-b3cc-7414-cd30-b8254adf1862": {

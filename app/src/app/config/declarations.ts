@@ -190,5 +190,5 @@ children: []},{path: 'login', component: loginComponent},{path: 'unauthorized', 
 children: [{path: 'hr', component: hrpolicyadminComponent},{path: '', component: managerComponent},{path: 'edit', component: editpolicyComponent}]},{path: 'operations', component: displayComponent,
 children: [{path: '', component: otherservicesComponent},{path: 'guesthouse', component: guesthouseComponent},{path: 'flight', component: flightComponent},{path: 'extension', component: extensionComponent}]},{path: 'policies', component: displayComponent,
 children: [{path: '', component: policiesComponent},{path: 'policy', component: policyComponent}]},{path: 'leave', component: displayComponent,
-children: [{path: 'userdetail', component: userdetailComponent},{path: 'applyleave', component: applyleaveComponent},{path: 'myleaves', component: myleavesComponent}]},{path: '', redirectTo: '/home', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
+children: [{path: 'userdetail', component: userdetailComponent},{path: 'applyleave', component: applyleaveComponent},{path: 'myleaves', component: myleavesComponent}]},{path: 'userregistration', component: userregistrationComponent},{path: '', redirectTo: '/home', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_END

@@ -98,6 +98,10 @@
             ]
         },
         {
+            "component": "userregistrationComponent",
+            "path": "userregistration"
+        },
+        {
             "path": "''",
             "component": "",
             "pathMatch": "full",

@@ -560,7 +560,7 @@
                         },
                         {
                             "_key": "H1 Text",
-                            "_value": "Hello <i>user</i>",
+                            "_value": "Hello <i>{{ user.username }}</i>",
                             "_type": "a",
                             "_attrDef": "p"
                         }
@@ -866,6 +866,88 @@
                             }
                         ]
                     }
+                }
+            },
+            "89cd7b10-519a-0f60-15e6-566eb2de4b54": {
+                "paletteKey": "FlexLayoutRow",
+                "designerReference": [
+                    {
+                        "_key": "style",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "class",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "fxFlex",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "fxLayoutGap",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "wrap",
+                        "_value": "wrap",
+                        "_type": "a",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "layoutAlign",
+                        "_value": "center",
+                        "_type": "a",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "pLayoutAlign",
+                        "_value": "center",
+                        "_type": "a",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "fxShow",
+                        "_value": "true",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "fxHide",
+                        "_value": "false",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    }
+                ],
+                "b105a45d-1db2-1bfe-1720-30a94f6e9b33": {
+                    "paletteKey": "HTML",
+                    "designerReference": [
+                        {
+                            "_key": "style",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "class",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "html",
+                            "_value": "<mat-chip-list>\r\n  <mat-chip color=\"primary\" selected>South Africa</mat-chip>\r\n  <mat-chip color=\"accent\" selected>India</mat-chip>\r\n  <mat-chip color=\"primary\" selected>Malaysia</mat-chip>\r\n  <mat-chip color=\"accent\" selected>Singapore</mat-chip>\r\n</mat-chip-list>",
+                            "_type": "a",
+                            "_attrDef": "p"
+                        }
+                    ]
                 }
             }
         }

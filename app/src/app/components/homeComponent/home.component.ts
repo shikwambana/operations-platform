@@ -45,13 +45,17 @@ export class homeComponent extends NBaseComponent implements OnInit {
                 // On Success code here
                 if (dataModelName == 'employee' && result.length == 0) {
                     // routing the employee form
-                    this.router.navigate(['leave/userregistration']);
                 } else {
                     // setting the current logged user data in the User service
-                    console.log(result);
+                    console.log(result, "check this user");
                     this.uService.user = result[0];
-                    // showing emloyee information here
-                    this.router.navigate(['/leave/userdetail']);
+                    var user = this.uService.user;
+                   
+                    // if (user.groupList == "Manager") {
+                    //     this.router.navigate(['/admin']);
+                    // }else {
+                    //     this.router.navigate(['/operations']);
+                    // }
                 }
             },
             error => {
