@@ -4,6 +4,7 @@ import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
 import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
+import { visa } from '../../models/visa.model';
 
 /**
  * Service import Example :
@@ -17,6 +18,8 @@ import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 
 export class extensionComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
+
+    visa = new visa();
 
     constructor(private bdms: NDataModelService) {
         super();
