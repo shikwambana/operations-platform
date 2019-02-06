@@ -736,7 +736,7 @@
                             },
                             {
                                 "_key": "routerLink",
-                                "_value": "/admin",
+                                "_value": "/policies",
                                 "_type": "kv",
                                 "_attrDef": "c"
                             },

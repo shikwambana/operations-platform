@@ -41,7 +41,7 @@
                     "path": "edit"
                 }
             ],
-            "canActivate": ""
+            "canActivate": "NAuthGuardService"
         },
         {
             "path": "operations",
