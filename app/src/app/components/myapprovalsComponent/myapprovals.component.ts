@@ -4,13 +4,7 @@ import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
 import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
-
-import { Router } from '@angular/router';
-import { operationsService } from '../../services/operations/operations.service';
-
-import { FormControl } from '@angular/forms';
-import { Observable } from 'rxjs';
-import { map, startWith } from 'rxjs/operators';
+import { userService } from '../../services/user/user.service';
 
 /**
  * Service import Example :
@@ -18,65 +12,62 @@ import { map, startWith } from 'rxjs/operators';
  */
 
 @Component({
-    selector: 'bh-search',
-    templateUrl: './search.template.html'
+    selector: 'bh-myapprovals',
+    templateUrl: './myapprovals.template.html'
 })
 
-export class searchComponent extends NBaseComponent implements OnInit {
+export class myapprovalsComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
 
-    services;
-    policies;
+    userObj;
+    leaveRequests = [];
 
-    myControl = new FormControl();
-
-    operations = [{
-        name: 'Services',
-        operationObj: this.services
-    }, {
-        name: 'Policies',
-        operationObj: this.policies
-    }];
-
-
-    filteredOperations: Observable<any[]>;
-
-    constructor(private bdms: NDataModelService, private operationsService: operationsService, private router: Router) {
+    constructor(private bdms: NDataModelService, private uService: userService) {
         super();
         this.mm = new ModelMethods(bdms);
     }
 
     ngOnInit() {
-        this.get('services');
 
-        this.filteredOperations = this.myControl.valueChanges.pipe(
-            startWith(''),
-            map(value => this._filter(value))
-        );
+        // this.get('leaverequest', { "managerName": this.uService.user.staff.displayName }, {}, { _id: -1 });
+        this.get('leaverequest');
+        
     }
 
-    private _filter(value: string): any[] {
-        const filterValue = value.toLowerCase();
-
-        return this.operations.filter(operation => operation.name.toLowerCase().indexOf(filterValue) === 0);
+    reject(leave) {
+        leave.leaveStatus = 'reject';
+        this.updateById('leaverequest', leave._id, leave);
     }
+
+    accept(leave) {
+        leave.leaveStatus = 'accept';
+
+        // updating leave requests
+        this.updateById('leaverequest', leave._id, leave);
+
+        // update for employee
+        let leaveKey = 'leaves.' + leave.leaveType;
+        let update = {
+            '$inc': {}
+        }
+        update['$inc'][leaveKey] = -leave.duration;
+        update['$inc']['leaves.approvedLeaves'] = leave.duration;
+        this.update('employee', update, { 'staff.username': leave.username }, {});
+    }
+
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, this, filter, keys, sort, pagenumber, pagesize,
             result => {
                 // On Success code here
-
-                // this.operationsService.services = result;
-                // this.services = this.operationsService.services;
-                // this.policies = this.operationsService.policies;
+                //this.uService.user = result[0];
+                this.leaveRequests = result;
             },
             error => {
                 // Handle errors here
-                
-                // console.log(error, 'services')
             });
     }
-
+    
     getById(dataModelName, dataModelId) {
         this.mm.getById(dataModelName, dataModelId,
             result => {
@@ -119,7 +110,7 @@ export class searchComponent extends NBaseComponent implements OnInit {
             })
     }
 
-    delete(dataModelName, filter) {
+    delete (dataModelName, filter) {
         this.mm.delete(dataModelName, filter,
             result => {
                 // On Success code here

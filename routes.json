@@ -80,6 +80,24 @@
             ]
         },
         {
+            "component": "displayComponent",
+            "path": "leave",
+            "children": [
+                {
+                    "component": "userdetailComponent",
+                    "path": "userdetail"
+                },
+                {
+                    "component": "applyleaveComponent",
+                    "path": "applyleave"
+                },
+                {
+                    "component": "myleavesComponent",
+                    "path": "myleaves"
+                }
+            ]
+        },
+        {
             "path": "''",
             "component": "",
             "pathMatch": "full",

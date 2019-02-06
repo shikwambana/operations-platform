@@ -12,6 +12,26 @@ window['neutrinos'] = {
 }
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-homeresolverService
+import { homeresolverService } from '../services/homeresolver/homeresolver.service';
+//CORE_REFERENCE_IMPORT-userService
+import { userService } from '../services/user/user.service';
+//CORE_REFERENCE_IMPORT-userregistrationComponent
+import { userregistrationComponent } from '../components/userregistrationComponent/userregistration.component';
+//CORE_REFERENCE_IMPORT-userdetailsComponent
+import { userdetailsComponent } from '../components/userdetailsComponent/userdetails.component';
+//CORE_REFERENCE_IMPORT-userdetailComponent
+import { userdetailComponent } from '../components/userdetailComponent/userdetail.component';
+//CORE_REFERENCE_IMPORT-myprofileComponent
+import { myprofileComponent } from '../components/myprofileComponent/myprofile.component';
+//CORE_REFERENCE_IMPORT-myleavesComponent
+import { myleavesComponent } from '../components/myleavesComponent/myleaves.component';
+//CORE_REFERENCE_IMPORT-myapprovalsComponent
+import { myapprovalsComponent } from '../components/myapprovalsComponent/myapprovals.component';
+//CORE_REFERENCE_IMPORT-contactComponent
+import { contactComponent } from '../components/contactComponent/contact.component';
+//CORE_REFERENCE_IMPORT-applyleaveComponent
+import { applyleaveComponent } from '../components/applyleaveComponent/applyleave.component';
 //CORE_REFERENCE_IMPORT-extensionComponent
 import { extensionComponent } from '../components/extensionComponent/extension.component';
 //CORE_REFERENCE_IMPORT-flightComponent
@@ -84,6 +104,22 @@ export const appDeclarations = [
   PageNotFoundComponent,
   NMapComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-userregistrationComponent
+userregistrationComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-userdetailsComponent
+userdetailsComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-userdetailComponent
+userdetailComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-myprofileComponent
+myprofileComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-myleavesComponent
+myleavesComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-myapprovalsComponent
+myapprovalsComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-contactComponent
+contactComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-applyleaveComponent
+applyleaveComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-extensionComponent
 extensionComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-flightComponent
@@ -133,6 +169,10 @@ export const appProviders = [
   },
   NAuthGuardService,
   //CORE_REFERENCE_PUSH_TO_PRO_ARRAY
+//CORE_REFERENCE_PUSH_TO_PRO_ARRAY-homeresolverService
+homeresolverService,
+//CORE_REFERENCE_PUSH_TO_PRO_ARRAY-userService
+userService,
 //CORE_REFERENCE_PUSH_TO_PRO_ARRAY-operationsService
 operationsService,
 //CORE_REFERENCE_PUSH_TO_PRO_ARRAY-policiesService
@@ -149,5 +189,6 @@ export const appRoutes = [{path: 'home', component: homeComponent, canActivate: 
 children: []},{path: 'login', component: loginComponent},{path: 'unauthorized', redirectTo: '/login', pathMatch: 'full'},{path: 'admin', component: displayComponent, canActivate: [NAuthGuardService],
 children: [{path: 'hr', component: hrpolicyadminComponent},{path: '', component: managerComponent},{path: 'edit', component: editpolicyComponent}]},{path: 'operations', component: displayComponent,
 children: [{path: '', component: otherservicesComponent},{path: 'guesthouse', component: guesthouseComponent},{path: 'flight', component: flightComponent},{path: 'extension', component: extensionComponent}]},{path: 'policies', component: displayComponent,
-children: [{path: '', component: policiesComponent},{path: 'policy', component: policyComponent}]},{path: '', redirectTo: '/home', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
+children: [{path: '', component: policiesComponent},{path: 'policy', component: policyComponent}]},{path: 'leave', component: displayComponent,
+children: [{path: 'userdetail', component: userdetailComponent},{path: 'applyleave', component: applyleaveComponent},{path: 'myleaves', component: myleavesComponent}]},{path: '', redirectTo: '/home', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_END

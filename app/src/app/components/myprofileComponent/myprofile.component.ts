@@ -4,13 +4,8 @@ import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
 import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
+import { userService} from '../../services/user/user.service';
 
-import { Router } from '@angular/router';
-import { operationsService } from '../../services/operations/operations.service';
-
-import { FormControl } from '@angular/forms';
-import { Observable } from 'rxjs';
-import { map, startWith } from 'rxjs/operators';
 
 /**
  * Service import Example :
@@ -18,62 +13,30 @@ import { map, startWith } from 'rxjs/operators';
  */
 
 @Component({
-    selector: 'bh-search',
-    templateUrl: './search.template.html'
+    selector: 'bh-myprofile',
+    templateUrl: './myprofile.template.html'
 })
 
-export class searchComponent extends NBaseComponent implements OnInit {
+export class myprofileComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
 
-    services;
-    policies;
-
-    myControl = new FormControl();
-
-    operations = [{
-        name: 'Services',
-        operationObj: this.services
-    }, {
-        name: 'Policies',
-        operationObj: this.policies
-    }];
-
-
-    filteredOperations: Observable<any[]>;
-
-    constructor(private bdms: NDataModelService, private operationsService: operationsService, private router: Router) {
+    constructor(private bdms: NDataModelService, public uService: userService) {
         super();
         this.mm = new ModelMethods(bdms);
     }
 
     ngOnInit() {
-        this.get('services');
-
-        this.filteredOperations = this.myControl.valueChanges.pipe(
-            startWith(''),
-            map(value => this._filter(value))
-        );
-    }
-
-    private _filter(value: string): any[] {
-        const filterValue = value.toLowerCase();
-
-        return this.operations.filter(operation => operation.name.toLowerCase().indexOf(filterValue) === 0);
+     //this.get('employee', { "staff.username": this.currentUserData.username }, {}, {}, 1, 1);
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, this, filter, keys, sort, pagenumber, pagesize,
             result => {
                 // On Success code here
-
-                // this.operationsService.services = result;
-                // this.services = this.operationsService.services;
-                // this.policies = this.operationsService.policies;
+                //this.uService.user = result[0];
             },
             error => {
                 // Handle errors here
-                
-                // console.log(error, 'services')
             });
     }
 
@@ -119,7 +82,7 @@ export class searchComponent extends NBaseComponent implements OnInit {
             })
     }
 
-    delete(dataModelName, filter) {
+    delete (dataModelName, filter) {
         this.mm.delete(dataModelName, filter,
             result => {
                 // On Success code here

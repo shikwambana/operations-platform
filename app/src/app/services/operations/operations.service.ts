@@ -6,12 +6,11 @@ import { policies } from '../../models/policies.model';
 @Injectable()
 export class operationsService {
     policies: policies;
-    displayer = "/operations";
 
     BtnRoutes = [
         {
             name: "Operations",
-            link: this.displayer
+            link: "/operations"
         },
         {
             name: "HR",
@@ -19,15 +18,15 @@ export class operationsService {
         },
         {
             name: "Apply Leave",
-            link: this.displayer + "/admin/applyleave"
+            link: "/leave/applyleave"
         },
         {
             name: "Contact HR",
-            link: this.displayer + "/admin/contacthr"
+            link: "/admin/contacthr"
         },
         {
             name: "Emergency Contacts",
-            link: this.displayer + "/emergencies"
+            link: "/operations/emergencies"
         }
     ]
 }

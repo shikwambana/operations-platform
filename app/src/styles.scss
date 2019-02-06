@@ -298,3 +298,11 @@
 //=============================================================================================
 // </Home component>
 //=============================================================================================
+
+.disabledInputs .mat-input-element:disabled {
+    color: red !important;
+}
+.underlineWidth .mat-form-field-underline {
+    background-color: transparent !important;
+    width: 200px !important;
+}

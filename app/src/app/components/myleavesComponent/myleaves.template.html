@@ -1,0 +1,63 @@
+<div fxLayout="column wrap" class="margin-tb" fxFlex="100" fxLayoutGap="1.8em" fxLayoutAlign="  none" fxShow="true" fxHide="false">
+  <div fxLayout="column wrap" fxFlex="100" fxLayoutGap="1.5em" fxLayoutAlign="center center" fxShow="true" fxHide="false" fxFlex.gt-md="40" fxFlex.md="50" fxFlex.sm="60" fxFlex.xs="80">
+    <mat-card style="background: rgba(185,185,185, 0.5);" class="leaveCard">
+      <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+        <div fxLayout="row wrap" fxLayoutAlign="center center" fxShow="true" fxHide="false">
+          <h4>Leave Information</h4>
+        </div>
+        <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="  none" fxShow="true" fxHide="false">
+          <div fxLayout="column " fxFlex="30" fxLayoutAlign="center center" fxShow="true" fxHide="false" fxFlex.xs="100">
+            <mat-form-field class="fullinfix"><input matInput="" placeholder="Annual Leaves" value="{{uService.user.leaves.annualLeaves}}" required disabled="disabled"></mat-form-field>
+          </div>
+          <div fxLayout="column wrap" fxFlex="30" fxLayoutAlign="center center" fxShow="true" fxHide="false" fxFlex.xs="100">
+            <mat-form-field class="fullinfix"><input matInput="" placeholder="Sick Leaves" value="{{uService.user.leaves.sickLeaves}}" required disabled="disabled"></mat-form-field>
+          </div>
+          <div fxLayout="column wrap" fxFlex="30" fxLayoutAlign="center center" fxShow="true" fxHide="false" fxFlex.xs="100" disabled="disabled">
+            <mat-form-field class="fullinfix"><input matInput="" placeholder="Approved Leaves" value="{{uService.user.leaves.approvedLeaves}}" required disabled="disabled"></mat-form-field>
+          </div>
+        </div>
+      </div>
+    </mat-card>
+    <mat-card *ngIf="leaveDetails.length == 0" style="background: rgba(185,185,185, 0.5);" class="leaveCard">
+      <p>You have not applied any leaves</p>
+    </mat-card>
+    <mat-card *ngFor="let leave of leaveDetails" style="background: rgba(185,185,185, 0.5);" class="leaveCard">
+      <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+        <div fxLayout="row wrap" class="underlineWidth" fxLayoutGap="1em" fxLayoutAlign="center center" fxShow="true" fxHide="false" fxLayout.xs="column">
+          <div fxLayout="column wrap" fxFlex="80" fxLayoutAlign="center center" fxShow="true" fxHide="false">
+            <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start stretch" fxShow="true" fxHide="false" fxLayout.xs="column">
+              <div fxLayout="column wrap" fxFlex="50" fxLayoutAlign="center center" fxShow="true" fxHide="false" fxFlex.xs="90">
+                <p>{{leave.fromDate | date: &apos;dd/MMM/yyyy&apos;}}</p>
+              </div>
+              <div fxLayout="column wrap" fxFlex="50" fxLayoutAlign="center center" fxShow="true" fxHide="false" fxFlex.xs="90">
+                <p>{{leave.toDate | date: &apos;dd/MMM/yyyy&apos;}}</p>
+              </div>
+            </div>
+            <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start stretch" fxShow="true" fxHide="false" fxLayout.xs="column">
+              <div fxLayout="column wrap" fxFlex="50" fxLayoutAlign="center center" fxShow="true" fxHide="false" fxFlex.xs="90">
+                <mat-form-field><input matInput="" placeholder="Leave Type" value="{{leave.leaveType == &apos;annualLeaves&apos; ? &apos;Annual&apos; : &apos;Sick&apos;}} Leave" required disabled="disabled"></mat-form-field>
+              </div>
+              <div fxLayout="column wrap" fxLayoutAlign="center center" fxShow="true" fxHide="false">
+                <mat-form-field><input matInput="" placeholder="Leave Reason" value="{{leave.leaveReason}}" required disabled="disabled"></mat-form-field>
+              </div>
+            </div>
+          </div>
+          <div fxLayout="column wrap" fxFlex="15" fxLayoutAlign="center start" fxShow="true" fxHide="false">
+            <div fxLayout="column wrap" fxLayoutAlign="center center" fxShow="true" fxHide="false">
+              <h4>Status</h4>
+            </div>
+            <div fxLayout="column wrap" fxLayoutAlign="center center" fxShow="true" fxHide="false">
+              <mat-icon class="acceptIcon" *ngIf="leave.leaveStatus == &apos;accept&apos;" title="Accepted">check_circle</mat-icon>
+              <mat-icon class="rejectIcon" *ngIf="leave.leaveStatus == &apos;reject&apos;" title="Rejected">cancel</mat-icon>
+              <mat-icon class="infoIcon" *ngIf="leave.leaveStatus == &apos;pending&apos;" title="Pending">info</mat-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+  <div fxLayout="row wrap" class="applyleavebtn" fxLayoutAlign="end end" fxShow="true" fxHide="false"><button mat-fab="" color="primary" title="Apply Leave" routerLink="/leave/applyleave">
+      <mat-icon>work_off<mat-icon></mat-icon>
+      </mat-icon>
+    </button></div>
+</div>

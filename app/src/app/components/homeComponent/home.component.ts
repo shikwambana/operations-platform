@@ -4,8 +4,9 @@ import { Router } from '@angular/router';
 
 import { ModelMethods } from '../../lib/model.methods';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
-import { NDataModelService, NLogoutService } from 'neutrinos-seed-services';
+import { NDataModelService, NLogoutService, NSessionStorageService  } from 'neutrinos-seed-services';
 import { operationsService } from '../../services/operations/operations.service';
+import { userService } from '../../services/user/user.service';
 
 @Component({
     selector: 'bh-home',
@@ -15,15 +16,22 @@ import { operationsService } from '../../services/operations/operations.service'
 export class homeComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
 
+    currentUserData;
     BtnRoutes: any[] = this.operationsService.BtnRoutes;
 
-    constructor(private bdms: NDataModelService, private logoutService: NLogoutService, private operationsService: operationsService, private router: Router) {
+    constructor(private bdms: NDataModelService, 
+    private logoutService: NLogoutService, 
+    private operationsService: operationsService, 
+    private router: Router, 
+        private ss: NSessionStorageService,
+        private uService: userService) {
         super();
         this.mm = new ModelMethods(bdms);
     }
 
     ngOnInit() {
-        this.get('policies');
+         this.currentUserData = this.ss.getValue('userObj');
+         this.get('employee', { "staff.username": this.currentUserData.username }, {}, {}, 1, 1);
     }
 
     logoutUser() {
@@ -35,13 +43,20 @@ export class homeComponent extends NBaseComponent implements OnInit {
         this.mm.get(dataModelName, this, filter, keys, sort, pagenumber, pagesize,
             result => {
                 // On Success code here
-                console.log(result, 'policies');
-                this.operationsService.policies = result;
-                console.log(this.operationsService.policies, "home");
+                if (dataModelName == 'employee' && result.length == 0) {
+                    // routing the employee form
+                    this.router.navigate(['leave/userregistration']);
+                } else {
+                    // setting the current logged user data in the User service
+                    console.log(result);
+                    this.uService.user = result[0];
+                    // showing emloyee information here
+                    this.router.navigate(['/leave/userdetail']);
+                }
             },
             error => {
                 // Handle errors here
-                console.log(error,'policies')
+                console.log(error,'userdetail')
             });
     }
 

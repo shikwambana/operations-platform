@@ -83,5 +83,45 @@
         "appPageName": "transport",
         "componentName": "transportComponent",
         "isEntry": false
+    },
+    "e05a1919-4cf1-50cd-aa66-fc6cd84b969e": {
+        "appPageName": "applyleave",
+        "componentName": "applyleaveComponent",
+        "isEntry": false
+    },
+    "fbdd8972-1f2c-ffd9-18ab-97064ba0071e": {
+        "appPageName": "contact",
+        "componentName": "contactComponent",
+        "isEntry": false
+    },
+    "372cecc2-fd2e-c1c5-c0e9-d05e6b0b678a": {
+        "appPageName": "myapprovals",
+        "componentName": "myapprovalsComponent",
+        "isEntry": false
+    },
+    "8a430338-cdf5-b718-508b-4d730a2b2315": {
+        "appPageName": "myleaves",
+        "componentName": "myleavesComponent",
+        "isEntry": false
+    },
+    "b1b6dc20-cfbb-f8a4-778e-65e30b8c43b1": {
+        "appPageName": "myprofile",
+        "componentName": "myprofileComponent",
+        "isEntry": false
+    },
+    "c5858791-4693-465b-4c57-4188e3caf1e8": {
+        "appPageName": "userdetail",
+        "componentName": "userdetailComponent",
+        "isEntry": false
+    },
+    "37c1bacb-9291-dce2-8c82-1d0d275370cc": {
+        "appPageName": "userdetails",
+        "componentName": "userdetailsComponent",
+        "isEntry": false
+    },
+    "38daca00-2803-809f-a085-416f9c408b3f": {
+        "appPageName": "userregistration",
+        "componentName": "userregistrationComponent",
+        "isEntry": false
     }
 }

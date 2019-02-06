@@ -2,15 +2,10 @@
 import { Component, OnInit } from '@angular/core'
 import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
-import { NDataModelService } from 'neutrinos-seed-services';
+import { NDataModelService, NSessionStorageService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
-
 import { Router } from '@angular/router';
-import { operationsService } from '../../services/operations/operations.service';
-
-import { FormControl } from '@angular/forms';
-import { Observable } from 'rxjs';
-import { map, startWith } from 'rxjs/operators';
+import { userService } from '../../services/user/user.service';
 
 /**
  * Service import Example :
@@ -18,62 +13,79 @@ import { map, startWith } from 'rxjs/operators';
  */
 
 @Component({
-    selector: 'bh-search',
-    templateUrl: './search.template.html'
+    selector: 'bh-userregistration',
+    templateUrl: './userregistration.template.html'
 })
 
-export class searchComponent extends NBaseComponent implements OnInit {
+export class userregistrationComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
 
-    services;
-    policies;
+    isManager = true;
+    userObj;
 
-    myControl = new FormControl();
+    // leaves are being hardcoded to be input into
+    // the database for onboarding employees
+    leaves = {
+        "annualLeaves": 15,
+        "sickLeaves": 15,
+        "approvedLeaves": 0
+    }
+    managers = [
+    ];
+    /**
+     * Hardcoded department values
+     * Each user will have to select at least one deparment
+     */
+    departments = [
+        'HR',
+        'Production'
+    ];
 
-    operations = [{
-        name: 'Services',
-        operationObj: this.services
-    }, {
-        name: 'Policies',
-        operationObj: this.policies
-    }];
 
-
-    filteredOperations: Observable<any[]>;
-
-    constructor(private bdms: NDataModelService, private operationsService: operationsService, private router: Router) {
+    constructor(private bdms: NDataModelService, private sessionStorage: NSessionStorageService,
+        private router: Router, private uService: userService) {
         super();
         this.mm = new ModelMethods(bdms);
     }
 
     ngOnInit() {
-        this.get('services');
 
-        this.filteredOperations = this.myControl.valueChanges.pipe(
-            startWith(''),
-            map(value => this._filter(value))
-        );
+         // mapping the userobject the datamodel
+        // this.get('employee', { "staff.username": this.currentUserData.username }, {}, {}, 1, 1);
+        this.userObj = this.sessionStorage.getValue('userObj');
+        this.dm.employee.staff.username = this.userObj.username;
+        this.dm.employee.staff.firstName = this.userObj.firstName;
+        this.dm.employee.staff.lastName = this.userObj.lastName;
+        this.dm.employee.staff.groupList = this.userObj.groupList;
+        this.dm.employee.staff.displayName = this.userObj.displayName;
+        this.dm.employee.leaves = this.leaves
+        this.isManager = (this.userObj.groupList.indexOf('Manager') > -1);
+        
+
     }
 
-    private _filter(value: string): any[] {
-        const filterValue = value.toLowerCase();
 
-        return this.operations.filter(operation => operation.name.toLowerCase().indexOf(filterValue) === 0);
+    showManager() {
+        this.get(
+            'employee',
+            { 'staff.department': this.dm.employee.staff.department, 'staff.groupList': 'Manager' },
+            { 'staff.displayName': 1, 'staff.groupList': 1 })
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, this, filter, keys, sort, pagenumber, pagesize,
             result => {
-                // On Success code here
-
-                // this.operationsService.services = result;
-                // this.services = this.operationsService.services;
-                // this.policies = this.operationsService.policies;
+                // populate the managers array
+                //this.uService.user = result[0];
+                if (result && result.length > 0 && result[0].staff.groupList.indexOf("Manager") > -1) {
+                    this.managers.push(result[0].staff.displayName);
+                } else {
+                    this.managers = [];
+                    this.dm.employee.staff.managerName = '';
+                }
             },
             error => {
                 // Handle errors here
-                
-                // console.log(error, 'services')
             });
     }
 
@@ -90,11 +102,13 @@ export class searchComponent extends NBaseComponent implements OnInit {
     put(dataModelName, dataModelObject) {
         this.mm.put(dataModelName, dataModelObject,
             result => {
-                // On Success code here
+                this.uService.user = dataModelObject;
+                this.router.navigate(['home/userdetail']);
             }, error => {
                 // Handle errors here
             })
     }
+
 
     validatePut(formObj, dataModelName, dataModelObject) {
         this.mm.validatePut(formObj, dataModelName, dataModelObject,
@@ -119,7 +133,7 @@ export class searchComponent extends NBaseComponent implements OnInit {
             })
     }
 
-    delete(dataModelName, filter) {
+    delete (dataModelName, filter) {
         this.mm.delete(dataModelName, filter,
             result => {
                 // On Success code here
