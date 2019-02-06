@@ -12,6 +12,12 @@ window['neutrinos'] = {
 }
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-transportComponent
+import { transportComponent } from '../components/transportComponent/transport.component';
+//CORE_REFERENCE_IMPORT-extensionComponent
+import { extensionComponent } from '../components/extensionComponent/extension.component';
+//CORE_REFERENCE_IMPORT-flightComponent
+import { flightComponent } from '../components/flightComponent/flight.component';
 //CORE_REFERENCE_IMPORT-operationsComponent
 import { operationsComponent } from '../components/operationsComponent/operations.component';
 //CORE_REFERENCE_IMPORT-managerComponent
@@ -80,6 +86,12 @@ export const appDeclarations = [
   PageNotFoundComponent,
   NMapComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-transportComponent
+transportComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-extensionComponent
+extensionComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-flightComponent
+flightComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-operationsComponent
 operationsComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-managerComponent
@@ -138,9 +150,8 @@ policiesService,
 
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_START
 export const appRoutes = [{path: 'home', component: homeComponent, canActivate: [NAuthGuardService],
-children: []},{path: 'login', component: loginComponent},{path: 'unauthorized', redirectTo: '/login', pathMatch: 'full'},{path: 'human-resource', component: displayComponent, canActivate: [NAuthGuardService],
-children: [{path: 'hr', component: hrpolicyadminComponent,
-children: []},{path: 'edit', component: editpolicyComponent},{path: 'policy', component: policyComponent},{path: 'policies', component: policiesComponent,
-children: []},{path: '', component: managerComponent}]},{path: 'menu', component: displayComponent,
-children: [{path: 'otherservices', component: otherservicesComponent},{path: 'guesthouse', component: guesthouseComponent},{path: 'policies', component: policiesComponent}]},{path: '', redirectTo: '/login', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
+children: []},{path: 'login', component: loginComponent},{path: 'unauthorized', redirectTo: '/login', pathMatch: 'full'},{path: 'admin', component: displayComponent, canActivate: [NAuthGuardService],
+children: [{path: 'hr', component: hrpolicyadminComponent},{path: '', component: managerComponent},{path: 'edit', component: editpolicyComponent}]},{path: 'operations', component: displayComponent,
+children: [{path: '', component: otherservicesComponent},{path: 'guesthouse', component: guesthouseComponent},{path: 'flight', component: flightComponent},{path: 'extension', component: extensionComponent}]},{path: 'policies', component: displayComponent,
+children: [{path: '', component: policiesComponent},{path: 'policy', component: policyComponent}]},{path: '', redirectTo: '/home', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_END

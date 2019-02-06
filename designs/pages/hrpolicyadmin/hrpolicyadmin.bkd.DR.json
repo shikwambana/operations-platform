@@ -1076,6 +1076,12 @@
                     "_value": "false",
                     "_type": "kv",
                     "_attrDef": "p"
+                },
+                {
+                    "_key": "ngClass.xs",
+                    "_value": "smallHrPolAdminTxt",
+                    "_type": "kv",
+                    "_attrDef": "c"
                 }
             ],
             "55fa31c7-6bed-38c7-3c99-ba872bbde748": {

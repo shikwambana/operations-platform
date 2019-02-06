@@ -172,7 +172,7 @@
                     },
                     {
                         "_key": "label",
-                        "_value": "Operations",
+                        "_value": "Leave Management System",
                         "_type": "kv",
                         "_attrDef": "p"
                     }
@@ -195,52 +195,6 @@
                         {
                             "_key": "html",
                             "_value": "<bh-operations>\r\n</bh-operations>",
-                            "_type": "a",
-                            "_attrDef": "p"
-                        }
-                    ]
-                }
-            },
-            "1d768f34-d345-1f32-efdd-ec320b09ae63": {
-                "paletteKey": "NG-tab",
-                "designerReference": [
-                    {
-                        "_key": "style",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "class",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "label",
-                        "_value": "Leave Management System",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    }
-                ],
-                "d1969d9e-23fb-1e79-8192-33107fc9c56c": {
-                    "paletteKey": "HTML",
-                    "designerReference": [
-                        {
-                            "_key": "style",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "class",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "html",
-                            "_value": "",
                             "_type": "a",
                             "_attrDef": "p"
                         }

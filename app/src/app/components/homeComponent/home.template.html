@@ -3,9 +3,7 @@
     <mat-toolbar class="homeToolBar">
       <div fxLayout="column wrap" fxFlex="20" fxLayoutAlign="start none" fxShow="true" fxHide="false" fxFlex.sm="30" fxFlex.xs="40"><img imgSrc="Web/homelogo.png" routerLink="/home"></div>
       <div fxLayout="column wrap" fxFlex="80" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
-        <div fxLayout="row wrap" fxLayoutAlign="end stretch" fxShow="true" fxHide="false"><button mat-button="" style="background:white;padding:10px;border-radius:50%;" class="homeMenuSmallBtn" fxHide="true" fxShow.sm="true" fxShow.xs="true" (click)="sidenav.toggle();">
-            <mat-icon style="color:white;">menu</mat-icon>
-          </button><button mat-raised-button="" class="homeMainLogoutBtn" fxHide.sm="true" fxHide.xs="true" fxShow="true" (click)="logoutUser()">Logout</button></div>
+        <div fxLayout="row wrap" fxLayoutAlign="end stretch" fxShow="true" fxHide="false"><button mat-raised-button="" class="homeMainLogoutBtn" fxShow="true" (click)="logoutUser()">Logout</button></div>
       </div>
     </mat-toolbar>
   </header>
@@ -15,8 +13,8 @@
       <h1 style="font-size: 7vh;">Hello <i>user</i></h1>
     </div>
     <div fxLayout="row wrap" class="homeDesktopLinks" fxFlex="100" fxLayoutAlign="center center" fxShow="true" fxHide="false" fxLayout.sm="column" fxLayout.xs="column" fxFlex.xs="">
-      <div fxLayout="column wrap" fxFlex="50" fxLayoutAlign="center center" fxShow="true" fxHide="false"><button mat-raised-button="" style="padding: 10px 0px;" routerLink="/human-resource" ngClass.sm="homeLinkBtnSm" ngClass.xs="homeLinkBtnXs">Human Resource</button></div>
-      <div fxLayout="column wrap" fxFlex="50" fxLayoutAlign="center center" fxShow="true" fxHide="false"><button mat-raised-button="" style="padding: 10px 45px;" routerLink="/operations/operation" ngClass.sm="homeLinkBtnSm" ngClass.xs="homeLinkBtnXs">Operations</button></div>
+      <div fxLayout="column wrap" fxFlex="50" fxLayoutAlign="center center" fxShow="true" fxHide="false"><button mat-raised-button="" style="padding: 10px 0px;" routerLink="/policies" ngClass.sm="homeLinkBtnSm" ngClass.xs="homeLinkBtnXs">Human Resource</button></div>
+      <div fxLayout="column wrap" fxFlex="50" fxLayoutAlign="center center" fxShow="true" fxHide="false"><button mat-raised-button="" style="padding: 10px 45px;" routerLink="/operations" ngClass.sm="homeLinkBtnSm" ngClass.xs="homeLinkBtnXs">Operations</button></div>
     </div>
   </div>
 </div>
