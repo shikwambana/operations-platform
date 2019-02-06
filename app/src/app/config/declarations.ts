@@ -66,10 +66,6 @@ import { loaderComponent } from '../components/loaderComponent/loader.component'
 import { homeComponent } from '../components/homeComponent/home.component';
 //CORE_REFERENCE_IMPORT-loginComponent
 import { loginComponent } from '../components/loginComponent/login.component';
-//CORE_REFERENCE_IMPORT-loginComponent
-import { homepageComponent } from '../components/homepageComponent/homepage.component';
-//CORE_REFERENCE_IMPORT-loginComponent
-import { transportComponent } from '../components/transportComponent/transport.component';
 import { userService } from 'app/services/user/user.service';
 
 /**
@@ -130,11 +126,7 @@ extensionComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-operationsComponent
 operationsComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-operationsComponent
-transportComponent,
-//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-operationsComponent
 flightComponent,
-//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-operationsComponent
-homepageComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-managerComponent
 managerComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-otherservicesComponent
@@ -192,11 +184,11 @@ userService
 
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_START
 export const appRoutes = [{path: 'home', component: homeComponent, canActivate: [NAuthGuardService],
-children: [{path: '', component: searchComponent}]},{path: 'login', component: loginComponent},{path: 'unauthorized', redirectTo: '/login', pathMatch: 'full'},{path: 'human-resource', component: homepageComponent, canActivate: [NAuthGuardService],
+children: [{path: '', component: searchComponent}]},{path: 'login', component: loginComponent},{path: 'unauthorized', redirectTo: '/login', pathMatch: 'full'},{path: 'human-resource', component: operationsComponent, canActivate: [NAuthGuardService],
 children: [{path: 'hr', component: hrpolicyadminComponent,
 children: []},{path: 'edit', component: editpolicyComponent},{path: 'policy', component: policyComponent},{path: 'policies', component: policiesComponent,
 children: []},{path: '', component: managerComponent}]},{path: 'operations', component: displayComponent,
-children: [{path: '', component: otherservicesComponent},{path: 'guesthouse', component: guesthouseComponent},{path: 'policies', component: policiesComponent},{path: 'transport', component: transportComponent}]},{path: 'lms', component: lmsComponent,
+children: [{path: '', component: otherservicesComponent},{path: 'guesthouse', component: guesthouseComponent},{path: 'policies', component: policiesComponent}]},{path: 'lms', component: lmsComponent,
 children: [{path: 'myprofile', component: myprofileComponent,
 children: []},{path: 'applyleave', component: applyleaveComponent},{path: 'userdetail', component: userdetailComponent}]},{path: '', redirectTo: '/login', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_END

@@ -8,8 +8,17 @@ export class visa {
   @JsonProperty('passportNumber', String, true)
   public passportNumber: string = undefined;
 
-  @JsonProperty('date', Date, true)
-  public date: Date = undefined;
+  @JsonProperty('phone', Number, true)
+  public phone: number = undefined;
+
+  @JsonProperty('expiry_date', Date, true)
+  public expiry_date: Date = undefined;
+
+  @JsonProperty('passport_number', String, true)
+  public passport_number: string = undefined;
+
+  @JsonProperty('renew', String, true)
+  public renew: string = undefined;
 
   @JsonProperty('time', String, true)
   public time: string = undefined;

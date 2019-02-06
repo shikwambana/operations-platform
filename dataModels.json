@@ -83,10 +83,9 @@
                 "name": "passportNumber",
                 "fieldType": 2,
                 "isArray": false
-            },
-            {
-                "name": "date",
-                "fieldType": 3,
+            },{
+                "name": "full_name",
+                "fieldType": 2,
                 "isArray": false
             },
             {
@@ -95,12 +94,12 @@
                 "isArray": false
             },
             {
-                "name": "username",
-                "fieldType": 2,
+                "name": "date",
+                "fieldType": 3,
                 "isArray": false
             },
             {
-                "name": "fullName",
+                "name": "username",
                 "fieldType": 2,
                 "isArray": false
             }
@@ -291,6 +290,39 @@
             },
             {
                 "name": "departure",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "airport",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "date",
+                "fieldType": 3,
+                "isArray": false
+            },
+            {
+                "name": "username",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "fullName",
+                "fieldType": 2,
+                "isArray": false
+            }
+        ]
+    },
+    "310c3cdd-89d9-633b-7edb-b52e3c9180df": {
+        "dataModelId": "310c3cdd-89d9-633b-7edb-b52e3c9180df",
+        "name": "operations",
+        "description": "operations",
+        "dataSource": "operations",
+        "fields": [
+            {
+                "name": "name",
                 "fieldType": 2,
                 "isArray": false
             },
