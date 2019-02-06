@@ -49,7 +49,7 @@
                 "isArray": false
             },
             {
-                "name": "link",
+                "name": "formlink",
                 "fieldType": 2,
                 "isArray": false
             }
@@ -72,8 +72,39 @@
         "dataModelId": "d0db7b92-4c67-19fa-a6df-17e3bba06bb9",
         "name": "visa",
         "description": "visa",
-        "dataSource": "neutrinos-delivery-rt",
-        "fields": []
+        "dataSource": "operations",
+        "fields": [
+            {
+                "name": "visaExpiry",
+                "fieldType": 3,
+                "isArray": false
+            },
+            {
+                "name": "passportNumber",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "date",
+                "fieldType": 3,
+                "isArray": false
+            },
+            {
+                "name": "time",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "username",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "fullName",
+                "fieldType": 2,
+                "isArray": false
+            }
+        ]
     },
     "76cf35b7-e10b-6eaf-89c7-91ad65b4ef04": {
         "dataModelId": "76cf35b7-e10b-6eaf-89c7-91ad65b4ef04",
@@ -226,12 +257,12 @@
                 "isArray": false
             },
             {
-                "name": "whatsapp_num",
-                "fieldType": 1,
+                "name": "username",
+                "fieldType": 2,
                 "isArray": false
             },
             {
-                "name": "email",
+                "name": "fullName",
                 "fieldType": 2,
                 "isArray": false
             }
@@ -270,6 +301,16 @@
             },
             {
                 "name": "date",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "username",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "fullName",
                 "fieldType": 2,
                 "isArray": false
             }

@@ -14,7 +14,7 @@ export class policies {
   @JsonProperty('procedure', String, true)
   public procedure: string = undefined;
 
-  @JsonProperty('link', String, true)
-  public link: string = undefined;
+  @JsonProperty('formlink', String, true)
+  public formlink: string = undefined;
 
 }

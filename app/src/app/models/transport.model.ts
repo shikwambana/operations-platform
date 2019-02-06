@@ -20,10 +20,10 @@ export class transport {
   @JsonProperty('additional_info', String, true)
   public additional_info: string = undefined;
 
-  @JsonProperty('whatsapp_num', Number, true)
-  public whatsapp_num: number = undefined;
+  @JsonProperty('username', String, true)
+  public username: string = undefined;
 
-  @JsonProperty('email', String, true)
-  public email: string = undefined;
+  @JsonProperty('fullName', String, true)
+  public fullName: string = undefined;
 
 }

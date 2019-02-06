@@ -2,28 +2,22 @@ import {JsonProperty, JsonObject} from '../lib/tj.deserializer'
 
 @JsonObject
 export class visa {
-  @JsonProperty('full_name', String, true)
-  public full_name: string = undefined;
+  @JsonProperty('visaExpiry', Date, true)
+  public visaExpiry: Date = undefined;
 
-  @JsonProperty('email', String, true)
-  public email: string = undefined;
+  @JsonProperty('passportNumber', String, true)
+  public passportNumber: string = undefined;
 
-  @JsonProperty('phone', Number, true)
-  public phone: number = undefined;
-
-  @JsonProperty('expiry_date', Date, true)
-  public expiry_date: Date = undefined;
-
-  @JsonProperty('passport_numer', String, true)
-  public passport_numer: string = undefined;
-
-  @JsonProperty('renew', String, true)
-  public renew: string = undefined;
+  @JsonProperty('date', Date, true)
+  public date: Date = undefined;
 
   @JsonProperty('time', String, true)
   public time: string = undefined;
 
-  @JsonProperty('documents', String, true)
-  public documents: string = undefined;
+  @JsonProperty('username', String, true)
+  public username: string = undefined;
+
+  @JsonProperty('fullName', String, true)
+  public fullName: string = undefined;
 
 }

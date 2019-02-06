@@ -30,7 +30,7 @@
             "pathMatch": "full"
         },
         {
-            "path": "homepage",
+            "path": "human-resource",
             "component": "homepageComponent",
             "children": [
                 {
@@ -59,11 +59,11 @@
             "canActivate": "NAuthGuardService"
         },
         {
-            "path": "menu",
+            "path": "operations",
             "component": "displayComponent",
             "children": [
                 {
-                    "path": "otherservices",
+                    "path": "''",
                     "component": "otherservicesComponent"
                 },
                 {
@@ -77,6 +77,25 @@
                 {
                     "component": "transportComponent",
                     "path": "transport"
+                }
+            ]
+        },
+        {
+            "component": "lmsComponent",
+            "path": "lms",
+            "children": [
+                {
+                    "component": "myprofileComponent",
+                    "path": "myprofile",
+                    "children": []
+                },
+                {
+                    "component": "applyleaveComponent",
+                    "path": "applyleave"
+                },
+                {
+                    "path": "userdetail",
+                    "component": "userdetailComponent"
                 }
             ]
         },
