@@ -12,8 +12,6 @@ window['neutrinos'] = {
 }
 
 //CORE_REFERENCE_IMPORTS
-//CORE_REFERENCE_IMPORT-transportComponent
-import { transportComponent } from '../components/transportComponent/transport.component';
 //CORE_REFERENCE_IMPORT-extensionComponent
 import { extensionComponent } from '../components/extensionComponent/extension.component';
 //CORE_REFERENCE_IMPORT-flightComponent
@@ -86,8 +84,6 @@ export const appDeclarations = [
   PageNotFoundComponent,
   NMapComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
-//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-transportComponent
-transportComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-extensionComponent
 extensionComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-flightComponent
