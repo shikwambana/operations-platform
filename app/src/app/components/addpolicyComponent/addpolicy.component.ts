@@ -4,6 +4,7 @@ import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
 import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
+import { policies } from "../../models/policies.model"
 
 /**
  * Service import Example :
@@ -11,47 +12,46 @@ import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
  */
 
 @Component({
-    selector: 'bh-operations',
-    templateUrl: './operations.template.html'
+    selector: 'bh-addpolicy',
+    templateUrl: './addpolicy.template.html'
 })
 
-export class operationsComponent extends NBaseComponent implements OnInit {
+export class addpolicyComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
 
-    leaves;    
-    transportRequest;
-    flights;
+    policies: policies;
+    //test data
+    currentPolicies: policies[];
+    // categories
+
+
+    categories = [
+        'RECRUITMENT AND SELECTION', 'RECRUITMENT AND SELECTION',
+        "ETHICAL BEHAVIOUR", "EMPLOYMENT EQUITY", "FLEET POLICY",
+        "FLEET POLICY"
+    ];
+
     constructor(private bdms: NDataModelService) {
         super();
         this.mm = new ModelMethods(bdms);
     }
 
     ngOnInit() {
-        this.get('leaverequest');
-        this.get('flight');
-        this.get('transportRequests');        
-        
+        this.policies = new policies();
+    }
+
+    addPolicy() {
+        this.put('policies', this.policies);
+        this.router.navigate[('/human-resource')];
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, this, filter, keys, sort, pagenumber, pagesize,
             result => {
                 // On Success code here
-                if(dataModelName == 'leaverequest'){
-                    this.leaves = result;
-                }
-                if(dataModelName == 'transportRequests'){
-                    this.transportRequest = result;
-                }
-                if(dataModelName == 'flight'){
-                    this.flights = result;
-                    
-                console.log(result);
-                }
             },
             error => {
                 // Handle errors here
-                console.log(error);
             });
     }
 
@@ -69,8 +69,11 @@ export class operationsComponent extends NBaseComponent implements OnInit {
         this.mm.put(dataModelName, dataModelObject,
             result => {
                 // On Success code here
+                console.log(result);
             }, error => {
                 // Handle errors here
+                console.log(error);
+                
             })
     }
 

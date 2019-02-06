@@ -123,5 +123,10 @@
         "appPageName": "userregistration",
         "componentName": "userregistrationComponent",
         "isEntry": false
+    },
+    "0a2bc5ef-4604-31fb-ba2b-bf4c889b5078": {
+        "appPageName": "addPolicy",
+        "componentName": "addpolicyComponent",
+        "isEntry": false
     }
 }

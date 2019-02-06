@@ -12,6 +12,8 @@ window['neutrinos'] = {
 }
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-addpolicyComponent
+import { addpolicyComponent } from '../components/addpolicyComponent/addpolicy.component';
 //CORE_REFERENCE_IMPORT-homeresolverService
 import { homeresolverService } from '../services/homeresolver/homeresolver.service';
 //CORE_REFERENCE_IMPORT-userService
@@ -104,6 +106,8 @@ export const appDeclarations = [
   PageNotFoundComponent,
   NMapComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-addpolicyComponent
+addpolicyComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-userregistrationComponent
 userregistrationComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-userdetailsComponent

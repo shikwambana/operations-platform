@@ -1,0 +1,17 @@
+<div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+  <h1>Add a Policy</h1>
+  <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+    <mat-form-field><input matInput="" [(ngModel)]="policies.title" placeholder="Title" required></mat-form-field>
+    <mat-form-field><textarea matInput="" [(ngModel)]="policies.content" placeholder="Policy Content" required></textarea></mat-form-field>
+    <mat-form-field><textarea matInput="" placeholder="Policy Procedure" required></textarea></mat-form-field>
+    <mat-form-field>
+      <mat-select placeholder="Category" [(ngModel)]="policies.category" required>
+        <mat-option *ngFor="let category of categories" [value]="category">{{category}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field><input matInput="" [(ngModel)]="policies.formlink" placeholder="Form Link" required></mat-form-field><button mat-raised-button="" style="color: red;" (click)="addPolicy()">Add Policy</button>
+    <div fxLayout="row wrap" fxLayoutAlign="start stretch" fxShow="false" fxHide="true">
+      <mat-checkbox [(ngModel)]="policies.acknowledgement" required></mat-checkbox>
+    </div>
+  </div>
+</div>

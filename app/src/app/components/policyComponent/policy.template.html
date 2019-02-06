@@ -1,4 +1,5 @@
 <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+  <div fxLayout="column wrap" fxLayoutAlign="start end" fxShow="true" fxHide="false"><button mat-raised-button="">Fill In Form</button></div>
   <mat-tab-group>
     <mat-tab label="Policy">
       <div fxLayout="column wrap" fxLayoutAlign="center center" fxShow="true" fxHide="false">
@@ -7,12 +8,16 @@
           <mat-card-content>
             <p>{{ selectedPolicy.content }}</p>
           </mat-card-content>
-          <mat-card-actions><button mat-raised-button="" (click)="goBack()">
-              <mat-icon>arrow_back</mat-icon>
-            </button></mat-card-actions>
         </mat-card>
       </div>
     </mat-tab>
-    <mat-tab label="Procedure"></mat-tab>
+    <mat-tab label="Procedure">
+      <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+        <mat-card-title>{{ selectedPolicy.title }}</mat-card-title>
+        <mat-card-content>
+          <p>{{ selectedPolicy.procedure }}</p>
+        </mat-card-content>
+      </div>
+    </mat-tab>
   </mat-tab-group>
 </div>

@@ -1,0 +1,13 @@
+{
+    "appPageId": "1c79efea-9b04-0d34-38b2-d8bdc37cc6ed",
+    "appPageName": "addPolicy",
+    "componentName": "addpolicyComponent",
+    "selectorName": "bh-addpolicy",
+    "htmlFileName": "addpolicy.template.html",
+    "tsFileName": "addpolicy.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}
