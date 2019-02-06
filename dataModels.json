@@ -298,32 +298,6 @@
                 "name": "departure",
                 "fieldType": 2,
                 "isArray": false
-<<<<<<< HEAD
-=======
-            },
-            {
-                "name": "airport",
-                "fieldType": 2,
-                "isArray": false
-            },
-            {
-                "name": "date",
-                "fieldType": 3,
-                "isArray": false
-            }
-        ]
-    },
-    "310c3cdd-89d9-633b-7edb-b52e3c9180df": {
-        "dataModelId": "310c3cdd-89d9-633b-7edb-b52e3c9180df",
-        "name": "operations",
-        "description": "operations",
-        "dataSource": "operations",
-        "fields": [
-            {
-                "name": "name",
-                "fieldType": 2,
-                "isArray": false
->>>>>>> origin/tukiso
             },
             {
                 "name": "airport",

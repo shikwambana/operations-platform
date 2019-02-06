@@ -25,30 +25,20 @@
             "pathMatch": "full"
         },
         {
-            "path": "human-resource",
+            "path": "admin",
             "component": "displayComponent",
             "children": [
                 {
-                    "path": "hr",
                     "component": "hrpolicyadminComponent",
-                    "children": []
+                    "path": "hr"
                 },
                 {
-                    "path": "edit",
-                    "component": "editpolicyComponent"
+                    "component": "managerComponent",
+                    "path": "''"
                 },
                 {
-                    "component": "policyComponent",
-                    "path": "policy"
-                },
-                {
-                    "component": "policiesComponent",
-                    "path": "policies",
-                    "children": []
-                },
-                {
-                    "path": "''",
-                    "component": "policiesComponent"
+                    "component": "editpolicyComponent",
+                    "path": "edit"
                 }
             ],
             "canActivate": "NAuthGuardService"
@@ -58,7 +48,7 @@
             "component": "displayComponent",
             "children": [
                 {
-                    "path": "operation",
+                    "path": "''",
                     "component": "otherservicesComponent"
                 },
                 {
@@ -66,16 +56,26 @@
                     "component": "guesthouseComponent"
                 },
                 {
-                    "path": "policies",
-                    "component": "policiesComponent"
-                },
-                {
-                    "path": "extension",
-                    "component": "extensionComponent"
-                },
-                {
                     "component": "flightComponent",
                     "path": "flight"
+                },
+                {
+                    "component": "extensionComponent",
+                    "path": "extension"
+                }
+            ]
+        },
+        {
+            "component": "displayComponent",
+            "path": "policies",
+            "children": [
+                {
+                    "component": "policiesComponent",
+                    "path": "''"
+                },
+                {
+                    "path": "policy",
+                    "component": "policyComponent"
                 }
             ]
         },
@@ -83,7 +83,7 @@
             "path": "''",
             "component": "",
             "pathMatch": "full",
-            "redirectTo": "/login",
+            "redirectTo": "/home",
             "resolve": "",
             "data": "",
             "canActivate": "",

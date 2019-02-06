@@ -12,8 +12,6 @@ window['neutrinos'] = {
 }
 
 //CORE_REFERENCE_IMPORTS
-//CORE_REFERENCE_IMPORT-transportComponent
-import { transportComponent } from '../components/transportComponent/transport.component';
 //CORE_REFERENCE_IMPORT-extensionComponent
 import { extensionComponent } from '../components/extensionComponent/extension.component';
 //CORE_REFERENCE_IMPORT-flightComponent

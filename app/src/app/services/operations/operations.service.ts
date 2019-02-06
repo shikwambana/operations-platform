@@ -25,7 +25,7 @@ export class operationsService {
         },
         {
             name: "HR",
-            link: this.displayer + "/policies"
+            link: "/admin"
         },
         {
             name: "Contact HR",

@@ -9,3 +9,4 @@ export { flight } from './flight.model';
 export { staff } from './staff.model';
 export { employee } from './employee.model';
 export { leaves } from './leaves.model';
+export { visa } from './visa.model';
