@@ -12,6 +12,24 @@ window['neutrinos'] = {
 }
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-contactComponent
+import { contactComponent } from '../components/contactComponent/contact.component';
+//CORE_REFERENCE_IMPORT-lmsComponent
+import { lmsComponent } from '../components/lmsComponent/lms.component';
+//CORE_REFERENCE_IMPORT-myprofileComponent
+import { myprofileComponent } from '../components/myprofileComponent/myprofile.component';
+//CORE_REFERENCE_IMPORT-myleavesComponent
+import { myleavesComponent } from '../components/myleavesComponent/myleaves.component';
+//CORE_REFERENCE_IMPORT-userregistrationComponent
+import { userregistrationComponent } from '../components/userregistrationComponent/userregistration.component';
+//CORE_REFERENCE_IMPORT-applyleaveComponent
+import { applyleaveComponent } from '../components/applyleaveComponent/applyleave.component';
+//CORE_REFERENCE_IMPORT-userdetailComponent
+import { userdetailComponent } from '../components/userdetailComponent/userdetail.component';
+//CORE_REFERENCE_IMPORT-myapprovalsComponent
+import { myapprovalsComponent } from '../components/myapprovalsComponent/myapprovals.component';
+//CORE_REFERENCE_IMPORT-addpolicyComponent
+import { addpolicyComponent } from '../components/addpolicyComponent/addpolicy.component';
 //CORE_REFERENCE_IMPORT-extensionComponent
 import { extensionComponent } from '../components/extensionComponent/extension.component';
 //CORE_REFERENCE_IMPORT-flightComponent
@@ -48,6 +66,11 @@ import { loaderComponent } from '../components/loaderComponent/loader.component'
 import { homeComponent } from '../components/homeComponent/home.component';
 //CORE_REFERENCE_IMPORT-loginComponent
 import { loginComponent } from '../components/loginComponent/login.component';
+//CORE_REFERENCE_IMPORT-loginComponent
+import { homepageComponent } from '../components/homepageComponent/homepage.component';
+//CORE_REFERENCE_IMPORT-loginComponent
+import { transportComponent } from '../components/transportComponent/transport.component';
+import { userService } from 'app/services/user/user.service';
 
 /**
  * Reads datasource object and injects the datasource object into window object
@@ -84,14 +107,34 @@ export const appDeclarations = [
   PageNotFoundComponent,
   NMapComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
-//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-transportComponent
-transportComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-contactComponent
+contactComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-lmsComponent
+lmsComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-myprofileComponent
+myprofileComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-myleavesComponent
+myleavesComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-userregistrationComponent
+userregistrationComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-applyleaveComponent
+applyleaveComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-userdetailComponent
+userdetailComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-myapprovalsComponent
+myapprovalsComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-addpolicyComponent
+addpolicyComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-extensionComponent
 extensionComponent,
-//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-flightComponent
-flightComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-operationsComponent
 operationsComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-operationsComponent
+transportComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-operationsComponent
+flightComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-operationsComponent
+homepageComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-managerComponent
 managerComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-otherservicesComponent
@@ -139,6 +182,7 @@ export const appProviders = [
 operationsService,
 //CORE_REFERENCE_PUSH_TO_PRO_ARRAY-policiesService
 policiesService,
+userService
 
 ];
 
@@ -148,8 +192,11 @@ policiesService,
 
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_START
 export const appRoutes = [{path: 'home', component: homeComponent, canActivate: [NAuthGuardService],
-children: []},{path: 'login', component: loginComponent},{path: 'unauthorized', redirectTo: '/login', pathMatch: 'full'},{path: 'admin', component: displayComponent, canActivate: [NAuthGuardService],
-children: [{path: 'hr', component: hrpolicyadminComponent},{path: '', component: managerComponent},{path: 'edit', component: editpolicyComponent}]},{path: 'operations', component: displayComponent,
-children: [{path: '', component: otherservicesComponent},{path: 'guesthouse', component: guesthouseComponent},{path: 'flight', component: flightComponent},{path: 'extension', component: extensionComponent}]},{path: 'policies', component: displayComponent,
-children: [{path: '', component: policiesComponent},{path: 'policy', component: policyComponent}]},{path: '', redirectTo: '/home', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
+children: [{path: '', component: searchComponent}]},{path: 'login', component: loginComponent},{path: 'unauthorized', redirectTo: '/login', pathMatch: 'full'},{path: 'human-resource', component: homepageComponent, canActivate: [NAuthGuardService],
+children: [{path: 'hr', component: hrpolicyadminComponent,
+children: []},{path: 'edit', component: editpolicyComponent},{path: 'policy', component: policyComponent},{path: 'policies', component: policiesComponent,
+children: []},{path: '', component: managerComponent}]},{path: 'operations', component: displayComponent,
+children: [{path: '', component: otherservicesComponent},{path: 'guesthouse', component: guesthouseComponent},{path: 'policies', component: policiesComponent},{path: 'transport', component: transportComponent}]},{path: 'lms', component: lmsComponent,
+children: [{path: 'myprofile', component: myprofileComponent,
+children: []},{path: 'applyleave', component: applyleaveComponent},{path: 'userdetail', component: userdetailComponent}]},{path: '', redirectTo: '/login', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_END

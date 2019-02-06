@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
     "appPageId": "ba860e13-9b0d-2061-f060-706f5e70d12a",
+=======
+    "appPageId": "84c8c506-e38d-8be5-07d5-b09d2af6752b",
+>>>>>>> e619536745201aa6c1d70d2ef6d340ef5fbe8f21
     "appPageName": "flight",
     "componentName": "flightComponent",
     "selectorName": "bh-flight",

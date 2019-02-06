@@ -1,0 +1,19 @@
+<mat-tab-group>
+  <mat-tab label="My Leaves">
+    <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="center center" fxShow="true" fxHide="false">
+      <bh-myleaves style="width:100%"></bh-myleaves>
+    </div>
+  </mat-tab>
+  <mat-tab label="My Profile">
+    <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="center center" fxShow="true" fxHide="false">
+      <bh-myprofile style="width:100%"></bh-myprofile>
+    </div>
+  </mat-tab>
+  <mat-tab style="background-color:grey" label=" My Approvals" *ngIf="uService.isManager()">
+    <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="center center" fxShow="true" fxHide="false">
+      <bh-myapprovals style="width:100%">
+        <bh-myapprovals></bh-myapprovals>
+      </bh-myapprovals>
+    </div>
+  </mat-tab>
+</mat-tab-group>

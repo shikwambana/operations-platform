@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
     "appPageId": "4d8d354f-315b-c11c-b887-526152e5710d",
+=======
+    "appPageId": "10dc8a2f-7502-1da1-ff65-42163dbcfe41",
+>>>>>>> e619536745201aa6c1d70d2ef6d340ef5fbe8f21
     "appPageName": "extension",
     "componentName": "extensionComponent",
     "selectorName": "bh-extension",

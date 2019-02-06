@@ -80,6 +80,25 @@
             ]
         },
         {
+            "component": "lmsComponent",
+            "path": "lms",
+            "children": [
+                {
+                    "component": "myprofileComponent",
+                    "path": "myprofile",
+                    "children": []
+                },
+                {
+                    "component": "applyleaveComponent",
+                    "path": "applyleave"
+                },
+                {
+                    "path": "userdetail",
+                    "component": "userdetailComponent"
+                }
+            ]
+        },
+        {
             "path": "''",
             "component": "",
             "pathMatch": "full",
