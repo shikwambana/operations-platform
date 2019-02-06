@@ -1,16 +1,5 @@
 {
     "dataSource": {
-        "user": "neutrinos-delivery-rt",
-        "policies": "operations",
-        "categories": "operations-platform-rt",
-        "visa": "operations",
-        "services": "operations",
-        "guesthouse": "operations",
-        "leaverequest": "operations",
-        "transport": "operations",
-        "flight": "operations",
-        "staff": "operations",
-        "employee": "operations",
-        "leaves": "operations"
+        "user": "neutrinos-delivery-rt"
     }
 }
